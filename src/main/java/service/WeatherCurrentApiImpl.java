@@ -1,6 +1,6 @@
 package service;
 
-import api.WeatherApi;
+import api.WeatherCurrentApi;
 import entity.Data;
 import entity.JsonBody;
 import entity.Weather;
@@ -12,19 +12,19 @@ import javax.json.bind.JsonbBuilder;
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 
-public class WeatherApiImpl implements WeatherApi
+public class WeatherCurrentApiImpl implements WeatherCurrentApi
 {
     private static String QUERY = "https://api.weatherbit.io/v2.0/current?city=%s&key=%s";
 
     private HttpConnection connection;
     private Jsonb jsonb;
 
-    public WeatherApiImpl(String city)
+    public WeatherCurrentApiImpl(String city)
     {
         this(new HttpConnection(setQUERY(city)), JsonbBuilder.create());
     }
 
-    public WeatherApiImpl(HttpConnection connection, Jsonb jsonb)
+    public WeatherCurrentApiImpl(HttpConnection connection, Jsonb jsonb)
     {
         this.connection = connection;
         this.jsonb = jsonb;

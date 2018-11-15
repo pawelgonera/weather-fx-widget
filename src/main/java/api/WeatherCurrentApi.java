@@ -2,7 +2,7 @@ package api;
 
 import java.math.BigDecimal;
 
-public interface WeatherApi
+public interface WeatherCurrentApi
 {
     double getTemperature();
 }

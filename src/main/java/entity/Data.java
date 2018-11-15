@@ -1,20 +1,29 @@
 package entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.json.bind.annotation.JsonbDateFormat;
 import javax.json.bind.annotation.JsonbProperty;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 
 public class Data
 {
-    //private DateTimeFormatter formatDate = DateTimeFormatter.ofPattern("yyyy-MM-dd-hh");
+    @JsonbProperty("timestamp_local")
+    private LocalDateTime timestampAtLocalTime;
+
+    @JsonbProperty("timestamp_utc")
+    private LocalDateTime timestampAtUTCTime;
+
+    @JsonbProperty("wind_gust_spd")
+    private double windGustSpeed;
+
+    @JsonbProperty("pop")
+    private double probabilityOfPrecipitation;
+
+    @JsonbProperty("snow_depth")
+    private double snowDepth;
+
     @JsonbProperty("wind_cdir")
     private String abbreviatedWindDirection;
 
@@ -39,6 +48,18 @@ public class Data
 
     @JsonbProperty("country_code")
     private String countryAbbreviation;
+
+    @JsonbProperty("clouds_low")
+    private double lowLevelCloudCoverage;
+
+    @JsonbProperty("clouds_mid")
+    private double midLevelCloudCoverage;
+
+    @JsonbProperty("clouds_hi")
+    private double highLevelCloudCoverage;
+
+    @JsonbProperty("ozone")
+    private double averageOzone;
 
     @JsonbProperty("clouds")
     private double cloudCoverage;
@@ -126,6 +147,78 @@ public class Data
     public Data()
     {
 
+    }
+
+    public double getWindGustSpeed() {
+        return windGustSpeed;
+    }
+
+    public void setWindGustSpeed(double windGustSpeed) {
+        this.windGustSpeed = windGustSpeed;
+    }
+
+    public double getProbabilityOfPrecipitation() {
+        return probabilityOfPrecipitation;
+    }
+
+    public void setProbabilityOfPrecipitation(double probabilityOfPrecipitation) {
+        this.probabilityOfPrecipitation = probabilityOfPrecipitation;
+    }
+
+    public double getSnowDepth() {
+        return snowDepth;
+    }
+
+    public void setSnowDepth(double snowDepth) {
+        this.snowDepth = snowDepth;
+    }
+
+    public double getLowLevelCloudCoverage() {
+        return lowLevelCloudCoverage;
+    }
+
+    public void setLowLevelCloudCoverage(double lowLevelCloudCoverage) {
+        this.lowLevelCloudCoverage = lowLevelCloudCoverage;
+    }
+
+    public double getMidLevelCloudCoverage() {
+        return midLevelCloudCoverage;
+    }
+
+    public void setMidLevelCloudCoverage(double midLevelCloudCoverage) {
+        this.midLevelCloudCoverage = midLevelCloudCoverage;
+    }
+
+    public double getHighLevelCloudCoverage() {
+        return highLevelCloudCoverage;
+    }
+
+    public void setHighLevelCloudCoverage(double highLevelCloudCoverage) {
+        this.highLevelCloudCoverage = highLevelCloudCoverage;
+    }
+
+    public double getAverageOzone() {
+        return averageOzone;
+    }
+
+    public void setAverageOzone(double averageOzone) {
+        this.averageOzone = averageOzone;
+    }
+
+    public LocalDateTime getTimestampAtLocalTime() {
+        return timestampAtLocalTime;
+    }
+
+    public void setTimestampAtLocalTime(LocalDateTime timestampAtLocalTime) {
+        this.timestampAtLocalTime = timestampAtLocalTime;
+    }
+
+    public LocalDateTime getTimestampAtUTCTime() {
+        return timestampAtUTCTime;
+    }
+
+    public void setTimestampAtUTCTime(LocalDateTime timestampAtUTCTime) {
+        this.timestampAtUTCTime = timestampAtUTCTime;
     }
 
     public String getAbbreviatedWindDirection() {

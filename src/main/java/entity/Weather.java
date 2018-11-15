@@ -1,7 +1,5 @@
 package entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.json.bind.annotation.JsonbProperty;
 
 public class Weather
