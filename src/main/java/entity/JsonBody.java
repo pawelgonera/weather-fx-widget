@@ -2,21 +2,16 @@ package entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.json.bind.annotation.JsonbProperty;
 import java.util.List;
 
 public class JsonBody
 {
-    @JsonProperty("data")
+    @JsonbProperty("data")
     private List<Data> data;
 
-    @JsonProperty("count")
+    @JsonbProperty("count")
     private int count;
-
-    public JsonBody(List<Data> data, int count)
-    {
-        this.data = data;
-        this.count = count;
-    }
 
     public List<Data> getData() {
         return data;

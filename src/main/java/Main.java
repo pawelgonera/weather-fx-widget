@@ -1,3 +1,12 @@
+import service.WeatherApiImpl;
+
+import javax.net.ssl.HttpsURLConnection;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+
+import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -5,9 +14,10 @@ public class Main
 {
     public static void main(String[] args)
     {
-        LocalDateTime d;
+        WeatherApiImpl weatherApi = new WeatherApiImpl("Kalisz");
+        double temp = weatherApi.getTemperature();
 
-        DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy-MM-dd-hh");
-        System.out.println(f);
+        char asci = 23;
+        System.out.println(temp + " stopni Celcjusza " + asci);
     }
 }

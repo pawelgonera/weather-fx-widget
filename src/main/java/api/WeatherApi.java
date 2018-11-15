@@ -1,6 +1,8 @@
 package api;
 
-public class WeatherApi
-{
+import java.math.BigDecimal;
 
+public interface WeatherApi
+{
+    double getTemperature();
 }

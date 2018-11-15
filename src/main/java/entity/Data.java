@@ -2,6 +2,10 @@ package entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.json.bind.annotation.JsonbDateFormat;
+import javax.json.bind.annotation.JsonbProperty;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -11,110 +15,112 @@ import java.util.List;
 public class Data
 {
     //private DateTimeFormatter formatDate = DateTimeFormatter.ofPattern("yyyy-MM-dd-hh");
-    @JsonProperty("wind_cdir")
+    @JsonbProperty("wind_cdir")
     private String abbreviatedWindDirection;
 
-    @JsonProperty("rh")
-    private int relativeHumidity;
+    @JsonbProperty("rh")
+    private double relativeHumidity;
 
-    @JsonProperty("pod")
+    @JsonbProperty("pod")
     private String partOfTheDay;
 
-    @JsonProperty("lon")
-    private double longitude;
+    @JsonbProperty("lon")
+    private BigDecimal longitude;
 
-    @JsonProperty("pres")
+    @JsonbProperty("pres")
     private double pressure;
 
-    @JsonProperty("timezone")
+    @JsonbProperty("timezone")
     private String timmeZone;
 
-    @JsonProperty("ob_time")
+    @JsonbProperty("ob_time")
+    @JsonbDateFormat(value = "yyyy-MM-dd HH:mm")
     private LocalDateTime lastObservationTime;
 
-    @JsonProperty("country_code")
+    @JsonbProperty("country_code")
     private String countryAbbreviation;
 
-    @JsonProperty("clouds")
-    private int cloudCoverage;
+    @JsonbProperty("clouds")
+    private double cloudCoverage;
 
-    @JsonProperty("vis")
-    private int visibility;
+    @JsonbProperty("vis")
+    private double visibility;
 
-    @JsonProperty("wind_spd")
+    @JsonbProperty("wind_spd")
     private double windSpeed;
 
-    @JsonProperty("wind_cdir_full")
+    @JsonbProperty("wind_cdir_full")
     private String verbalWindDirection;
 
-    @JsonProperty("app_temp")
+    @JsonbProperty("app_temp")
     private double apparentTemperature;
 
-    @JsonProperty("state_code")
+    @JsonbProperty("state_code")
     private String stateAbbreviation;
 
-    @JsonProperty("ts")
-    private long lastObservationTimeUnixTimestamp;
+    @JsonbProperty("ts")
+    private double lastObservationTimeUnixTimestamp;
 
-    @JsonProperty("h_angle")
-    private int solarHourAngle;
+    @JsonbProperty("h_angle")
+    private double solarHourAngle;
 
-    @JsonProperty("dewpt")
+    @JsonbProperty("dewpt")
     private double dewPoint;
 
-    @JsonProperty("weather")
-    private List<Weather> weather;
+    @JsonbProperty("weather")
+    private Weather weather;
 
-    @JsonProperty("uv")
-    private int UVIndex;
+    @JsonbProperty("uv")
+    private double UVIndex;
 
-    @JsonProperty("station")
+    @JsonbProperty("station")
     private String sourceStationID;
 
-    @JsonProperty("wind_dir")
-    private int windDirection;
+    @JsonbProperty("wind_dir")
+    private double windDirection;
 
-    @JsonProperty("elev_angle")
-    private int solarElevationAngle;
+    @JsonbProperty("elev_angle")
+    private double solarElevationAngle;
 
-    @JsonProperty("datetime")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd-hh")
+    @JsonbProperty("datetime")
+    //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd:HH")
+    @JsonbDateFormat(value = "yyyy-MM-dd:HH")
     private LocalDateTime currentCycleHour;
 
-    @JsonProperty("precip")
-    private int accumulatedLiquidEquivalentPrecipitation;
+    @JsonbProperty("precip")
+    private double accumulatedLiquidEquivalentPrecipitation;
 
-    @JsonProperty("snow")
-    private int accumulatedSnowfall;
+    @JsonbProperty("snow")
+    private double accumulatedSnowfall;
 
-    @JsonProperty("ghi")
+    @JsonbProperty("ghi")
     private double globalHorizontalSolarIrradiance;
 
-    @JsonProperty("dni")
-    private int directNormalSolarIrradiance;
+    @JsonbProperty("dni")
+    private double directNormalSolarIrradiance;
 
-    @JsonProperty("dhi")
-    private int diffuseHorizontalSolarIrradiance;
+    @JsonbProperty("dhi")
+    private double diffuseHorizontalSolarIrradiance;
 
-    @JsonProperty("solar_rad")
-    private int estimatedSolarRadiation;
+    @JsonbProperty("solar_rad")
+    private double estimatedSolarRadiation;
 
-    @JsonProperty("city_name")
+    @JsonbProperty("city_name")
     private String cityName;
 
-    @JsonProperty("sunrise")
+    @JsonbProperty("sunrise")
     private LocalTime sunriseTime;
 
-    @JsonProperty("sunset")
+    @JsonbProperty("sunset")
     private LocalTime sunSet;
 
-    @JsonProperty("temp")
+    @JsonbProperty("temp")
     private double temperature;
 
-    @JsonProperty("lat")
-    private double latitude;
+    @JsonbProperty("lat")
+    private BigDecimal latitude;
 
-    @JsonProperty("slp")
+    @JsonbProperty("slp")
     private double seaLevelPressure;
 
     public Data()
@@ -130,11 +136,11 @@ public class Data
         this.abbreviatedWindDirection = abbreviatedWindDirection;
     }
 
-    public int getRelativeHumidity() {
+    public double getRelativeHumidity() {
         return relativeHumidity;
     }
 
-    public void setRelativeHumidity(int relativeHumidity) {
+    public void setRelativeHumidity(double relativeHumidity) {
         this.relativeHumidity = relativeHumidity;
     }
 
@@ -146,11 +152,11 @@ public class Data
         this.partOfTheDay = partOfTheDay;
     }
 
-    public double getLongitude() {
+    public BigDecimal getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(BigDecimal longitude) {
         this.longitude = longitude;
     }
 
@@ -186,19 +192,19 @@ public class Data
         this.countryAbbreviation = countryAbbreviation;
     }
 
-    public int getCloudCoverage() {
+    public double getCloudCoverage() {
         return cloudCoverage;
     }
 
-    public void setCloudCoverage(int cloudCoverage) {
+    public void setCloudCoverage(double cloudCoverage) {
         this.cloudCoverage = cloudCoverage;
     }
 
-    public int getVisibility() {
+    public double getVisibility() {
         return visibility;
     }
 
-    public void setVisibility(int visibility) {
+    public void setVisibility(double visibility) {
         this.visibility = visibility;
     }
 
@@ -234,19 +240,19 @@ public class Data
         this.stateAbbreviation = stateAbbreviation;
     }
 
-    public long getLastObservationTimeUnixTimestamp() {
+    public double getLastObservationTimeUnixTimestamp() {
         return lastObservationTimeUnixTimestamp;
     }
 
-    public void setLastObservationTimeUnixTimestamp(long lastObservationTimeUnixTimestamp) {
+    public void setLastObservationTimeUnixTimestamp(double lastObservationTimeUnixTimestamp) {
         this.lastObservationTimeUnixTimestamp = lastObservationTimeUnixTimestamp ;
     }
 
-    public int getSolarHourAngle() {
+    public double getSolarHourAngle() {
         return solarHourAngle;
     }
 
-    public void setSolarHourAngle(int solarHourAngle) {
+    public void setSolarHourAngle(double solarHourAngle) {
         this.solarHourAngle = solarHourAngle;
     }
 
@@ -258,19 +264,19 @@ public class Data
         this.dewPoint = dewPoint;
     }
 
-    public List<Weather> getWeather() {
+    public Weather getWeather() {
         return weather;
     }
 
-    public void setWeather(List<Weather> weather) {
+    public void setWeather(Weather weather) {
         this.weather = weather;
     }
 
-    public int getUVIndex() {
+    public double getUVIndex() {
         return UVIndex;
     }
 
-    public void setUVIndex(int UVIndex) {
+    public void setUVIndex(double UVIndex) {
         this.UVIndex = UVIndex;
     }
 
@@ -282,19 +288,19 @@ public class Data
         this.sourceStationID = sourceStationID;
     }
 
-    public int getWindDirection() {
+    public double getWindDirection() {
         return windDirection;
     }
 
-    public void setWindDirection(int windDirection) {
+    public void setWindDirection(double windDirection) {
         this.windDirection = windDirection;
     }
 
-    public int getSolarElevationAngle() {
+    public double getSolarElevationAngle() {
         return solarElevationAngle;
     }
 
-    public void setSolarElevationAngle(int solarElevationAngle) {
+    public void setSolarElevationAngle(double solarElevationAngle) {
         this.solarElevationAngle = solarElevationAngle;
     }
 
@@ -306,19 +312,19 @@ public class Data
         this.currentCycleHour = currentCycleHour;
     }
 
-    public int getAccumulatedLiquidEquivalentPrecipitation() {
+    public double getAccumulatedLiquidEquivalentPrecipitation() {
         return accumulatedLiquidEquivalentPrecipitation;
     }
 
-    public void setAccumulatedLiquidEquivalentPrecipitation(int accumulatedLiquidEquivalentPrecipitation) {
+    public void setAccumulatedLiquidEquivalentPrecipitation(double accumulatedLiquidEquivalentPrecipitation) {
         this.accumulatedLiquidEquivalentPrecipitation = accumulatedLiquidEquivalentPrecipitation;
     }
 
-    public int getAccumulatedSnowfall() {
+    public double getAccumulatedSnowfall() {
         return accumulatedSnowfall;
     }
 
-    public void setAccumulatedSnowfall(int accumulatedSnowfall) {
+    public void setAccumulatedSnowfall(double accumulatedSnowfall) {
         this.accumulatedSnowfall = accumulatedSnowfall;
     }
 
@@ -330,27 +336,27 @@ public class Data
         this.globalHorizontalSolarIrradiance = globalHorizontalSolarIrradiance;
     }
 
-    public int getDirectNormalSolarIrradiance() {
+    public double getDirectNormalSolarIrradiance() {
         return directNormalSolarIrradiance;
     }
 
-    public void setDirectNormalSolarIrradiance(int directNormalSolarIrradiance) {
+    public void setDirectNormalSolarIrradiance(double directNormalSolarIrradiance) {
         this.directNormalSolarIrradiance = directNormalSolarIrradiance;
     }
 
-    public int getDiffuseHorizontalSolarIrradiance() {
+    public double getDiffuseHorizontalSolarIrradiance() {
         return diffuseHorizontalSolarIrradiance;
     }
 
-    public void setDiffuseHorizontalSolarIrradiance(int diffuseHorizontalSolarIrradiance) {
+    public void setDiffuseHorizontalSolarIrradiance(double diffuseHorizontalSolarIrradiance) {
         this.diffuseHorizontalSolarIrradiance = diffuseHorizontalSolarIrradiance;
     }
 
-    public int getEstimatedSolarRadiation() {
+    public double getEstimatedSolarRadiation() {
         return estimatedSolarRadiation;
     }
 
-    public void setEstimatedSolarRadiation(int estimatedSolarRadiation) {
+    public void setEstimatedSolarRadiation(double estimatedSolarRadiation) {
         this.estimatedSolarRadiation = estimatedSolarRadiation;
     }
 
@@ -386,11 +392,11 @@ public class Data
         this.temperature = temperature;
     }
 
-    public double getLatitude() {
+    public BigDecimal getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(double latitude) {
+    public void setLatitude(BigDecimal latitude) {
         this.latitude = latitude;
     }
 

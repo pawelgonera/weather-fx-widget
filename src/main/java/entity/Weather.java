@@ -2,13 +2,15 @@ package entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.json.bind.annotation.JsonbProperty;
+
 public class Weather
 {
-    @JsonProperty("icon")
+    @JsonbProperty("icon")
     private String weatherIconCode;
-    @JsonProperty("code")
+    @JsonbProperty("code")
     private String weatherCode;
-    @JsonProperty("description")
+    @JsonbProperty("description")
     private String textWeatherDescription;
 
     public Weather()
