@@ -49,13 +49,9 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     public double getTemperature()
     {
         String response = connection.connect();
-        //System.out.println(response);
         JsonBody jsonBody = jsonb.fromJson(response, JsonBody.class);
         Data data = jsonBody.getData().get(0);
-        Weather weather = data.getWeather();
-        //String weatherDescription = weather.getTextWeatherDescription();
-        return data.getTemperature();
 
-        //return weatherDescription;
+        return data.getTemperature();
     }
 }

@@ -1,7 +1,10 @@
 package get;
 
+import exception.WrongServerStatusException;
+
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
@@ -15,25 +18,41 @@ public class HttpConnection
         {
             connection = (HttpsURLConnection) new URL(url).openConnection();
 
-        }catch (Exception e)
+        }catch (IOException e)
         {
-            e.printStackTrace();
+            throw new WrongServerStatusException(e);
         }
     }
 
     public String connect()
     {
+        serverResponse();
         String response = null;
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream())))
         {
             response = reader.readLine();
 
-        }catch (Exception e)
+        }catch (IOException e)
         {
-            e.printStackTrace();
+            throw new WrongServerStatusException(e);
         }
 
         return response;
+    }
+
+    public void serverResponse() {
+        try
+        {
+            int responseCode =  connection.getResponseCode();
+            if(responseCode != 200) {
+                String statusMessage = connection.getResponseMessage();
+                throw new WrongServerStatusException("Server have a problem :( code: " + responseCode + " - " + statusMessage);
+            }
+
+        } catch (IOException e)
+        {
+            throw new WrongServerStatusException(e);
+        }
     }
 }
 
