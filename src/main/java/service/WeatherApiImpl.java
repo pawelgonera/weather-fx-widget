@@ -5,14 +5,16 @@ import entity.Data;
 import entity.JsonBody;
 import entity.Weather;
 import get.HttpConnection;
+import util.ApiKey;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
+import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 
 public class WeatherApiImpl implements WeatherApi
 {
-    private static String QUERY = "https://api.weatherbit.io/v2.0/current?city=%s&key=c820ef242bee4a319736ef8537661f06";
+    private static String QUERY = "https://api.weatherbit.io/v2.0/current?city=%s&key=%s";
 
     private HttpConnection connection;
     private Jsonb jsonb;
@@ -31,9 +33,16 @@ public class WeatherApiImpl implements WeatherApi
 
     private static String setQUERY(String city)
     {
-        String response = String.format(QUERY, city);
+        StringBuilder response = new StringBuilder();
+        try
+        {
+            response.append(String.format(QUERY, city, ApiKey.getApiKey()));
 
-        return response;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return response.toString();
     }
 
     @Override
