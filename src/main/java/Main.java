@@ -3,6 +3,7 @@ import api.WeatherHourlyForecastApi;
 import entity.Data;
 import service.WeatherCurrentApiImpl;
 import service.WeatherHourlyForecastApiImpl;
+import util.JsonData;
 
 import java.time.LocalTime;
 import java.util.List;
@@ -16,12 +17,14 @@ public class Main
 
         System.out.println(temp + " stopni Celcjusza");
 
+        System.out.println("**********************************************");
+
         WeatherHourlyForecastApiImpl weatherHourlyForecastApi = new WeatherHourlyForecastApiImpl("Kalisz", 48);
 
-        List<Data> datas = weatherHourlyForecastApi.getTemperatureForecast();
+        List<Double> datas = weatherHourlyForecastApi.getTemperatureForecast();
 
         int i = 1;
-        for(Data data : datas)
-            System.out.println(data.getTemperature() + " Time: " + LocalTime.now().plusHours(i++));
+        for(Double temps : datas)
+            System.out.println(temps + " Time: " + LocalTime.now().plusHours(i++));
     }
 }

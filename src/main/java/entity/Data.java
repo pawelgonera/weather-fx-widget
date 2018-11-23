@@ -104,7 +104,6 @@ public class Data
     private double solarElevationAngle;
 
     @JsonbProperty("datetime")
-    //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd:HH")
     @JsonbDateFormat(value = "yyyy-MM-dd:HH")
     private LocalDateTime currentCycleHour;
 

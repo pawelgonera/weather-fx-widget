@@ -5,12 +5,16 @@ import entity.Data;
 import entity.JsonBody;
 import entity.Weather;
 import get.HttpConnection;
+import get.factory.HttpConnectFactory;
+import get.factory.QueryFactory;
 import util.ApiKey;
+import util.JsonData;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
+import java.util.List;
 
 public class WeatherCurrentApiImpl implements WeatherCurrentApi
 {
@@ -21,7 +25,7 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
 
     public WeatherCurrentApiImpl(String city)
     {
-        this(new HttpConnection(setQUERY(city)), JsonbBuilder.create());
+        this(HttpConnectFactory.getConnection(QueryFactory.setCurrentQuery(city, QUERY)), JsonbBuilder.create());
     }
 
     public WeatherCurrentApiImpl(HttpConnection connection, Jsonb jsonb)
@@ -30,28 +34,11 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
         this.jsonb = jsonb;
     }
 
-
-    private static String setQUERY(String city)
-    {
-        StringBuilder response = new StringBuilder();
-        try
-        {
-            response.append(String.format(QUERY, city, ApiKey.getApiKey()));
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        return response.toString();
-    }
-
     @Override
     public double getTemperature()
     {
-        String response = connection.connect();
-        JsonBody jsonBody = jsonb.fromJson(response, JsonBody.class);
-        Data data = jsonBody.getData().get(0);
+        List<Data> data = JsonData.getJson(connection, jsonb, 1);
 
-        return data.getTemperature();
+        return data.stream().mapToDouble(Data::getTemperature).sum();
     }
 }

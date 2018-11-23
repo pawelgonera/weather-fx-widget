@@ -26,8 +26,8 @@ public class HttpConnection
 
     public String connect()
     {
-        serverResponse();
-        String response = null;
+        serverResponseValidate();
+        String response;
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream())))
         {
             response = reader.readLine();
@@ -40,11 +40,12 @@ public class HttpConnection
         return response;
     }
 
-    public void serverResponse() {
+    private void serverResponseValidate() {
         try
         {
             int responseCode =  connection.getResponseCode();
-            if(responseCode != 200) {
+            if(responseCode != 200)
+            {
                 String statusMessage = connection.getResponseMessage();
                 throw new WrongServerStatusException("Server have a problem :( code: " + responseCode + " - " + statusMessage);
             }

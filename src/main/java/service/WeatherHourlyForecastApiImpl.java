@@ -2,27 +2,25 @@ package service;
 
 import api.WeatherHourlyForecastApi;
 import entity.Data;
-import entity.JsonBody;
 import get.HttpConnection;
-import util.ApiKey;
-
+import get.factory.HttpConnectFactory;
+import get.factory.QueryFactory;
+import util.JsonData;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
-import java.io.FileNotFoundException;
-import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class WeatherHourlyForecastApiImpl implements WeatherHourlyForecastApi
 {
     private static String QUERY = "https://api.weatherbit.io/v2.0/forecast/hourly?city=%s&key=%s&hours=%d";
-
     private HttpConnection connection;
     private Jsonb jsonb;
     private int hours;
 
     public WeatherHourlyForecastApiImpl(String city, int hours)
     {
-        this(new HttpConnection(setQUERY(city, hours)), JsonbBuilder.create());
+        this(HttpConnectFactory.getConnection(QueryFactory.setForecastQuery(city, hours, QUERY)), JsonbBuilder.create());
         this.hours = hours;
     }
 
@@ -32,30 +30,12 @@ public class WeatherHourlyForecastApiImpl implements WeatherHourlyForecastApi
         this.jsonb = jsonb;
     }
 
-    private static String setQUERY(String city, int hours)
-    {
-        StringBuilder response = new StringBuilder();
-        try
-        {
-            response.append(String.format(QUERY, city, ApiKey.getApiKey(), hours));
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        return response.toString();
-    }
-
-
     @Override
-    public List<Data> getTemperatureForecast()
+    public List<Double> getTemperatureForecast()
     {
-        String response = connection.connect();
-        JsonBody jsonBody = jsonb.fromJson(response, JsonBody.class);
-        List<Data> datas = new LinkedList<>();
-        for(int i = 0; i < hours; i++)
-            datas.add(jsonBody.getData().get(i));
-
-        return datas;
+        List<Data> data = JsonData.getJson(connection, jsonb, hours);
+        return data.stream()
+                    .map(Data::getTemperature)
+                    .collect(Collectors.toList());
     }
 }
