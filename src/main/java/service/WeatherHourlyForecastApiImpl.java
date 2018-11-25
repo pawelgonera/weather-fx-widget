@@ -2,9 +2,7 @@ package service;
 
 import api.WeatherHourlyForecastApi;
 import entity.Data;
-import get.HttpConnection;
 import get.factory.HttpConnectFactory;
-import get.factory.QueryFactory;
 import util.JsonData;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
@@ -14,26 +12,25 @@ import java.util.stream.Collectors;
 public class WeatherHourlyForecastApiImpl implements WeatherHourlyForecastApi
 {
     private static String QUERY = "https://api.weatherbit.io/v2.0/forecast/hourly?city=%s&key=%s&hours=%d";
-    private HttpConnection connection;
+    private HttpConnectFactory httpConnectFactory;
+    private JsonData jsonData;
     private Jsonb jsonb;
-    private int hours;
 
-    public WeatherHourlyForecastApiImpl(String city, int hours)
+    public WeatherHourlyForecastApiImpl()
     {
-        this(HttpConnectFactory.getConnection(QueryFactory.setForecastQuery(city, hours, QUERY)), JsonbBuilder.create());
-        this.hours = hours;
+        this(new HttpConnectFactory(), JsonbBuilder.create());
     }
 
-    public WeatherHourlyForecastApiImpl(HttpConnection connection, Jsonb jsonb)
+    public WeatherHourlyForecastApiImpl(HttpConnectFactory httpConnectFactory, Jsonb jsonb)
     {
-        this.connection = connection;
+        this.httpConnectFactory = httpConnectFactory;
         this.jsonb = jsonb;
     }
 
     @Override
-    public List<Double> getTemperatureForecast()
+    public List<Double> getTemperatureForecast(String city, int hours)
     {
-        List<Data> data = JsonData.getJson(connection, jsonb, hours);
+        List<Data> data = jsonData.getJson(jsonb, QUERY, city, hours);
         return data.stream()
                     .map(Data::getTemperature)
                     .collect(Collectors.toList());

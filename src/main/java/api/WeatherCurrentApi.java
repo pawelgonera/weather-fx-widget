@@ -4,5 +4,5 @@ import java.math.BigDecimal;
 
 public interface WeatherCurrentApi
 {
-    double getTemperature();
+    double getTemperature(String city);
 }

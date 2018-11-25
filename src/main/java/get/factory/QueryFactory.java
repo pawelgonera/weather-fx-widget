@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 
 public class QueryFactory
 {
-    public static String setCurrentQuery(String city, String query)
+    public String setCurrentQuery(String city, String query)
     {
         StringBuilder response = new StringBuilder();
         try
@@ -19,7 +19,6 @@ public class QueryFactory
 
         return response.toString();
     }
-
 
     public static String setForecastQuery(String city, int hours, String query)
     {

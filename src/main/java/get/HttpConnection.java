@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-public class HttpConnection
+public class HttpConnection implements AutoCloseable
 {
     private HttpsURLConnection connection;
 
@@ -54,6 +54,12 @@ public class HttpConnection
         {
             throw new WrongServerStatusException(e);
         }
+    }
+
+    @Override
+    public void close() throws Exception
+    {
+        connection.disconnect();
     }
 }
 
