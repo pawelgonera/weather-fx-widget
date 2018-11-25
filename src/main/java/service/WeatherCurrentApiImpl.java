@@ -15,21 +15,22 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     private HttpConnectFactory httpConnectionFactory;
     private Jsonb jsonb;
 
-    public WeatherCurrentApiImpl(String city)
+    public WeatherCurrentApiImpl()
     {
-        this(new HttpConnectFactory(), JsonbBuilder.create());
+        this(new HttpConnectFactory(), JsonbBuilder.create(), new JsonData());
     }
 
-    public WeatherCurrentApiImpl(HttpConnectFactory httpConnectionFactory, Jsonb jsonb)
+    public WeatherCurrentApiImpl(HttpConnectFactory httpConnectionFactory, Jsonb jsonb, JsonData jsonData)
     {
         this.httpConnectionFactory = httpConnectionFactory;
         this.jsonb = jsonb;
+        this.jsonData = jsonData;
     }
 
     @Override
     public double getTemperature(String city)
     {
-        List<Data> data = jsonData.getJson(jsonb, QUERY, city,1);
+        List<Data> data = jsonData.getJson(httpConnectionFactory, jsonb, QUERY, city);
 
         return data.stream()
                     .mapToDouble(Data::getTemperature)

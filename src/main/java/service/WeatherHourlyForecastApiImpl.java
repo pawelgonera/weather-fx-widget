@@ -18,19 +18,20 @@ public class WeatherHourlyForecastApiImpl implements WeatherHourlyForecastApi
 
     public WeatherHourlyForecastApiImpl()
     {
-        this(new HttpConnectFactory(), JsonbBuilder.create());
+        this(new HttpConnectFactory(), JsonbBuilder.create(), new JsonData());
     }
 
-    public WeatherHourlyForecastApiImpl(HttpConnectFactory httpConnectFactory, Jsonb jsonb)
+    public WeatherHourlyForecastApiImpl(HttpConnectFactory httpConnectFactory, Jsonb jsonb, JsonData jsonData)
     {
         this.httpConnectFactory = httpConnectFactory;
         this.jsonb = jsonb;
+        this.jsonData = jsonData;
     }
 
     @Override
     public List<Double> getTemperatureForecast(String city, int hours)
     {
-        List<Data> data = jsonData.getJson(jsonb, QUERY, city, hours);
+        List<Data> data = jsonData.getJson(httpConnectFactory, jsonb, QUERY, city, hours);
         return data.stream()
                     .map(Data::getTemperature)
                     .collect(Collectors.toList());

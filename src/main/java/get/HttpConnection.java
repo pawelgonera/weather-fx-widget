@@ -57,7 +57,7 @@ public class HttpConnection implements AutoCloseable
     }
 
     @Override
-    public void close() throws Exception
+    public void close()
     {
         connection.disconnect();
     }

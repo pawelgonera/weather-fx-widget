@@ -20,7 +20,7 @@ public class QueryFactory
         return response.toString();
     }
 
-    public static String setForecastQuery(String city, int hours, String query)
+    public String setForecastQuery(String city, int hours, String query)
     {
         StringBuilder response = new StringBuilder();
         try

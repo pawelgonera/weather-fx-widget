@@ -1,9 +1,6 @@
 
-import api.WeatherHourlyForecastApi;
-import entity.Data;
 import service.WeatherCurrentApiImpl;
 import service.WeatherHourlyForecastApiImpl;
-import util.JsonData;
 
 import java.time.LocalTime;
 import java.util.List;
@@ -12,16 +9,16 @@ public class Main
 {
     public static void main(String[] args)
     {
-        WeatherCurrentApiImpl weatherApi = new WeatherCurrentApiImpl("Kalisz");
-        double temp = weatherApi.getTemperature();
+        WeatherCurrentApiImpl weatherApi = new WeatherCurrentApiImpl();
+        double temp = weatherApi.getTemperature("Kalisz");
 
         System.out.println(temp + " stopni Celcjusza");
 
         System.out.println("**********************************************");
 
-        WeatherHourlyForecastApiImpl weatherHourlyForecastApi = new WeatherHourlyForecastApiImpl("Kalisz", 48);
+        WeatherHourlyForecastApiImpl weatherHourlyForecastApi = new WeatherHourlyForecastApiImpl();
 
-        List<Double> datas = weatherHourlyForecastApi.getTemperatureForecast();
+        List<Double> datas = weatherHourlyForecastApi.getTemperatureForecast("Kalisz", 48);
 
         int i = 1;
         for(Double temps : datas)
