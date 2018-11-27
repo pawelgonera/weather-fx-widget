@@ -27,17 +27,27 @@ public class HttpConnection implements AutoCloseable
     public String connect()
     {
         serverResponseValidate();
-        String response;
+        StringBuilder response = new StringBuilder();
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream())))
         {
-            response = reader.readLine();
+            String line;
+            while((line = reader.readLine()) != null)
+            {
+                response.append(line);
+            }
 
         }catch (IOException e)
         {
             throw new WrongServerStatusException(e);
         }
 
-        return response;
+        return response.toString();
+    }
+
+    @Override
+    public void close()
+    {
+        connection.disconnect();
     }
 
     private void serverResponseValidate() {
@@ -56,10 +66,5 @@ public class HttpConnection implements AutoCloseable
         }
     }
 
-    @Override
-    public void close()
-    {
-        connection.disconnect();
-    }
 }
 

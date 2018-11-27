@@ -5,6 +5,8 @@ import javax.json.bind.annotation.JsonbProperty;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.ZoneId;
+import java.util.Optional;
 
 
 public class Data
@@ -40,7 +42,7 @@ public class Data
     private double pressure;
 
     @JsonbProperty("timezone")
-    private String timmeZone;
+    private ZoneId timeZone;
 
     @JsonbProperty("ob_time")
     @JsonbDateFormat(value = "yyyy-MM-dd HH:mm")
@@ -260,12 +262,12 @@ public class Data
         this.pressure = pressure;
     }
 
-    public String getTimmeZone() {
-        return timmeZone;
+    public ZoneId getTimeZone() {
+        return timeZone;
     }
 
-    public void setTimmeZone(String timmeZone) {
-        this.timmeZone = timmeZone;
+    public void setTimeZone(ZoneId timeZone) {
+        this.timeZone = timeZone;
     }
 
     public LocalDateTime getLastObservationTime() {
