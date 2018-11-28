@@ -3,8 +3,11 @@ package service;
 import api.WeatherCurrentApi;
 import entity.Data;
 import exception.NotFoundDesiredJsonDataException;
+import exception.WrongCityNameRequestException;
 import get.factory.HttpConnectFactory;
 import util.JsonData;
+import validator.ClientRequestValidation;
+
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import java.time.LocalDateTime;
@@ -16,10 +19,11 @@ import java.util.Optional;
 
 public class WeatherCurrentApiImpl implements WeatherCurrentApi
 {
-    private static String QUERY = "https://api.weatherbit.io/v2.0/current?city=%s&lang=pl&key=%s";
+    private static String QUERY_CURRENT_WEATHER = "https://api.weatherbit.io/v2.0/current?city=%s&lang=pl&key=%s";
     private JsonData jsonData;
     private HttpConnectFactory httpConnectionFactory;
     private Jsonb jsonb;
+    private ClientRequestValidation validation;
     private List<Data> apiData = new LinkedList<>();
     private String cityNameRequest;
 
@@ -27,7 +31,7 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     {
         this(new HttpConnectFactory(), JsonbBuilder.create(), new JsonData());
         this.cityNameRequest = cityNameRequest;
-        getApiData();
+        validateCityNameRequest();
     }
 
     public WeatherCurrentApiImpl(HttpConnectFactory httpConnectionFactory, Jsonb jsonb, JsonData jsonData)
@@ -37,9 +41,23 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
         this.jsonData = jsonData;
     }
 
+    private void validateCityNameRequest()
+    {
+        validation = ClientRequestValidation.getInstance();
+        try
+        {
+            if(validation.validateCityNameRequest(cityNameRequest))
+            {
+                getApiData();
+            }
+        } catch (WrongCityNameRequestException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void getApiData()
     {
-        apiData = jsonData.getJson(httpConnectionFactory, jsonb, QUERY, cityNameRequest);
+        apiData = jsonData.getJson(httpConnectionFactory, jsonb, QUERY_CURRENT_WEATHER, cityNameRequest);
     }
 
     private NotFoundDesiredJsonDataException newRunTimeException()

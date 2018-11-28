@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d04144c6-5341-4823-b0d3-8e6119e610d5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/exception/WrongCityNameRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/validator/ClientRequestValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/validatorTest/ClientRequestValidationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -58,50 +63,51 @@
     <session id="-1074008780">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
-          <entry key="project.open.time.0" value="8" />
+          <entry key="project.closed" value="21" />
+          <entry key="project.open.time.0" value="10" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="3" />
-          <entry key="java" value="88" />
+          <entry key="java" value="106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="3" />
-          <entry key="JAVA" value="88" />
+          <entry key="JAVA" value="106" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="9" />
-          <entry key="java" value="8844" />
+          <entry key="java" value="10399" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="9" />
-          <entry key="JAVA" value="8844" />
+          <entry key="JAVA" value="10399" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="279">
+              <caret line="50" column="95" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,19 +116,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entity/Weather.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/validatorTest/ClientRequestValidationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="224">
+              <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
+                <element signature="e#299#300#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entity/JsonBody.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/validator/ClientRequestValidation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+            <state relative-caret-position="221">
+              <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,17 +144,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/connectTest/HttpConnectionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+            <state relative-caret-position="204">
+              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/JsonBodyTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-170">
+              <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1454">
-              <caret line="159" column="25" selection-start-line="159" selection-start-column="25" selection-end-line="159" selection-end-column="25" />
+            <state relative-caret-position="85">
+              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,20 +177,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/util/JsonData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+            <state relative-caret-position="119">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/get/factory/HttpConnectFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/exception/WrongCityNameRequestException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            <state relative-caret-position="170">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
               <folding>
-                <element signature="e#140#141#0" expanded="true" />
-                <element signature="e#186#187#0" expanded="true" />
+                <element signature="e#200#201#0" expanded="true" />
+                <element signature="e#230#231#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/get/factory/QueryFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -580,13 +618,17 @@
         <option value="$PROJECT_DIR$/src/test/java/connectTest/HttpConnectionTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/deserializingTest/DataTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Data.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/deserializeTest/JsonBodyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exception/WrongCityNameRequestException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/validate/ClientRequestValidation.java" />
+        <option value="$PROJECT_DIR$/src/test/java/validatorTest/ClientRequestValidationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/validator/ClientRequestValidation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" />
       </list>
     </option>
   </component>
@@ -624,6 +666,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -710,6 +753,14 @@
               <item name="weather_forecast_api" type="b2602c69:ProjectViewProjectNode" />
               <item name="weather_forecast_api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="validator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather_forecast_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather_forecast_api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -718,6 +769,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather_forecast_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather_forecast_api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="connectTest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="weather_forecast_api" type="b2602c69:ProjectViewProjectNode" />
@@ -727,12 +786,19 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="deserializeTest" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="weather_forecast_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather_forecast_api" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="validatorTest" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -740,7 +806,8 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/poulg/Downloads/StrefaZadaniowaSamouka-master/StrefaZadaniowaSamouka-master/weather_forecast_api/src/main/java/entity/Weather.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543422831652" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543437221801" />
+    <property name="last.edited.regexp" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -755,95 +822,90 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.deserializeTest in weather_forecast_api_test">
-    <configuration name="JsonBodyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="weather_forecast_api_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="deserializeTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="deserializeTest" />
-      <option name="MAIN_CLASS_NAME" value="deserializeTest.JsonBodyTest" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="weather_forecast_api_main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeatherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientRequestValidationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather_forecast_api_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="deserializeTest.*" />
+          <option name="PATTERN" value="validatorTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="deserializeTest" />
-      <option name="MAIN_CLASS_NAME" value="deserializeTest.WeatherTest" />
+      <option name="PACKAGE_NAME" value="validatorTest" />
+      <option name="MAIN_CLASS_NAME" value="validatorTest.ClientRequestValidationTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeatherTest.getDescriptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientRequestValidationTest.checkIsCityNameRequestValidateRegExWithUnicodeCharsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather_forecast_api_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="deserializeTest.*" />
+          <option name="PATTERN" value="validatorTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="deserializeTest" />
-      <option name="MAIN_CLASS_NAME" value="deserializeTest.WeatherTest" />
-      <option name="METHOD_NAME" value="getDescriptionTest" />
+      <option name="PACKAGE_NAME" value="validatorTest" />
+      <option name="MAIN_CLASS_NAME" value="validatorTest.ClientRequestValidationTest" />
+      <option name="METHOD_NAME" value="checkIsCityNameRequestValidateRegExWithUnicodeCharsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeatherTest.getIconTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientRequestValidationTest.notValidateCityNameRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather_forecast_api_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="deserializeTest.*" />
+          <option name="PATTERN" value="validatorTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="deserializeTest" />
-      <option name="MAIN_CLASS_NAME" value="deserializeTest.WeatherTest" />
-      <option name="METHOD_NAME" value="getIconTest" />
+      <option name="PACKAGE_NAME" value="validatorTest" />
+      <option name="MAIN_CLASS_NAME" value="validatorTest.ClientRequestValidationTest" />
+      <option name="METHOD_NAME" value="notValidateCityNameRequestTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="deserializeTest in weather_forecast_api_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientRequestValidationTest.validateCityNameRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather_forecast_api_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="deserializeTest.*" />
+          <option name="PATTERN" value="validatorTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="deserializeTest" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="validatorTest" />
+      <option name="MAIN_CLASS_NAME" value="validatorTest.ClientRequestValidationTest" />
+      <option name="METHOD_NAME" value="validateCityNameRequestTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.JsonBodyTest" />
-      <item itemvalue="JUnit.WeatherTest.getIconTest" />
-      <item itemvalue="JUnit.WeatherTest.getDescriptionTest" />
-      <item itemvalue="JUnit.WeatherTest" />
-      <item itemvalue="JUnit.deserializeTest in weather_forecast_api_test" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ClientRequestValidationTest.checkIsCityNameRequestValidateRegExWithUnicodeCharsTest" />
+      <item itemvalue="JUnit.ClientRequestValidationTest.validateCityNameRequestTest" />
+      <item itemvalue="JUnit.ClientRequestValidationTest.notValidateCityNameRequestTest" />
+      <item itemvalue="JUnit.ClientRequestValidationTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.deserializeTest in weather_forecast_api_test" />
-        <item itemvalue="JUnit.WeatherTest" />
-        <item itemvalue="JUnit.WeatherTest.getDescriptionTest" />
-        <item itemvalue="JUnit.WeatherTest.getIconTest" />
-        <item itemvalue="JUnit.JsonBodyTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ClientRequestValidationTest" />
+        <item itemvalue="JUnit.ClientRequestValidationTest.validateCityNameRequestTest" />
+        <item itemvalue="JUnit.ClientRequestValidationTest.notValidateCityNameRequestTest" />
+        <item itemvalue="JUnit.ClientRequestValidationTest.checkIsCityNameRequestValidateRegExWithUnicodeCharsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -861,41 +923,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JsonBodyTest_getLatitudeTest - 2018.11.28 at 17h 24m 52s.xml">
-      <configuration name="JsonBodyTest.getLatitudeTest" configurationId="JUnit" />
+    <history-entry file="ClientRequestValidationTest_validateCityNameRequestTest - 2018.11.28 at 21h 01m 50s.xml">
+      <configuration name="ClientRequestValidationTest.validateCityNameRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JsonBodyTest_getLatitudeTest - 2018.11.28 at 17h 25m 21s.xml">
-      <configuration name="JsonBodyTest.getLatitudeTest" configurationId="JUnit" />
+    <history-entry file="ClientRequestValidationTest_validateCityNameRequestTest - 2018.11.28 at 21h 02m 09s.xml">
+      <configuration name="ClientRequestValidationTest.validateCityNameRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JsonBodyTest_getLongitudeTest - 2018.11.28 at 17h 26m 15s.xml">
-      <configuration name="JsonBodyTest.getLongitudeTest" configurationId="JUnit" />
+    <history-entry file="ClientRequestValidationTest_validateCityNameRequestTest - 2018.11.28 at 21h 02m 17s.xml">
+      <configuration name="ClientRequestValidationTest.validateCityNameRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JsonBodyTest - 2018.11.28 at 17h 26m 20s.xml">
-      <configuration name="JsonBodyTest" configurationId="JUnit" />
+    <history-entry file="ClientRequestValidationTest_validateCityNameRequestTest - 2018.11.28 at 21h 02m 31s.xml">
+      <configuration name="ClientRequestValidationTest.validateCityNameRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_getIconTest - 2018.11.28 at 17h 30m 16s.xml">
-      <configuration name="WeatherTest.getIconTest" configurationId="JUnit" />
+    <history-entry file="ClientRequestValidationTest_validateCityNameRequestTest - 2018.11.28 at 21h 05m 07s.xml">
+      <configuration name="ClientRequestValidationTest.validateCityNameRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_getIconTest - 2018.11.28 at 17h 30m 42s.xml">
-      <configuration name="WeatherTest.getIconTest" configurationId="JUnit" />
+    <history-entry file="ClientRequestValidationTest_notValidateCityNameRequestTest - 2018.11.28 at 21h 06m 09s.xml">
+      <configuration name="ClientRequestValidationTest.notValidateCityNameRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_getIconTest - 2018.11.28 at 17h 31m 59s.xml">
-      <configuration name="WeatherTest.getIconTest" configurationId="JUnit" />
+    <history-entry file="ClientRequestValidationTest_notValidateCityNameRequestTest - 2018.11.28 at 21h 18m 55s.xml">
+      <configuration name="ClientRequestValidationTest.notValidateCityNameRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_getDescriptionTest - 2018.11.28 at 17h 32m 02s.xml">
-      <configuration name="WeatherTest.getDescriptionTest" configurationId="JUnit" />
+    <history-entry file="ClientRequestValidationTest_notValidateCityNameRequestTest - 2018.11.28 at 21h 19m 29s.xml">
+      <configuration name="ClientRequestValidationTest.notValidateCityNameRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest - 2018.11.28 at 17h 32m 06s.xml">
-      <configuration name="WeatherTest" configurationId="JUnit" />
+    <history-entry file="ClientRequestValidationTest_validateCityNameRequestTest - 2018.11.28 at 21h 19m 46s.xml">
+      <configuration name="ClientRequestValidationTest.validateCityNameRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="deserializeTest_in_weather_forecast_api_test - 2018.11.28 at 17h 32m 16s.xml">
-      <configuration name="deserializeTest in weather_forecast_api_test" configurationId="JUnit" />
+    <history-entry file="ClientRequestValidationTest - 2018.11.28 at 21h 20m 17s.xml">
+      <configuration name="ClientRequestValidationTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3672708" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38006395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -909,7 +972,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.329718" />
@@ -929,83 +992,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.4.1/60007e1eb9be41c619875b725cb982012dff8a99/jackson-annotations-2.4.1-sources.jar!/com/fasterxml/jackson/annotation/JsonProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/time/LocalDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="138" column="19" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="132" column="13" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.4.1/60007e1eb9be41c619875b725cb982012dff8a99/jackson-annotations-2.4.1-sources.jar!/com/fasterxml/jackson/annotation/JsonFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.json.bind/javax.json.bind-api/1.0/54aa0ac77fb55ff1bad3e4134e344bf65cc2d199/javax.json.bind-api-1.0-sources.jar!/javax/json/bind/JsonbBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="106" column="17" selection-start-line="106" selection-start-column="17" selection-end-line="106" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse/yasson/1.0.1/c9503b0d1d7fbeed7fad68f8ebd4e00c2a0b8bba/yasson-1.0.1-sources.jar!/org/eclipse/yasson/internal/serializer/AbstractContainerDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse/yasson/1.0.1/c9503b0d1d7fbeed7fad68f8ebd4e00c2a0b8bba/yasson-1.0.1-sources.jar!/org/eclipse/yasson/internal/serializer/ObjectDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="164" selection-start-line="164" selection-end-line="164" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse/yasson/1.0.1/c9503b0d1d7fbeed7fad68f8ebd4e00c2a0b8bba/yasson-1.0.1-sources.jar!/org/eclipse/yasson/internal/Unmarshaller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse/yasson/1.0.1/c9503b0d1d7fbeed7fad68f8ebd4e00c2a0b8bba/yasson-1.0.1-sources.jar!/org/eclipse/yasson/internal/JsonBinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse/yasson/1.0.1/c9503b0d1d7fbeed7fad68f8ebd4e00c2a0b8bba/yasson-1.0.1-sources.jar!/org/eclipse/yasson/internal/serializer/LongTypeDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse/yasson/1.0.1/c9503b0d1d7fbeed7fad68f8ebd4e00c2a0b8bba/yasson-1.0.1-sources.jar!/org/eclipse/yasson/internal/serializer/IntegerTypeDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/time/format/DateTimeFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1333">
@@ -1062,21 +1048,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="1115" column="18" selection-start-line="1115" selection-start-column="18" selection-end-line="1115" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/api/WeatherHistoricalApi.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/get/factory/QueryFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/util/ApiKey.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1109,6 +1081,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1151,10 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-          <folding>
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#215#216#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1176,12 +1147,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
           <caret line="1764" column="26" selection-start-line="1764" selection-start-column="26" selection-end-line="1764" selection-end-column="26" />
-          <folding>
-            <element signature="e#79809#79810#0" expanded="true" />
-            <element signature="e#79863#79864#0" expanded="true" />
-            <element signature="e#81639#81640#0" expanded="true" />
-            <element signature="e#81690#81691#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1204,11 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7525#7526#0" expanded="true" />
-            <element signature="e#7567#7568#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1216,9 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1226,51 +1183,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding>
-            <element signature="e#140#141#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1454">
-          <caret line="159" column="25" selection-start-line="159" selection-start-column="25" selection-end-line="159" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/connectTest/HttpConnectionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/JsonData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/JsonBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Weather.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1282,18 +1194,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#234#235#0" expanded="true" />
             <element signature="e#271#272#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/JsonBodyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-957">
-          <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1310,10 +1210,178 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/Weather.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/RuntimeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="114" column="13" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="64" column="11" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/JsonBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exception/WrongCityNameRequestException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="e#200#201#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/get/factory/QueryFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="2045" column="19" selection-start-line="2045" selection-start-column="19" selection-end-line="2045" selection-end-column="19" />
+          <folding>
+            <element signature="e#81751#81752#0" expanded="true" />
+            <element signature="e#81800#81801#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/regex/Pattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="1115" column="18" selection-start-line="1115" selection-start-column="18" selection-end-line="1115" selection-end-column="18" />
+          <folding>
+            <element signature="e#53361#53362#0" expanded="true" />
+            <element signature="e#53391#53392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/connectTest/HttpConnectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.3.1/b03f607c0822a283c972e37eaeacb00dc3a3c2e7/junit-jupiter-api-5.3.1-sources.jar!/org/junit/jupiter/api/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.3.1/b03f607c0822a283c972e37eaeacb00dc3a3c2e7/junit-jupiter-api-5.3.1-sources.jar!/org/junit/jupiter/api/Assertions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="1177" column="42" selection-start-line="1177" selection-start-column="42" selection-end-line="1177" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.3.1/b03f607c0822a283c972e37eaeacb00dc3a3c2e7/junit-jupiter-api-5.3.1-sources.jar!/org/junit/jupiter/api/function/Executable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/JsonData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/JsonBodyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/validatorTest/ClientRequestValidationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="279">
+          <caret line="50" column="95" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/validator/ClientRequestValidation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,10 +1,12 @@
 
 import entity.JsonBody;
+import exception.WrongCityNameRequestException;
 import get.HttpConnection;
 import get.factory.HttpConnectFactory;
 import service.WeatherCurrentApiImpl;
 import service.WeatherHourlyForecastApiImpl;
 import util.JsonData;
+import validator.ClientRequestValidation;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
@@ -44,11 +46,16 @@ public class Main
             System.out.println(temps + " Time: " + LocalTime.now().plusHours(i++));
             */
 
-        WeatherCurrentApiImpl api = new WeatherCurrentApiImpl("Kalisz");
+        WeatherCurrentApiImpl api = new WeatherCurrentApiImpl("Kal9isz");
 
-        ZoneId zoneId = ZoneId.systemDefault();
+        ClientRequestValidation clientRequestValidation = ClientRequestValidation.getInstance();
 
-        System.out.println(zoneId);
+        try
+        {
+            System.out.println(clientRequestValidation.validateCityNameRequest("Chrząszczyżewoszyce"));
+        } catch (WrongCityNameRequestException e) {
+            e.printStackTrace();
+        }
 
         System.out.println("Temperaturta: " + api.getTemperature() + " C");
         System.out.println("Kierunek wiatru: " + api.getWindDirection());
