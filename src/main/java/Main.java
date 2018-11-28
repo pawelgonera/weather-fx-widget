@@ -46,6 +46,9 @@ public class Main
 
         WeatherCurrentApiImpl api = new WeatherCurrentApiImpl("Kalisz");
 
+        ZoneId zoneId = ZoneId.systemDefault();
+
+        System.out.println(zoneId);
 
         System.out.println("Temperaturta: " + api.getTemperature() + " C");
         System.out.println("Kierunek wiatru: " + api.getWindDirection());
