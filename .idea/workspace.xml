@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d04144c6-5341-4823-b0d3-8e6119e610d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/deserializeTest/JsonBodyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -88,67 +84,26 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="9" />
-          <entry key="java" value="8793" />
+          <entry key="java" value="8844" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="9" />
-          <entry key="JAVA" value="8793" />
+          <entry key="JAVA" value="8844" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
+            <state relative-caret-position="333">
               <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-              <folding>
-                <element signature="e#1197#1198#0" expanded="true" />
-                <element signature="e#1277#1278#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/JsonBodyTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#234#235#0" expanded="true" />
-                <element signature="e#271#272#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -628,10 +583,10 @@
         <option value="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/deserializeTest/JsonBodyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java" />
       </list>
     </option>
   </component>
@@ -785,7 +740,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/poulg/Downloads/StrefaZadaniowaSamouka-master/StrefaZadaniowaSamouka-master/weather_forecast_api/src/main/java/entity/Weather.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543422724518" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543422831652" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -906,21 +861,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JsonBodyTest_getStateCodeTest - 2018.11.28 at 17h 17m 34s.xml">
-      <configuration name="JsonBodyTest.getStateCodeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JsonBodyTest_getTimeZoneTest - 2018.11.28 at 17h 18m 46s.xml">
-      <configuration name="JsonBodyTest.getTimeZoneTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JsonBodyTest_getTimeZoneTest - 2018.11.28 at 17h 20m 02s.xml">
-      <configuration name="JsonBodyTest.getTimeZoneTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JsonBodyTest_getTimeZoneTest - 2018.11.28 at 17h 20m 52s.xml">
-      <configuration name="JsonBodyTest.getTimeZoneTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JsonBodyTest_getTimeZoneTest - 2018.11.28 at 17h 21m 17s.xml">
-      <configuration name="JsonBodyTest.getTimeZoneTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="JsonBodyTest_getLatitudeTest - 2018.11.28 at 17h 24m 52s.xml">
       <configuration name="JsonBodyTest.getLatitudeTest" configurationId="JUnit" />
     </history-entry>
@@ -936,10 +876,24 @@
     <history-entry file="WeatherTest_getIconTest - 2018.11.28 at 17h 30m 16s.xml">
       <configuration name="WeatherTest.getIconTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="WeatherTest_getIconTest - 2018.11.28 at 17h 30m 42s.xml">
+      <configuration name="WeatherTest.getIconTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WeatherTest_getIconTest - 2018.11.28 at 17h 31m 59s.xml">
+      <configuration name="WeatherTest.getIconTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WeatherTest_getDescriptionTest - 2018.11.28 at 17h 32m 02s.xml">
+      <configuration name="WeatherTest.getDescriptionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WeatherTest - 2018.11.28 at 17h 32m 06s.xml">
+      <configuration name="WeatherTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="deserializeTest_in_weather_forecast_api_test - 2018.11.28 at 17h 32m 16s.xml">
+      <configuration name="deserializeTest in weather_forecast_api_test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3672708" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -950,12 +904,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.329718" />
@@ -1313,27 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1277#1278#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/Weather.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1341,9 +1274,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/JsonBodyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="-957">
           <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1353,14 +1298,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+        <state relative-caret-position="425">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#1197#1198#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
