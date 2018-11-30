@@ -1,6 +1,8 @@
 package util;
 
+import entity.City;
 import entity.Data;
+import entity.GeoData;
 import entity.JsonBody;
 import exception.NotFoundDesiredJsonDataException;
 import get.HttpConnection;
@@ -13,7 +15,7 @@ import java.util.Optional;
 
 public class JsonData
 {
-    public List<Data> getJson(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String city)
+    public List<Data> getJsonWeather(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String city)
     {
         List<Data> data = new LinkedList<>();
         try(HttpConnection connection = httpConnectFactory.getConnection(new QueryFactory().setCurrentQuery(city, query)))
@@ -33,7 +35,7 @@ public class JsonData
         return data;
     }
 
-    public List<Data> getJson(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String city, int hours)
+    public List<Data> getJsonWeather(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String city, int hours)
     {
         List<Data> data = new LinkedList<>();
         try(HttpConnection connection = httpConnectFactory.getConnection(new QueryFactory().setForecastQuery(city, hours, query)))
@@ -49,6 +51,20 @@ public class JsonData
         }
 
         return data;
+    }
+
+    public List<City> getJsonCities(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String countryCode)
+    {
+        List<City> cityList = new LinkedList<>();
+        try(HttpConnection connection = httpConnectFactory.getConnection(new QueryFactory().setCityNamesQuery(countryCode, query)))
+        {
+            String response = connection.connect();
+            GeoData geoData = jsonb.fromJson(response, GeoData.class);
+            for(int i = 0; i < 1000; i++)
+                cityList.add(geoData.getCities().get(i));
+        }
+
+        return cityList;
     }
 
 }

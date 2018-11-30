@@ -31,7 +31,7 @@ public class WeatherHourlyForecastApiImpl implements WeatherHourlyForecastApi
     @Override
     public List<Double> getTemperatureForecast(String city, int hours)
     {
-        List<Data> data = jsonData.getJson(httpConnectFactory, jsonb, QUERY, city, hours);
+        List<Data> data = jsonData.getJsonWeather(httpConnectFactory, jsonb, QUERY, city, hours);
         return data.stream()
                     .map(Data::getTemperature)
                     .collect(Collectors.toList());

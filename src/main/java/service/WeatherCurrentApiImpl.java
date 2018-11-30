@@ -57,7 +57,7 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
 
     private void getApiData()
     {
-        apiData = jsonData.getJson(httpConnectionFactory, jsonb, QUERY_CURRENT_WEATHER, cityNameRequest);
+        apiData = jsonData.getJsonWeather(httpConnectionFactory, jsonb, QUERY_CURRENT_WEATHER, cityNameRequest);
     }
 
     private NotFoundDesiredJsonDataException newRunTimeException()

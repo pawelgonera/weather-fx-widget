@@ -8,7 +8,6 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.Optional;
 
-
 public class Data
 {
     @JsonbProperty("timestamp_local")

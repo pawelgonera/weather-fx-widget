@@ -1,8 +1,11 @@
 
+import api.CityNamesApi;
+import entity.Data;
 import entity.JsonBody;
 import exception.WrongCityNameRequestException;
 import get.HttpConnection;
 import get.factory.HttpConnectFactory;
+import service.CityNamesApiImpl;
 import service.WeatherCurrentApiImpl;
 import service.WeatherHourlyForecastApiImpl;
 import util.JsonData;
@@ -19,7 +22,9 @@ import java.lang.reflect.Type;
 import java.text.DecimalFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.TimeZone;
 
 public class Main
@@ -46,10 +51,10 @@ public class Main
             System.out.println(temps + " Time: " + LocalTime.now().plusHours(i++));
             */
 
-        WeatherCurrentApiImpl api = new WeatherCurrentApiImpl("Kal9isz");
+        WeatherCurrentApiImpl api = new WeatherCurrentApiImpl("Kalisz");
 
         ClientRequestValidation clientRequestValidation = ClientRequestValidation.getInstance();
-
+/*
         try
         {
             System.out.println(clientRequestValidation.validateCityNameRequest("Chrząszczyżewoszyce"));
@@ -75,7 +80,12 @@ public class Main
         System.out.println("Nazwa miasta: " + api.getCityName());
         System.out.println("Wschód słońca: " + api.getSunrise());
         System.out.println("Zachód słońca: " + api.getSunset());
+*/
 
+
+        CityNamesApi cityApi = new CityNamesApiImpl("PL");
+
+        System.out.println(cityApi.getCityName());
 
     }
 }
