@@ -5,6 +5,11 @@ import entity.JsonBody;
 import exception.WrongCityNameRequestException;
 import get.HttpConnection;
 import get.factory.HttpConnectFactory;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import service.CityNamesApiImpl;
 import service.WeatherCurrentApiImpl;
 import service.WeatherHourlyForecastApiImpl;
@@ -27,7 +32,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-public class Main
+public class Main extends Application
 {
     private static String QUERY = "https://api.weatherbit.io/v2.0/current?city=Kalisz&key=c820ef242bee4a319736ef8537661f06";
     private static final String DATE_FORMAT = "yyyy-MM-dd hh:mm";
@@ -54,14 +59,16 @@ public class Main
         WeatherCurrentApiImpl api = new WeatherCurrentApiImpl("Kalisz");
 
         ClientRequestValidation clientRequestValidation = ClientRequestValidation.getInstance();
-/*
-        try
+
+        /*try
         {
             System.out.println(clientRequestValidation.validateCityNameRequest("Chrząszczyżewoszyce"));
         } catch (WrongCityNameRequestException e) {
             e.printStackTrace();
         }
+        */
 
+        /*
         System.out.println("Temperaturta: " + api.getTemperature() + " C");
         System.out.println("Kierunek wiatru: " + api.getWindDirection());
         System.out.println("Wilgotność: " + api.getHumidity() + " %");
@@ -80,12 +87,24 @@ public class Main
         System.out.println("Nazwa miasta: " + api.getCityName());
         System.out.println("Wschód słońca: " + api.getSunrise());
         System.out.println("Zachód słońca: " + api.getSunset());
-*/
+        */
 
 
-        CityNamesApi cityApi = new CityNamesApiImpl("PL");
+        ///CityNamesApi cityApi = new CityNamesApiImpl("PL");
 
-        System.out.println(cityApi.getCityName());
+        //System.out.println(cityApi.getCityName());
 
+        launch(args);
+
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("widget.fxml"));
+        primaryStage.setTitle("Weather Widget - welcome");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
+        primaryStage.show();
     }
 }

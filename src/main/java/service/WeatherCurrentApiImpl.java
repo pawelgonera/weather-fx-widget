@@ -68,7 +68,6 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     @Override
     public double getTemperature()
     {
-
         return apiData.stream()
                         .mapToDouble(Data::getTemperature)
                         .findFirst()
