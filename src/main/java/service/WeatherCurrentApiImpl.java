@@ -19,7 +19,7 @@ import java.util.Optional;
 
 public class WeatherCurrentApiImpl implements WeatherCurrentApi
 {
-    private static String QUERY_CURRENT_WEATHER = "https://api.weatherbit.io/v2.0/current?city=%s&lang=pl&key=%s";
+    private static String QUERY_CURRENT_WEATHER = "https://api.weatherbit.io/v2.0/current?city=%s&lang=en&key=%s";
     private JsonData jsonData;
     private HttpConnectFactory httpConnectionFactory;
     private Jsonb jsonb;
@@ -79,6 +79,15 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     {
         return apiData.stream()
                         .map(Data::getVerbalWindDirection)
+                        .findFirst()
+                        .orElseThrow(this::newRunTimeException);
+    }
+
+    @Override
+    public String getAabbreviatedWindDirection()
+    {
+        return apiData.stream()
+                        .map(Data::getAbbreviatedWindDirection)
                         .findFirst()
                         .orElseThrow(this::newRunTimeException);
     }

@@ -9,6 +9,7 @@ public interface WeatherCurrentApi
 {
     double getTemperature();
     String getWindDirection();
+    String getAabbreviatedWindDirection();
     double getHumidity();
     String getPartOfTheDay();
     double getPressure();

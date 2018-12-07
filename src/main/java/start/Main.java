@@ -1,3 +1,4 @@
+package start;
 
 import api.CityNamesApi;
 import entity.Data;
@@ -101,9 +102,9 @@ public class Main extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("widget.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../../resources/widget.fxml"));
         primaryStage.setTitle("Weather Widget - welcome");
-        primaryStage.setScene(new Scene(root));
+        primaryStage.setScene(new Scene(root, 390, 390));
         primaryStage.setResizable(false);
         primaryStage.show();
     }
