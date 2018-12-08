@@ -2,19 +2,18 @@ package api;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.ZoneId;
-import java.util.Optional;
+import java.util.TimeZone;
 
 public interface WeatherCurrentApi
 {
     double getTemperature();
     String getWindDirection();
     String getAabbreviatedWindDirection();
-    double getHumidity();
+    int getHumidity();
     String getPartOfTheDay();
     double getPressure();
     LocalDateTime getLastObservationTime();
-    double getCloudsCoverage();
+    int getCloudsCoverage();
     double getVisibility();
     double getWindSpeed();
     double getApparentTemperature();
@@ -26,5 +25,7 @@ public interface WeatherCurrentApi
     String getCityName();
     LocalTime getSunrise();
     LocalTime getSunset();
-    ZoneId getTimeZone();
+    TimeZone getTimeZone();
+    String getWeatherIconCode();
+    String getWeatherCode();
 }

@@ -4,6 +4,7 @@ import entity.JsonBody;
 import exception.WrongCityNameRequestException;
 import get.HttpConnection;
 import get.factory.HttpConnectFactory;
+import gui_fx.rotates.Rotate;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,10 +27,7 @@ import java.lang.reflect.Type;
 import java.text.DecimalFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Locale;
-import java.util.TimeZone;
+import java.util.*;
 
 public class Main extends Application
 {
@@ -58,6 +56,8 @@ public class Main extends Application
         WeatherCurrentApiImpl api = new WeatherCurrentApiImpl("Kalisz");
 
         ClientRequestValidation clientRequestValidation = ClientRequestValidation.getInstance();
+
+        System.out.println(api.getWeatherIconCode());
 
         /*try
         {
@@ -89,11 +89,12 @@ public class Main extends Application
         */
 
 
+
         ///CityNamesApi cityApi = new CityNamesApiImpl("PL");
 
         //System.out.println(cityApi.getCityName());
 
-        launch(args);
+        //launch(args);
 
     }
 

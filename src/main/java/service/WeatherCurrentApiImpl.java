@@ -2,6 +2,7 @@ package service;
 
 import api.WeatherCurrentApi;
 import entity.Data;
+import entity.Weather;
 import exception.NotFoundDesiredJsonDataException;
 import exception.WrongCityNameRequestException;
 import get.factory.HttpConnectFactory;
@@ -16,6 +17,7 @@ import java.time.ZoneId;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
+import java.util.TimeZone;
 
 public class WeatherCurrentApiImpl implements WeatherCurrentApi
 {
@@ -66,6 +68,26 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     }
 
     @Override
+    public String getWeatherCode()
+    {
+        return apiData.stream()
+                        .map(Data::getWeather)
+                        .findFirst()
+                        .map(Weather::getWeatherCode)
+                        .orElseThrow(this::newRunTimeException);
+    }
+
+    @Override
+    public String getWeatherIconCode()
+    {
+        return apiData.stream()
+                        .map(Data::getWeather)
+                        .findFirst()
+                        .map(Weather::getWeatherIconCode)
+                        .orElseThrow(this::newRunTimeException);
+    }
+
+    @Override
     public double getTemperature()
     {
         return apiData.stream()
@@ -93,10 +115,10 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     }
 
     @Override
-    public double getHumidity()
+    public int getHumidity()
     {
         return apiData.stream()
-                        .mapToDouble(Data::getRelativeHumidity)
+                        .mapToInt(Data::getRelativeHumidity)
                         .findFirst()
                         .orElseThrow(this::newRunTimeException);
     }
@@ -129,10 +151,10 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     }
 
     @Override
-    public double getCloudsCoverage()
+    public int getCloudsCoverage()
     {
         return apiData.stream()
-                        .mapToDouble(Data::getCloudCoverage)
+                        .mapToInt(Data::getCloudCoverage)
                         .findFirst()
                         .orElseThrow(this::newRunTimeException);
     }
@@ -237,7 +259,7 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     }
 
     @Override
-    public ZoneId getTimeZone()
+    public TimeZone getTimeZone()
     {
         return apiData.stream()
                         .map(Data::getTimeZone)

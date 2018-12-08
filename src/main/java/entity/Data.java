@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.Optional;
+import java.util.TimeZone;
 
 public class Data
 {
@@ -29,7 +30,7 @@ public class Data
     private String abbreviatedWindDirection;
 
     @JsonbProperty("rh")
-    private double relativeHumidity;
+    private int relativeHumidity;
 
     @JsonbProperty("pod")
     private String partOfTheDay;
@@ -41,7 +42,7 @@ public class Data
     private double pressure;
 
     @JsonbProperty("timezone")
-    private ZoneId timeZone;
+    private TimeZone timeZone;
 
     @JsonbProperty("ob_time")
     @JsonbDateFormat(value = "yyyy-MM-dd HH:mm")
@@ -63,7 +64,7 @@ public class Data
     private double averageOzone;
 
     @JsonbProperty("clouds")
-    private double cloudCoverage;
+    private int cloudCoverage;
 
     @JsonbProperty("vis")
     private double visibility;
@@ -229,11 +230,11 @@ public class Data
         this.abbreviatedWindDirection = abbreviatedWindDirection;
     }
 
-    public double getRelativeHumidity() {
+    public int getRelativeHumidity() {
         return relativeHumidity;
     }
 
-    public void setRelativeHumidity(double relativeHumidity) {
+    public void setRelativeHumidity(int relativeHumidity) {
         this.relativeHumidity = relativeHumidity;
     }
 
@@ -261,11 +262,11 @@ public class Data
         this.pressure = pressure;
     }
 
-    public ZoneId getTimeZone() {
+    public TimeZone getTimeZone() {
         return timeZone;
     }
 
-    public void setTimeZone(ZoneId timeZone) {
+    public void setTimeZone(TimeZone timeZone) {
         this.timeZone = timeZone;
     }
 
@@ -285,11 +286,11 @@ public class Data
         this.countryAbbreviation = countryAbbreviation;
     }
 
-    public double getCloudCoverage() {
+    public int getCloudCoverage() {
         return cloudCoverage;
     }
 
-    public void setCloudCoverage(double cloudCoverage) {
+    public void setCloudCoverage(int cloudCoverage) {
         this.cloudCoverage = cloudCoverage;
     }
 
