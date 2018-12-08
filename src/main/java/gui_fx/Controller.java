@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import service.WeatherCurrentApiImpl;
@@ -90,7 +89,7 @@ public class Controller
 
     public void loadMain() throws IOException
     {
-        main = FXMLLoader.load(getClass().getResource("../../resources/main.fxml"));
+        main = FXMLLoader.load(getClass().getResource("/main.fxml"));
         main_pane.getChildren().addAll(main);
     }
 
