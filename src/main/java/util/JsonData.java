@@ -53,6 +53,7 @@ public class JsonData
         return data;
     }
 
+    /*
     public List<City> getJsonCities(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String countryCode)
     {
         List<City> cityList = new LinkedList<>();
@@ -66,5 +67,6 @@ public class JsonData
 
         return cityList;
     }
+    */
 
 }

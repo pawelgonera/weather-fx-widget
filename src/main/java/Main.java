@@ -9,6 +9,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import service.CityNamesApiImpl;
 import service.WeatherCurrentApiImpl;
@@ -103,7 +104,7 @@ public class Main extends Application
     {
         Parent root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
         primaryStage.setTitle("Weather Widget - welcome");
-        primaryStage.setScene(new Scene(root, 390, 390));
+        primaryStage.setScene(new Scene(root, 390, 390, Color.rgb( 164, 248, 255)));
         primaryStage.setResizable(false);
         primaryStage.show();
     }

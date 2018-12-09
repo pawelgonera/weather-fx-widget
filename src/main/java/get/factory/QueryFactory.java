@@ -34,7 +34,7 @@ public class QueryFactory
 
         return response.toString();
     }
-
+    /*
     public String setCityNamesQuery(String countryCode, String query)
     {
         StringBuilder response = new StringBuilder();
@@ -48,4 +48,5 @@ public class QueryFactory
 
         return response.toString();
     }
+    */
 }

@@ -10,8 +10,9 @@ import javax.json.bind.JsonbBuilder;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CityNamesApiImpl implements CityNamesApi
+public class CityNamesApiImpl //implements CityNamesApi
 {
+    /*
     private static String QUERY_CITY_NAMES = "http://api.geonames.org/searchJSON?country=%s&maxRows=1000&orderby=population&username=%s";
     private JsonData jsonData;
     private HttpConnectFactory httpConnectFactory;
@@ -60,4 +61,5 @@ public class CityNamesApiImpl implements CityNamesApi
                         .map(City::getCityName)
                         .collect(Collectors.toList());
     }
+    */
 }

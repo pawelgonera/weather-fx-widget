@@ -18,11 +18,7 @@
    <children>
       <Pane fx:id="left_data_weather_pane" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
          <children>
-            <ImageView fx:id="weather_icon" fitHeight="100.0" fitWidth="100.0" layoutX="23.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../icons_weather/d03d.png" />
-               </image>
-            </ImageView>
+            <ImageView fx:id="weather_icon" fitHeight="100.0" fitWidth="100.0" layoutX="23.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" />
             <Label fx:id="main_temp_label" alignment="CENTER_RIGHT" layoutX="4.0" layoutY="140.0" prefHeight="75.0" prefWidth="109.0" text="--,-" textAlignment="RIGHT">
                <font>
                   <Font name="Tw Cen MT" size="50.0" />

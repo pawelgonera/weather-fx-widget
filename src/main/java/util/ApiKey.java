@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class ApiKey
 {
-    private static String FILENAME = "I:/Dokumenty/api_key/api_key.data";
+    private static String FILENAME = "api_key/api_key.data";
 
     public ApiKey()
     {

@@ -13,7 +13,9 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import service.WeatherCurrentApiImpl;
+import util.SaveCityName;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
@@ -36,41 +38,45 @@ public class Controller
 
     private Parent about;
 
+    private SaveCityName saveCityName = new SaveCityName();
+
     @FXML
     private Label top_welcome_label;
     @FXML
-    private AnchorPane main_pane;
+    private AnchorPane main_anchorPane;
+    @FXML
+    private AnchorPane about_anchorPane;
     @FXML
     private Button start_button;
 
     @FXML
     private Label main_temp_label = new Label();
     @FXML
-    private Label realFeel_temp_label;
+    private Label realFeel_temp_label = new Label();
     @FXML
-    private Label wind_speed_label;
+    private Label wind_speed_label = new Label();
     @FXML
-    private Label wind_direction_label;
+    private Label wind_direction_label = new Label();
     @FXML
-    private ImageView wind_direction_icon;
+    private ImageView wind_direction_icon = new ImageView();
     @FXML
-    private Label pressure_label;
+    private Label pressure_label = new Label();
     @FXML
-    private Label humidity_label;
+    private Label humidity_label = new Label();
     @FXML
-    private Label rain_fall_label;
+    private Label rain_fall_label = new Label();
     @FXML
-    private Label snowfall_label;
+    private Label snowfall_label = new Label();
     @FXML
-    private Label cityname_label;
+    private Label cityname_label = new Label();
     @FXML
-    private Label clouds_label;
+    private Label clouds_label = new Label();
     @FXML
-    private Label refresh_time_label;
+    private Label refresh_time_label = new Label();
     @FXML
-    private ImageView weather_icon;
+    private ImageView weather_icon = new ImageView();
     @FXML
-    private TextField search_city_textField;
+    private TextField search_city_textField = new TextField();
 
     private void setApi()
     {
@@ -96,6 +102,7 @@ public class Controller
     public void onEnterPressed()
     {
 
+
         search_city_textField.setOnKeyPressed((KeyEvent event) ->
         {
             if(event.getCode() == KeyCode.ENTER)
@@ -109,6 +116,7 @@ public class Controller
     private void findCity()
     {
         CITY_REQUEST = search_city_textField.getText();
+        saveCityName();
         onClickRefreshData();
     }
 
@@ -246,32 +254,62 @@ public class Controller
 
     public void onClickRefreshData()
     {
-        setApi();
-        displayTemp();
-        displayRealFeelTemp();
-        displayWindSpeed();
-        displayWindDirection();
-        displayPressure();
-        displayHumidity();
-        displayRainFall();
-        displaySnowFall();
-        displayCityName();
-        displayCloudsCoverage();
-        displayLastObservationTime();
-        displayWindDirectionArrow();
-        displayWeatherIcon();
+        loadCityName();
+
+        if(CITY_REQUEST != null)
+        {
+            setApi();
+            displayTemp();
+            displayRealFeelTemp();
+            displayWindSpeed();
+            displayWindDirection();
+            displayPressure();
+            displayHumidity();
+            displayRainFall();
+            displaySnowFall();
+            displayCityName();
+            displayCloudsCoverage();
+            displayLastObservationTime();
+            displayWindDirectionArrow();
+            displayWeatherIcon();
+        }
+    }
+
+    private void loadCityName()
+    {
+        try
+        {
+            CITY_REQUEST = saveCityName.loadCityName();
+
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    private void saveCityName()
+    {
+        try
+        {
+            System.out.println(CITY_REQUEST);
+            saveCityName.saveCityName(CITY_REQUEST);
+
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     public void aboutProgram() throws IOException
     {
         about = FXMLLoader.load(getClass().getResource("/fxml/widget.fxml"));
-        main_pane.getChildren().addAll(about);
+        main_anchorPane.getChildren().addAll(about);
     }
 
     public void loadMain() throws IOException
     {
         main = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
-        main_pane.getChildren().addAll(main);
+        about_anchorPane.getChildren().addAll(main);
     }
 
 }

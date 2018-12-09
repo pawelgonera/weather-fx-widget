@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public class UserNameApi
 {
+    /*
     private static String FILENAME = "I:/Dokumenty/api_key/userNameApi.data";
 
     public UserNameApi()
@@ -27,4 +28,5 @@ public class UserNameApi
 
         throw new FileNotFoundException("File not found!");
     }
+    */
 }
