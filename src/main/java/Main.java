@@ -57,7 +57,7 @@ public class Main extends Application
 
         ClientRequestValidation clientRequestValidation = ClientRequestValidation.getInstance();
 
-        System.out.println(api.getWeatherIconCode());
+        //System.out.println(api.getWeatherIconCode());
 
         /*try
         {
@@ -94,14 +94,14 @@ public class Main extends Application
 
         //System.out.println(cityApi.getCityName());
 
-        //launch(args);
+        launch(args);
 
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("widget.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
         primaryStage.setTitle("Weather Widget - welcome");
         primaryStage.setScene(new Scene(root, 390, 390));
         primaryStage.setResizable(false);

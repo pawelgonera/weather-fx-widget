@@ -4,11 +4,13 @@ import gui_fx.rotates.Rotate;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import service.WeatherCurrentApiImpl;
 
@@ -26,9 +28,14 @@ public class Controller
 
     private final static DecimalFormat FORMAT_PRECISION = new DecimalFormat("#0.0");
 
+    private static String CITY_REQUEST;
+
     private static String WIND_DIRECTION;
 
     private Parent main;
+
+    private Parent about;
+
     @FXML
     private Label top_welcome_label;
     @FXML
@@ -67,7 +74,7 @@ public class Controller
 
     private void setApi()
     {
-        api = new WeatherCurrentApiImpl("Kalisz");
+        api = new WeatherCurrentApiImpl(CITY_REQUEST);
     }
 
     public void setWelcomeTitle()
@@ -76,9 +83,41 @@ public class Controller
 
     }
 
-    private void displayWeatherIcon()
+    public void clickOnAnchorPane()
+    {
+        search_city_textField.setPromptText("wyszukaj miasto");
+    }
+
+    public void setAvailableTextField()
     {
 
+    }
+
+    public void onEnterPressed()
+    {
+
+        search_city_textField.setOnKeyPressed((KeyEvent event) ->
+        {
+            if(event.getCode() == KeyCode.ENTER)
+            {
+                findCity();
+            }
+        });
+
+    }
+
+    private void findCity()
+    {
+        CITY_REQUEST = search_city_textField.getText();
+        onClickRefreshData();
+    }
+
+    private void displayWeatherIcon()
+    {
+        String weatherCodeIcon = api.getWeatherIconCode();
+        String iconUrl = String.format("icons_weather/%s.png", weatherCodeIcon);
+
+        weather_icon.setImage(new Image(iconUrl));
     }
 
     private int getRotateValue()
@@ -184,7 +223,6 @@ public class Controller
     private void displayWindSpeed()
     {
         String windSpeed = FORMAT_PRECISION.format(api.getWindSpeed() * 3.6);
-        //double windSpeed = Double.parseDouble("13,38");
         wind_speed_label.setText(windSpeed);
 
     }
@@ -221,11 +259,18 @@ public class Controller
         displayCloudsCoverage();
         displayLastObservationTime();
         displayWindDirectionArrow();
+        displayWeatherIcon();
+    }
+
+    public void aboutProgram() throws IOException
+    {
+        about = FXMLLoader.load(getClass().getResource("/fxml/widget.fxml"));
+        main_pane.getChildren().addAll(about);
     }
 
     public void loadMain() throws IOException
     {
-        main = FXMLLoader.load(getClass().getResource("/main.fxml"));
+        main = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
         main_pane.getChildren().addAll(main);
     }
 

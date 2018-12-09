@@ -2,154 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c95392a-ccc7-47da-8169-47f5bb82cd5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui_fx/rotates/Rotate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Arrow_Icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cities_20000.json/cities_20000.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a04d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a04n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a05d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a05n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a06d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._a06n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._c02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._c03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._c03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._c04d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._c04n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._d01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._d01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._d02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._d02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._d03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._d03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._f01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._f01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._r01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._r01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._r02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._r02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._r03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._r03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._r04d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._r04n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._r05n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._r06d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._r06n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s04d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s04n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s05d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s05n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s06d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._s06n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._t01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._t01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._t02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._t02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._t03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._t03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._t04d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._t04n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._t05d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._t05n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._u00d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/._u00n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a04d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a04n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a05d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a05n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a06d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/a06n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/c01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/c01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/c02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/c02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/c03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/c03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/c04d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/c04n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/d01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/d01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/d02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/d02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/d03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/d03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/f01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/f01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r04d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r04n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r05d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r05n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r06d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/r06n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s04d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s04n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s05d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s05n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s06d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/s06n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/t01d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/t01n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/t02d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/t02n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/t03d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/t03n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/t04d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/t04n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/t05d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/t05n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/u00d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons_weather/u00n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/refresh_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Arrow_Icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gui_fx/rotates/Rotate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/refresh_button.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui_fx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui_fx/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Down_Arrow_Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/widget.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/widget.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/api/WeatherCurrentApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/api/WeatherCurrentApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui_fx/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui_fx/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/WeatherCurrentApiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/WeatherCurrentApiImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/deserializeTest/DataTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/deserializeTest/DataTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main.fxml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -186,29 +44,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="fxml" value="4" />
-          <entry key="java" value="2433" />
+          <entry key="fxml" value="26" />
+          <entry key="java" value="3362" />
           <entry key="xml" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2433" />
-          <entry key="XML" value="29" />
+          <entry key="JAVA" value="3362" />
+          <entry key="XML" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="2" />
-          <entry key="java" value="25" />
+          <entry key="fxml" value="5" />
+          <entry key="java" value="32" />
           <entry key="png" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="25" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="32" />
+          <entry key="XML" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -218,8 +76,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="281">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/validator/ClientRequestValidation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -227,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="76" column="64" lean-forward="true" selection-start-line="76" selection-start-column="64" selection-end-line="76" selection-end-column="64" />
+            <state relative-caret-position="663">
+              <caret line="76" column="64" selection-start-line="76" selection-start-column="64" selection-end-line="76" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -236,15 +103,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
+            <state relative-caret-position="434">
+              <caret line="275" lean-forward="true" selection-start-line="275" selection-end-line="275" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1231#1232#0" expanded="true" />
                 <element signature="e#1288#1289#0" expanded="true" />
-                <element signature="e#4149#4150#0" expanded="true" />
-                <element signature="e#4182#4183#0" expanded="true" />
+                <element signature="e#2049#2050#0" expanded="true" />
+                <element signature="e#2119#2120#0" expanded="true" />
+                <element signature="e#6294#6295#0" expanded="true" />
+                <element signature="e#6327#6328#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/widget.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="28" column="115" selection-start-line="28" selection-start-column="115" selection-end-line="28" selection-end-column="115" />
             </state>
           </provider>
         </entry>
@@ -267,7 +146,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/entity/Data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2390">
+            <state relative-caret-position="3461">
               <caret line="264" column="28" selection-start-line="264" selection-start-column="28" selection-end-line="264" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -288,8 +167,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="29" />
+            <state relative-caret-position="493">
+              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -298,19 +177,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/get/HttpConnection.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/util/ApiKey.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+            <state relative-caret-position="303">
+              <caret line="177" column="119" selection-start-line="177" selection-start-column="107" selection-end-line="177" selection-end-column="119" />
             </state>
           </provider>
         </entry>
@@ -348,10 +219,12 @@
         <option value="$PROJECT_DIR$/src/main/java/entity/Data.java" />
         <option value="$PROJECT_DIR$/src/main/resources/main.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/gui_fx/rotates/Rotate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui_fx/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/widget.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/gui_fx/Controller.java" />
       </list>
     </option>
   </component>
@@ -361,6 +234,17 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="wweather_forecast_maven" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
@@ -409,22 +293,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_forecast_maven" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_forecast_maven" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_forecast_maven" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_forecast_maven" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gui_fx" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -432,14 +300,6 @@
               <item name="weather_forecast_maven" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_forecast_maven" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_forecast_maven" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -448,7 +308,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="icons_weather" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="weather_forecast_maven" type="b2602c69:ProjectViewProjectNode" />
@@ -470,7 +330,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544308241936" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544314534146" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -549,7 +409,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2771855" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2771855" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -558,23 +418,23 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="1" weight="0.32995737" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -658,28 +518,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/layout/Region.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="144" column="24" selection-start-line="144" selection-start-column="24" selection-end-line="144" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/Parent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8132">
           <caret line="80" column="39" lean-forward="true" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5380" column="22" selection-start-line="5380" selection-start-column="22" selection-end-line="5380" selection-end-column="22" />
-          <folding>
-            <element signature="e#231136#231137#0" expanded="true" />
-            <element signature="e#231179#231180#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,20 +567,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/icons_weather/icons/._a01d.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-            <element signature="e#1288#1289#0" expanded="true" />
-            <element signature="e#4149#4150#0" expanded="true" />
-            <element signature="e#4182#4183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/Weather.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -746,19 +574,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2390">
+        <state relative-caret-position="3461">
           <caret line="264" column="28" selection-start-line="264" selection-start-column="28" selection-end-line="264" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -766,17 +584,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/input/KeyEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="98" column="44" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="76" column="64" lean-forward="true" selection-start-line="76" selection-start-column="64" selection-end-line="76" selection-end-column="64" />
+        <state relative-caret-position="663">
+          <caret line="76" column="64" selection-start-line="76" selection-start-column="64" selection-end-line="76" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/validator/ClientRequestValidation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/layout/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="1322" column="22" selection-start-line="1322" selection-start-column="22" selection-end-line="1322" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="7876" column="16" selection-start-line="7876" selection-start-column="16" selection-end-line="7876" selection-end-column="16" />
+          <folding>
+            <element signature="e#52103#52104#0" expanded="true" />
+            <element signature="e#52147#52148#0" expanded="true" />
+            <element signature="e#54688#54689#0" expanded="true" />
+            <element signature="e#54729#54730#0" expanded="true" />
+            <element signature="e#66166#66167#0" expanded="true" />
+            <element signature="e#66215#66216#0" expanded="true" />
+            <element signature="e#231136#231137#0" expanded="true" />
+            <element signature="e#231179#231180#0" expanded="true" />
+            <element signature="e#318653#318654#0" expanded="true" />
+            <element signature="e#318706#318707#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="177" column="119" selection-start-line="177" selection-start-column="107" selection-end-line="177" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/widget.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="115" selection-start-line="28" selection-start-column="115" selection-end-line="28" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="275" lean-forward="true" selection-start-line="275" selection-end-line="275" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1231#1232#0" expanded="true" />
+            <element signature="e#1288#1289#0" expanded="true" />
+            <element signature="e#2049#2050#0" expanded="true" />
+            <element signature="e#2119#2120#0" expanded="true" />
+            <element signature="e#6294#6295#0" expanded="true" />
+            <element signature="e#6327#6328#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="281">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>

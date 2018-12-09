@@ -14,159 +14,172 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui_fx.Controller">
+<AnchorPane fx:id="main_anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#clickOnAnchorPane" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui_fx.Controller">
    <children>
       <Pane fx:id="left_data_weather_pane" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
          <children>
-            <Label fx:id="main_temp_label" alignment="CENTER_RIGHT" layoutX="4.0" layoutY="73.0" prefHeight="75.0" prefWidth="109.0" text="--,-" textAlignment="RIGHT">
+            <ImageView fx:id="weather_icon" fitHeight="100.0" fitWidth="100.0" layoutX="23.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons_weather/d03d.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="main_temp_label" alignment="CENTER_RIGHT" layoutX="4.0" layoutY="140.0" prefHeight="75.0" prefWidth="109.0" text="--,-" textAlignment="RIGHT">
                <font>
                   <Font name="Tw Cen MT" size="50.0" />
                </font>
             </Label>
-            <Label fx:id="realFeel_temp_label" alignment="CENTER_RIGHT" layoutX="104.0" layoutY="111.0" prefHeight="27.0" prefWidth="50.0" text="/ --,-">
+            <Label fx:id="realFeel_temp_label" alignment="CENTER_RIGHT" layoutX="104.0" layoutY="180.0" prefHeight="27.0" prefWidth="50.0" text="/ --,-">
                <font>
                   <Font size="16.0" />
                </font></Label>
-            <Label alignment="TOP_CENTER" layoutX="112.0" layoutY="85.0" text="°C">
+            <Label alignment="TOP_CENTER" layoutX="113.0" layoutY="153.0" text="°C">
                <font>
                   <Font size="21.0" />
                </font>
             </Label>
-            <Label layoutX="154.0" layoutY="114.0" prefHeight="10.0" prefWidth="18.0" text="°C">
+            <Label layoutX="155.0" layoutY="184.0" prefHeight="10.0" prefWidth="18.0" text="°C">
                <font>
                   <Font size="8.0" />
                </font></Label>
-            <Label fx:id="cityname_label" alignment="CENTER" layoutX="58.0" layoutY="53.0" prefHeight="26.0" prefWidth="145.0" text="-">
+            <Label fx:id="cityname_label" alignment="CENTER" layoutX="30.0" layoutY="50.0" prefHeight="26.0" prefWidth="145.0" text="-">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="4.0" layoutY="175.0" prefHeight="15.0" prefWidth="50.0" text="Wiatr:">
+            <Label alignment="CENTER" layoutX="4.0" layoutY="235.0" prefHeight="15.0" prefWidth="50.0" text="Wiatr:">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="wind_speed_label" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="50.0" layoutY="175.0" prefHeight="20.0" prefWidth="38.0" text="---,-">
+            <Label fx:id="wind_speed_label" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="50.0" layoutY="235.0" prefHeight="20.0" prefWidth="38.0" text="---,-">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="92.0" layoutY="175.0" prefHeight="20.0" prefWidth="40.0" text="km/h">
+            <Label layoutX="92.0" layoutY="235.0" prefHeight="20.0" prefWidth="40.0" text="km/h">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="wind_direction_label" alignment="CENTER_RIGHT" layoutX="133.0" layoutY="175.0" text="--">
+            <Label fx:id="wind_direction_label" alignment="CENTER_RIGHT" layoutX="130.0" layoutY="235.0" text="---">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <ImageView fx:id="wind_direction_icon" fitHeight="30.0" fitWidth="20.0" layoutX="165.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="wind_direction_icon" fitHeight="30.0" fitWidth="20.0" layoutX="170.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Arrow_Icon.png" />
+                  <Image url="@../Arrow_Icon.png" />
                </image>
             </ImageView>
-            <Label layoutX="10.0" layoutY="205.0" prefHeight="20.0" prefWidth="60.0" text="Ciśnienie:">
+            <Label layoutX="10.0" layoutY="260.0" prefHeight="20.0" prefWidth="60.0" text="Ciśnienie:">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="pressure_label" alignment="CENTER_RIGHT" layoutX="74.0" layoutY="205.0" prefHeight="20.0" prefWidth="45.0" text="----,-">
+            <Label fx:id="pressure_label" alignment="CENTER_RIGHT" layoutX="74.0" layoutY="260.0" prefHeight="20.0" prefWidth="45.0" text="----,-">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="124.0" layoutY="205.0" text="hPa">
+            <Label layoutX="124.0" layoutY="260.0" text="hPa">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="refresh_button" layoutX="172.0" layoutY="118.0" maxHeight="12.0" maxWidth="12.0" minHeight="12.0" minWidth="12.0" mnemonicParsing="false" onAction="#onClickRefreshData" prefHeight="12.0" prefWidth="12.0" style="-fx-background-image: C:\Users\poulg\IdeaProjects\weather_forecast_maven\src\main\resources.refresh_button.png">
+            <Button fx:id="refresh_button" layoutX="172.0" layoutY="187.0" maxHeight="12.0" maxWidth="12.0" minHeight="12.0" minWidth="12.0" mnemonicParsing="false" onAction="#onClickRefreshData" prefHeight="12.0" prefWidth="12.0" style="-fx-background-image: C:\Users\poulg\IdeaProjects\weather_forecast_maven\src\main\resources.refresh_button.png">
                <graphic>
                   <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@refresh_button.png" />
+                        <Image url="@../refresh_button.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Label layoutX="10.0" layoutY="235.0" text="Zachmurzenie:">
+            <Label layoutX="10.0" layoutY="285.0" text="Zachmurzenie:">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="clouds_label" alignment="CENTER_RIGHT" layoutX="105.0" layoutY="235.0" prefHeight="20.0" prefWidth="24.0" text="---">
+            <Label fx:id="clouds_label" alignment="CENTER_RIGHT" layoutX="105.0" layoutY="285.0" prefHeight="20.0" prefWidth="24.0" text="---">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="133.0" layoutY="235.0" text="\%">
+            <Label layoutX="133.0" layoutY="285.0" text="\%">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="9.0" layoutY="295.0" text="Opady deszczu:">
+            <Label layoutX="9.0" layoutY="335.0" text="Opady deszczu:">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="rain_fall_label" alignment="CENTER_RIGHT" layoutX="110.0" layoutY="295.0" prefHeight="20.0" prefWidth="30.0" text="--,-">
+            <Label fx:id="rain_fall_label" alignment="CENTER_RIGHT" layoutX="110.0" layoutY="335.0" prefHeight="20.0" prefWidth="30.0" text="--,-">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="145.0" layoutY="295.0" text="mm">
+            <Label layoutX="145.0" layoutY="335.0" text="mm">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="10.0" layoutY="265.0" prefHeight="20.0" prefWidth="73.0" text="Wilgotność:">
+            <Label layoutX="10.0" layoutY="310.0" prefHeight="20.0" prefWidth="73.0" text="Wilgotność:">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="humidity_label" alignment="CENTER_RIGHT" layoutX="90.0" layoutY="265.0" prefHeight="20.0" prefWidth="24.0" text="---">
+            <Label fx:id="humidity_label" alignment="CENTER_RIGHT" layoutX="90.0" layoutY="310.0" prefHeight="20.0" prefWidth="24.0" text="---">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="119.0" layoutY="265.0" text="\%">
+            <Label layoutX="119.0" layoutY="310.0" text="\%">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="9.0" layoutY="325.0" text="Opady Śniegu:">
+            <Label layoutX="9.0" layoutY="360.0" text="Opady Śniegu:">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="snowfall_label" alignment="CENTER_RIGHT" layoutX="105.0" layoutY="325.0" prefHeight="20.0" prefWidth="30.0" text="--,-">
+            <Label fx:id="snowfall_label" alignment="CENTER_RIGHT" layoutX="105.0" layoutY="360.0" prefHeight="20.0" prefWidth="30.0" text="--,-">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="142.0" layoutY="325.0" text="mm">
+            <Label layoutX="142.0" layoutY="360.0" text="mm">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="refresh_time_label" alignment="CENTER" layoutX="102.0" layoutY="136.0" prefHeight="16.0" prefWidth="89.0" text="rrrr-mm-dd gg-mm">
+            <Label fx:id="refresh_time_label" alignment="CENTER" layoutX="102.0" layoutY="210.0" prefHeight="16.0" prefWidth="89.0" text="rrrr-mm-dd gg-mm">
                <font>
                   <Font size="10.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="25.0" layoutY="355.0" prefHeight="24.0" prefWidth="153.0" text="Dane pogodowe pochodzą ze strony&#10;" textAlignment="CENTER">
+            <TextField fx:id="search_city_textField" layoutX="28.0" layoutY="13.0" onKeyTyped="#onEnterPressed" onMouseClicked="#setAvailableTextField" promptText="wyszukaj miasto" />
+         </children>
+      </Pane>
+      <Pane fx:id="right_data_weather_pane" layoutX="200.0" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #eaf8ff;">
+         <children>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="356.0" prefHeight="24.0" prefWidth="153.0" text="Dane pogodowe pochodzą ze strony&#10;" textAlignment="CENTER">
                <font>
                   <Font size="9.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="55.0" layoutY="375.0" prefHeight="17.0" prefWidth="90.0" text="www.weatherbit.io">
+            <Label alignment="CENTER" layoutX="55.0" layoutY="376.0" prefHeight="17.0" prefWidth="90.0" text="www.weatherbit.io">
                <font>
                   <Font size="11.0" />
                </font>
             </Label>
-         </children>
-      </Pane>
-      <Pane fx:id="right_data_weather_pane" layoutX="200.0" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #eaf8ff;" />
+            <Button fx:id="about_button" layoutX="63.0" layoutY="334.0" mnemonicParsing="false" onAction="#aboutProgram" prefHeight="20.0" prefWidth="75.0" text="O programie">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children></Pane>
    </children>
 </AnchorPane>
