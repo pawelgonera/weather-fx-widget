@@ -1,6 +1,8 @@
 package gui_fx;
 
 import gui_fx.rotates.Rotate;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -27,18 +29,15 @@ public class Controller
     private WeatherCurrentApiImpl api;
 
     private final static DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-
     private final static DecimalFormat FORMAT_PRECISION = new DecimalFormat("#0.0");
 
     private static String CITY_REQUEST;
-
     private static String WIND_DIRECTION;
 
     private Parent main;
-
     private Parent about;
 
-    private SaveCityName saveCityName = new SaveCityName();
+    private SaveCityName saveCityName = SaveCityName.getInstance();
 
     @FXML
     private Label top_welcome_label;
@@ -48,35 +47,36 @@ public class Controller
     private AnchorPane about_anchorPane;
     @FXML
     private Button start_button;
-
     @FXML
-    private Label main_temp_label = new Label();
+    private Button refresh_button;
     @FXML
-    private Label realFeel_temp_label = new Label();
+    private Label main_temp_label;
     @FXML
-    private Label wind_speed_label = new Label();
+    private Label realFeel_temp_label ;
     @FXML
-    private Label wind_direction_label = new Label();
+    private Label wind_speed_label;
     @FXML
-    private ImageView wind_direction_icon = new ImageView();
+    private Label wind_direction_label;
     @FXML
-    private Label pressure_label = new Label();
+    private ImageView wind_direction_icon;
     @FXML
-    private Label humidity_label = new Label();
+    private Label pressure_label;
     @FXML
-    private Label rain_fall_label = new Label();
+    private Label humidity_label;
     @FXML
-    private Label snowfall_label = new Label();
+    private Label rain_fall_label;
     @FXML
-    private Label cityname_label = new Label();
+    private Label snowfall_label;
     @FXML
-    private Label clouds_label = new Label();
+    private Label cityname_label;
     @FXML
-    private Label refresh_time_label = new Label();
+    private Label clouds_label;
     @FXML
-    private ImageView weather_icon = new ImageView();
+    private Label refresh_time_label;
     @FXML
-    private TextField search_city_textField = new TextField();
+    private ImageView weather_icon;
+    @FXML
+    private TextField search_city_textField;
 
     private void setApi()
     {
@@ -86,7 +86,6 @@ public class Controller
     public void setWelcomeTitle()
     {
         //top_welcome_label.setText("Welcome\nin\nWeather Widget");
-
     }
 
     public void clickOnAnchorPane()
@@ -101,8 +100,6 @@ public class Controller
 
     public void onEnterPressed()
     {
-
-
         search_city_textField.setOnKeyPressed((KeyEvent event) ->
         {
             if(event.getCode() == KeyCode.ENTER)
@@ -255,7 +252,6 @@ public class Controller
     public void onClickRefreshData()
     {
         loadCityName();
-
         if(CITY_REQUEST != null)
         {
             setApi();
@@ -289,15 +285,7 @@ public class Controller
 
     private void saveCityName()
     {
-        try
-        {
-            System.out.println(CITY_REQUEST);
-            saveCityName.saveCityName(CITY_REQUEST);
-
-        } catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }
+        saveCityName.saveCityName(CITY_REQUEST);
     }
 
     public void aboutProgram() throws IOException
@@ -310,6 +298,7 @@ public class Controller
     {
         main = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
         about_anchorPane.getChildren().addAll(main);
+
     }
 
 }

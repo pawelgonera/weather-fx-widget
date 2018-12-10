@@ -4,26 +4,40 @@ import java.io.*;
 
 public class SaveCityName
 {
-    private final static String LOCATION = "city/city_name.data";
+    private static SaveCityName instance = null;
 
+    private final static String LOCATION = "city";
+    private final static String FILE_NAME = LOCATION + "/city_name.data";
+
+    private static File DIR;
     private static File FILE;
+
+    public static SaveCityName getInstance()
+    {
+        if(instance == null)
+            instance = new SaveCityName();
+
+        return instance;
+    }
 
     public SaveCityName()
     {
+        DIR = new File(LOCATION);
+        FILE = new File(FILE_NAME);
 
-        FILE = new File(LOCATION);
+        DIR.mkdirs();
+
         try
         {
             FILE.createNewFile();
 
-        } catch (IOException e) {
+        } catch (IOException e)
+        {
             e.printStackTrace();
         }
     }
 
-
-
-    public String saveCityName(String cityName) throws FileNotFoundException
+    public void saveCityName(String cityName)
     {
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(FILE)))
         {
@@ -34,7 +48,6 @@ public class SaveCityName
             e.printStackTrace();
         }
 
-        throw new FileNotFoundException("File not found!");
     }
 
     public String loadCityName() throws FileNotFoundException

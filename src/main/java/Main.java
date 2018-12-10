@@ -4,6 +4,7 @@ import entity.JsonBody;
 import exception.WrongCityNameRequestException;
 import get.HttpConnection;
 import get.factory.HttpConnectFactory;
+import gui_fx.Controller;
 import gui_fx.rotates.Rotate;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -34,6 +35,7 @@ public class Main extends Application
 {
     private static String QUERY = "https://api.weatherbit.io/v2.0/current?city=Kalisz&key=c820ef242bee4a319736ef8537661f06";
     private static final String DATE_FORMAT = "yyyy-MM-dd hh:mm";
+    Controller controller = new Controller();
 
     public static void main(String[] args)
     {
@@ -107,5 +109,7 @@ public class Main extends Application
         primaryStage.setScene(new Scene(root, 390, 390, Color.rgb( 164, 248, 255)));
         primaryStage.setResizable(false);
         primaryStage.show();
+
+        //controller.
     }
 }
