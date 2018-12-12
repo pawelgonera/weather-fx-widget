@@ -1,20 +1,32 @@
 package util;
 
-import entity.City;
-import entity.Data;
-import entity.GeoData;
-import entity.JsonBody;
+import entity.*;
 import exception.NotFoundDesiredJsonDataException;
 import get.HttpConnection;
 import get.factory.HttpConnectFactory;
 import get.factory.QueryFactory;
 import javax.json.bind.Jsonb;
+import javax.json.stream.JsonParser;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
 public class JsonData
 {
+    private static JsonData instance = null;
+
+    public static JsonData getInstance()
+    {
+        if(instance == null)
+            instance = new JsonData();
+
+        return instance;
+    }
+
     public List<Data> getJsonWeather(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String city)
     {
         List<Data> data = new LinkedList<>();
@@ -52,6 +64,30 @@ public class JsonData
 
         return data;
     }
+
+    /*
+    public List<Cities> getJsonCities(Jsonb jsonb)
+    {
+        List<Cities> citiesList = new LinkedList<>();
+        String line = CitiesFile.getCitiesFile();
+        byte[] bytes = line.getBytes(StandardCharsets.UTF_16LE);
+        String utf8 = new String(bytes, StandardCharsets.UTF_16LE);
+
+        line = line.replaceAll("\r?\n", "");
+        CitiesData citiesData = jsonb.fromJson(line, CitiesData.class);
+
+        citiesList = Optional.ofNullable(citiesData)
+                                .map(CitiesData::getCitiesList)
+                                .orElseThrow(() -> new NotFoundDesiredJsonDataException("Not found desired data"));
+
+        for(int i = 0; i < 2; i++)
+        {
+            citiesList.add(citiesData.getCitiesList().get(i));
+        }
+        return citiesList;
+        return citiesList;
+    }*/
+
 
     /*
     public List<City> getJsonCities(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String countryCode)

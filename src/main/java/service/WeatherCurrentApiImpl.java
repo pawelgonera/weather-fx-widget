@@ -22,7 +22,7 @@ import java.util.TimeZone;
 public class WeatherCurrentApiImpl implements WeatherCurrentApi
 {
     private static String QUERY_CURRENT_WEATHER = "https://api.weatherbit.io/v2.0/current?city=%s&lang=en&key=%s";
-    private JsonData jsonData;
+    private JsonData jsonData = JsonData.getInstance();
     private HttpConnectFactory httpConnectionFactory;
     private Jsonb jsonb;
     private ClientRequestValidation validation;
@@ -31,16 +31,15 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
 
     public WeatherCurrentApiImpl(String cityNameRequest)
     {
-        this(new HttpConnectFactory(), JsonbBuilder.create(), new JsonData());
+        this(new HttpConnectFactory(), JsonbBuilder.create());
         this.cityNameRequest = cityNameRequest;
         validateCityNameRequest();
     }
 
-    public WeatherCurrentApiImpl(HttpConnectFactory httpConnectionFactory, Jsonb jsonb, JsonData jsonData)
+    public WeatherCurrentApiImpl(HttpConnectFactory httpConnectionFactory, Jsonb jsonb)
     {
         this.httpConnectionFactory = httpConnectionFactory;
         this.jsonb = jsonb;
-        this.jsonData = jsonData;
     }
 
     private void validateCityNameRequest()

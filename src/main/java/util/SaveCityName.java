@@ -50,7 +50,7 @@ public class SaveCityName
 
     }
 
-    public String loadCityName() throws FileNotFoundException
+    public String loadCityName()
     {
         try(BufferedReader reader = new BufferedReader(new FileReader(FILE)))
         {
@@ -59,8 +59,7 @@ public class SaveCityName
         }catch (IOException e)
         {
             e.printStackTrace();
+            return e.getMessage();
         }
-
-        throw new FileNotFoundException("File not found!");
     }
 }

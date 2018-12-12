@@ -14,7 +14,7 @@ public class ApiKey
 
     }
 
-    public static String getApiKey() throws FileNotFoundException
+    public static String getApiKey()
     {
         try(BufferedReader reader = new BufferedReader(new FileReader(FILENAME)))
         {
@@ -23,8 +23,7 @@ public class ApiKey
         }catch (IOException e)
         {
             e.printStackTrace();
+            return e.getMessage();
         }
-
-        throw new FileNotFoundException("File not found!");
     }
 }

@@ -1,35 +1,12 @@
-import api.CityNamesApi;
-import entity.Data;
-import entity.JsonBody;
-import exception.WrongCityNameRequestException;
-import get.HttpConnection;
-import get.factory.HttpConnectFactory;
 import gui_fx.Controller;
-import gui_fx.rotates.Rotate;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import service.CityNamesApiImpl;
-import service.WeatherCurrentApiImpl;
-import service.WeatherHourlyForecastApiImpl;
-import util.JsonData;
+import service.*;
 import validator.ClientRequestValidation;
-
-import javax.json.bind.Jsonb;
-import javax.json.bind.JsonbBuilder;
-import javax.json.bind.JsonbException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.Reader;
-import java.io.Writer;
-import java.lang.reflect.Type;
-import java.text.DecimalFormat;
-import java.time.*;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
 
 public class Main extends Application
 {
@@ -98,6 +75,18 @@ public class Main extends Application
         //System.out.println(cityApi.getCityName());
 
         launch(args);
+
+        //CitiesNameListImpl citiesNameList = CitiesNameListImpl.getInstance();
+
+        //System.out.println(citiesNameList.getStateName());
+
+        //GeoDataImpl geoData = GeoDataImpl.getInstance();
+
+        //List<String> citiesList = geoData.getCityName();
+
+        //System.out.println(citiesList.contains("Wiel"));
+
+        //System.out.println(geoData.getCityName());
 
     }
 
