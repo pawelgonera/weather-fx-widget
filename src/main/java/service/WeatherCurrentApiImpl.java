@@ -8,6 +8,7 @@ import exception.WrongCityNameRequestException;
 import get.factory.HttpConnectFactory;
 import util.JsonData;
 import validator.ClientRequestValidation;
+import validator.FixCityName;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
@@ -26,6 +27,7 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     private HttpConnectFactory httpConnectionFactory;
     private Jsonb jsonb;
     private ClientRequestValidation validation;
+    private FixCityName fixCityName;
     private List<Data> apiData = new LinkedList<>();
     private String cityNameRequest;
 
@@ -45,6 +47,7 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     private void validateCityNameRequest()
     {
         validation = ClientRequestValidation.getInstance();
+
         try
         {
             if(validation.validateCityNameRequest(cityNameRequest))
@@ -58,7 +61,10 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
 
     private void getApiData()
     {
-        apiData = jsonData.getJsonWeather(httpConnectionFactory, jsonb, QUERY_CURRENT_WEATHER, cityNameRequest);
+        fixCityName = FixCityName.getInstance();
+        String fixedCityNameRequest = fixCityName.fixName(cityNameRequest);
+        System.out.println(fixedCityNameRequest);
+        apiData = jsonData.getJsonWeather(httpConnectionFactory, jsonb, QUERY_CURRENT_WEATHER, fixedCityNameRequest);
     }
 
     private NotFoundDesiredJsonDataException newRunTimeException()

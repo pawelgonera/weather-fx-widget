@@ -7,7 +7,7 @@ public class SaveCityName
     private static SaveCityName instance = null;
 
     private final static String LOCATION = "city";
-    private final static String FILE_NAME = LOCATION + "/city_name.data";
+    private final static String FILE_NAME = LOCATION + "/saved_city.data";
 
     private static File DIR;
     private static File FILE;

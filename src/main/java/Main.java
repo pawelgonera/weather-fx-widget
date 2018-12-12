@@ -7,6 +7,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import service.*;
 import validator.ClientRequestValidation;
+import validator.FixCityName;
 
 public class Main extends Application
 {
@@ -74,8 +75,6 @@ public class Main extends Application
 
         //System.out.println(cityApi.getCityName());
 
-        launch(args);
-
         //CitiesNameListImpl citiesNameList = CitiesNameListImpl.getInstance();
 
         //System.out.println(citiesNameList.getStateName());
@@ -87,6 +86,14 @@ public class Main extends Application
         //System.out.println(citiesList.contains("Wiel"));
 
         //System.out.println(geoData.getCityName());
+
+        //FixCityName fixCityName = FixCityName.getInstance();
+
+        //System.out.println(fixCityName.fixName("Wroclaw ZielonaGora"));
+
+
+
+        launch(args);
 
     }
 
