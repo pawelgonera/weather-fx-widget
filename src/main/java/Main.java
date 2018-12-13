@@ -9,6 +9,8 @@ import service.*;
 import validator.ClientRequestValidation;
 import validator.FixCityName;
 
+import java.util.List;
+
 public class Main extends Application
 {
     private static String QUERY = "https://api.weatherbit.io/v2.0/current?city=Kalisz&key=c820ef242bee4a319736ef8537661f06";
@@ -82,15 +84,24 @@ public class Main extends Application
         //GeoDataImpl geoData = GeoDataImpl.getInstance();
 
         //List<String> citiesList = geoData.getCityName();
+        //List<String> countryName = geoData.getCountryName();
+
 
         //System.out.println(citiesList.contains("Wiel"));
 
-        //System.out.println(geoData.getCityName());
+        //System.out.println(geoData.getDataId());
 
         //FixCityName fixCityName = FixCityName.getInstance();
 
-        //System.out.println(fixCityName.fixName("Wroclaw ZielonaGora"));
+        //System.out.println(fixCityName.fixName("Łódź |"));
 
+
+        /*for(int i = 0; i < citiesList.size(); i++)
+        {
+            citiesList.set(i, citiesList.get(i) + " | " +  countryName.get(i));
+        }*/
+
+        //System.out.println(citiesList);
 
 
         launch(args);

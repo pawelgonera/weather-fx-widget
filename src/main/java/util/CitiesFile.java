@@ -1,6 +1,7 @@
 package util;
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,22 +23,29 @@ public class CitiesFile
             return e.getMessage();
         }*/
 
-        List<String[]> geodata = new LinkedList<>();
-        String[] record;
-        try(BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/cities_20000csv/cities_20000.csv")))
+        List<String[]> geoData = new LinkedList<>();
+
+        try(BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/resources/cities_20000csv/cities_20000.csv"), "UTF-8")))
         {
+            String[] record = new String[7];
             String line;
             while ((line = reader.readLine()) != null)
             {
-                record = line.split(",");
-                geodata.add(record);
+                record = line.split(",", 8);
+
+                if(record[0].equals("id"))
+                    continue;
+
+                //if(record.length == 7)
+                    geoData.add(record);
             }
+
 
         }catch (IOException e)
         {
             e.printStackTrace();
         }
 
-        return geodata;
+        return geoData;
     }
 }

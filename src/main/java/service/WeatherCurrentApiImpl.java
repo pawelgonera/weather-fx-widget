@@ -35,7 +35,8 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     {
         this(new HttpConnectFactory(), JsonbBuilder.create());
         this.cityNameRequest = cityNameRequest;
-        validateCityNameRequest();
+        //validateCityNameRequest();
+        getApiData();
     }
 
     public WeatherCurrentApiImpl(HttpConnectFactory httpConnectionFactory, Jsonb jsonb)
@@ -63,7 +64,7 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     {
         fixCityName = FixCityName.getInstance();
         String fixedCityNameRequest = fixCityName.fixName(cityNameRequest);
-        System.out.println(fixedCityNameRequest);
+        System.out.println("fixed: " + fixedCityNameRequest);
         apiData = jsonData.getJsonWeather(httpConnectionFactory, jsonb, QUERY_CURRENT_WEATHER, fixedCityNameRequest);
     }
 

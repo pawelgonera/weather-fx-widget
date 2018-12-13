@@ -1,5 +1,7 @@
 package util;
 
+import validator.FixCityName;
+
 import java.io.*;
 
 public class SaveCityName
@@ -11,6 +13,8 @@ public class SaveCityName
 
     private static File DIR;
     private static File FILE;
+
+    private FixCityName fixCityName = FixCityName.getInstance();
 
     public static SaveCityName getInstance()
     {
@@ -41,6 +45,7 @@ public class SaveCityName
     {
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(FILE)))
         {
+            cityName = fixCityName.fixName(cityName);
             writer.write(cityName);
 
         }catch (IOException e)

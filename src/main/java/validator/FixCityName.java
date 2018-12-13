@@ -22,12 +22,14 @@ public class FixCityName
 
         fixedName = replaceSpecialChars(fixedName);
 
+        fixedName = removeCountryName(fixedName);
+
         return fixedName;
     }
 
     private String removeEmptySpace(String cityRequest)
     {
-        return cityRequest.replace(" ", "_");
+        return cityRequest.replace(" ", "");
     }
 
     private String replaceSpecialChars(String cityRequest)
@@ -41,5 +43,10 @@ public class FixCityName
             return cityRequest.toLowerCase().replace("ł", "l");
 
         return cityRequest;
+    }
+
+    private String removeCountryName(String cityRequest)
+    {
+        return cityRequest.replaceAll("[|].*", "");
     }
 }

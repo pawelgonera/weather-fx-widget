@@ -3,6 +3,7 @@ package gui_fx;
 import gui_fx.rotates.RotateArrow;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.ObservableMap;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,7 +24,7 @@ import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
+import java.util.*;
 
 public class Controller
 {
@@ -46,6 +47,8 @@ public class Controller
     private GeoDataImpl geoData = GeoDataImpl.getInstance();
 
     private List<String> citiesList;
+    private List<String> countryList;
+    private List<String> citiesMap = new LinkedList<>();
 
     @FXML
     private Label top_welcome_label;
@@ -153,10 +156,17 @@ public class Controller
         onClickRefreshData();
     }
 
+    @SuppressWarnings("unchecked")
     public void searchingCity()
     {
         citiesList = geoData.getCityName();
-        TextFields.bindAutoCompletion(search_city_textField, citiesList).setVisibleRowCount(10);
+        countryList = geoData.getCountryName();
+        for(int i = 0; i < citiesList.size(); i++)
+        {
+            citiesMap.add(citiesList.get(i) + " | " +  countryList.get(i));
+        }
+
+        TextFields.bindAutoCompletion(search_city_textField, citiesMap).setVisibleRowCount(10);
     }
 
     public void onClickRefreshData()
