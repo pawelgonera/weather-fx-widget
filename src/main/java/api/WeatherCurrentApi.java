@@ -1,14 +1,15 @@
 package api;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.TimeZone;
 
 public interface WeatherCurrentApi
 {
-    double getTemperature();
+    BigDecimal getTemperature();
     String getWindDirection();
-    String getAabbreviatedWindDirection();
+    String getAbbreviatedWindDirection();
     int getHumidity();
     String getPartOfTheDay();
     double getPressure();

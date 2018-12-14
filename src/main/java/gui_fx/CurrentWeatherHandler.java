@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import service.WeatherCurrentApiImpl;
 
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
@@ -121,7 +122,7 @@ public class CurrentWeatherHandler
 
     public void displayWindDirection()
     {
-        Controller.WIND_DIRECTION = api.getAabbreviatedWindDirection();
+        Controller.WIND_DIRECTION = api.getAbbreviatedWindDirection();
         wind_direction_label.setText(Controller.WIND_DIRECTION);
 
     }
@@ -141,7 +142,7 @@ public class CurrentWeatherHandler
 
     public void displayTemp()
     {
-        double temp = api.getTemperature();
+        BigDecimal temp = api.getTemperature();
         System.out.println("temp" + temp);
         main_temp_label.setText(String.valueOf(temp));
     }

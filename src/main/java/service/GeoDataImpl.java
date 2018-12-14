@@ -29,11 +29,6 @@ public class GeoDataImpl implements GeoData
         return instance;
     }
 
-    private NotFoundDesiredJsonDataException newRunTimeException()
-    {
-        return new NotFoundDesiredJsonDataException("Not found any desired value");
-    }
-
     @Override
     public List<Long> getDataId()
     {

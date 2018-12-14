@@ -6,6 +6,7 @@ import get.factory.HttpConnectFactory;
 import util.JsonData;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,7 +30,7 @@ public class WeatherHourlyForecastApiImpl implements WeatherHourlyForecastApi
     }
 
     @Override
-    public List<Double> getTemperatureForecast(String city, int hours)
+    public List<BigDecimal> getTemperatureForecast(String city, int hours)
     {
         List<Data> data = jsonData.getJsonWeather(httpConnectFactory, jsonb, QUERY, city, hours);
         return data.stream()

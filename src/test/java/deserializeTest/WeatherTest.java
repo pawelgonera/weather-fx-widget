@@ -13,11 +13,21 @@ public class WeatherTest
 {
     private final static String WEATHER_TEST_RESPONSE = "{\"icon\":\"c01n\",\"code\":800,\"description\":\"Przejrzyste niebo\"}";
     private Weather weather;
+    private static WeatherTest instance = null;
+
+    public static WeatherTest getInstance()
+    {
+        if(instance == null)
+            instance = new WeatherTest();
+
+        return instance;
+    }
 
     @BeforeEach
-    public void setUp()
+    public Weather setUp()
     {
         weather = JsonbBuilder.create().fromJson(WEATHER_TEST_RESPONSE, Weather.class);
+        return weather;
     }
 
     @Test

@@ -83,13 +83,13 @@ public class Main extends Application
 
         //GeoDataImpl geoData = GeoDataImpl.getInstance();
 
-        //List<String> citiesList = geoData.getCityName();
+        //List<Long> citiesList = geoData.getDataId();
         //List<String> countryName = geoData.getCountryName();
 
 
         //System.out.println(citiesList.contains("Wiel"));
 
-        //System.out.println(geoData.getDataId());
+        //System.out.println(citiesList.get(0));
 
         //FixCityName fixCityName = FixCityName.getInstance();
 
@@ -111,7 +111,7 @@ public class Main extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/current.fxml"));
         primaryStage.setTitle("Weather Widget - welcome");
         primaryStage.setScene(new Scene(root, 390, 390, Color.rgb( 164, 248, 255)));
         primaryStage.setResizable(false);

@@ -137,7 +137,7 @@ public class Data
     private LocalTime sunSet;
 
     @JsonbProperty("temp")
-    private double temperature;
+    private BigDecimal temperature;
 
     @JsonbProperty("lat")
     private BigDecimal latitude;
@@ -478,11 +478,11 @@ public class Data
         this.sunSet = sunSet;
     }
 
-    public double getTemperature() {
+    public BigDecimal getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(double temperature) {
+    public void setTemperature(BigDecimal temperature) {
         this.temperature = temperature;
     }
 

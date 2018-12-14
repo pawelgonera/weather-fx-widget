@@ -14,17 +14,19 @@ public class FixCityName
         return instance;
     }
 
-    public String fixName(String cityRequest)
+    public String fixInputName(String cityRequest)
     {
         String fixedName = removeEmptySpace(cityRequest);
-
         fixedName = replaceProblematicChar(fixedName);
-
         fixedName = replaceSpecialChars(fixedName);
-
         fixedName = removeCountryName(fixedName);
 
         return fixedName;
+    }
+
+    public String removecountry(String cityName)
+    {
+        return removeCountryName(cityName);
     }
 
     private String removeEmptySpace(String cityRequest)
@@ -49,4 +51,5 @@ public class FixCityName
     {
         return cityRequest.replaceAll("[|].*", "");
     }
+
 }

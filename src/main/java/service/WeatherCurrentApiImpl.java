@@ -12,6 +12,7 @@ import validator.FixCityName;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
@@ -60,10 +61,15 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
         }
     }
 
-    private void getApiData()
+    private String fixCityName()
     {
         fixCityName = FixCityName.getInstance();
-        String fixedCityNameRequest = fixCityName.fixName(cityNameRequest);
+        return fixCityName.fixInputName(cityNameRequest);
+    }
+
+    private void getApiData()
+    {
+        String fixedCityNameRequest = fixCityName();
         System.out.println("fixed: " + fixedCityNameRequest);
         apiData = jsonData.getJsonWeather(httpConnectionFactory, jsonb, QUERY_CURRENT_WEATHER, fixedCityNameRequest);
     }
@@ -94,10 +100,10 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     }
 
     @Override
-    public double getTemperature()
+    public BigDecimal getTemperature()
     {
         return apiData.stream()
-                        .mapToDouble(Data::getTemperature)
+                        .map(Data::getTemperature)
                         .findFirst()
                         .orElseThrow(this::newRunTimeException);
     }
@@ -112,7 +118,7 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     }
 
     @Override
-    public String getAabbreviatedWindDirection()
+    public String getAbbreviatedWindDirection()
     {
         return apiData.stream()
                         .map(Data::getAbbreviatedWindDirection)

@@ -1,10 +1,6 @@
 package gui_fx;
 
 import gui_fx.rotates.RotateArrow;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.collections.ObservableMap;
-import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,8 +14,10 @@ import org.controlsfx.control.textfield.TextFields;
 import service.GeoDataImpl;
 import service.WeatherCurrentApiImpl;
 import util.SaveCityName;
+import validator.FixCityName;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
@@ -45,6 +43,7 @@ public class Controller
 
     private SaveCityName saveCityName = SaveCityName.getInstance();
     private GeoDataImpl geoData = GeoDataImpl.getInstance();
+    private FixCityName fixCityName = FixCityName.getInstance();
 
     private List<String> citiesList;
     private List<String> countryList;
@@ -54,8 +53,6 @@ public class Controller
     private Label top_welcome_label;
     @FXML
     private AnchorPane main_anchorPane;
-    @FXML
-    private AnchorPane about_anchorPane;
     @FXML
     private Button start_button;
     @FXML
@@ -105,37 +102,15 @@ public class Controller
         api = new WeatherCurrentApiImpl(CITY_REQUEST);
     }
 
-    public void setWelcomeTitle()
+    @FXML
+    private void initialize()
     {
-        //top_welcome_label.setText("Welcome\nin\nWeather Widget");
+        onClickRefreshData();
     }
 
     public void clickOnAnchorPane()
     {
         search_city_textField.setPromptText("wyszukaj miasto");
-    }
-
-    public void setAvailableTextField()
-    {
-
-    }
-
-    private void listView()
-    {
-        ObservableList<String> rawData= FXCollections.observableArrayList();
-        FilteredList<String> filteredList= new FilteredList<>(rawData, data -> true);
-        listView.setItems(filteredList);
-        search_city_textField.textProperty().addListener(((observable, oldValue, newValue) -> {
-            filteredList.setPredicate(data -> {
-                if (newValue == null || newValue.isEmpty()){
-                    return true;
-                }
-                String lowerCaseSearch=newValue.toLowerCase();
-                return Boolean.parseBoolean(String.valueOf(data.contains(lowerCaseSearch)));
-            });
-        }));
-
-
     }
 
     public void onEnterPressed()
@@ -221,6 +196,7 @@ public class Controller
 
     public void displayCityName()
     {
+        //String cityName = fixCityName.removecountry(CITY_REQUEST);
         String cityName = api.getCityName();
         cityname_label.setText(cityName);
     }
@@ -251,7 +227,7 @@ public class Controller
 
     public void displayWindDirection()
     {
-        Controller.WIND_DIRECTION = api.getAabbreviatedWindDirection();
+        Controller.WIND_DIRECTION = api.getAbbreviatedWindDirection();
         wind_direction_label.setText(Controller.WIND_DIRECTION);
 
     }
@@ -271,10 +247,9 @@ public class Controller
 
     public void displayTemp()
     {
-        double temp = api.getTemperature();
+        BigDecimal temp = api.getTemperature();
         main_temp_label.setText(String.valueOf(temp));
     }
-
 
     private void loadCityName()
     {
@@ -286,17 +261,21 @@ public class Controller
         saveCityName.saveCityName(CITY_REQUEST);
     }
 
+    public void switchToCurrent()
+    {
+
+    }
+
+    public void switchToHourly()
+    {
+
+    }
+
     public void aboutProgram() throws IOException
     {
         about = FXMLLoader.load(getClass().getResource("/fxml/widget.fxml"));
         main_anchorPane.getChildren().addAll(about);
     }
 
-    public void loadMain() throws IOException
-    {
-        main = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
-        about_anchorPane.getChildren().addAll(main);
-
-    }
 
 }

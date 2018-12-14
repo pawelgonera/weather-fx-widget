@@ -45,7 +45,7 @@ public class SaveCityName
     {
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(FILE)))
         {
-            cityName = fixCityName.fixName(cityName);
+            cityName = fixCityName.fixInputName(cityName);
             writer.write(cityName);
 
         }catch (IOException e)
