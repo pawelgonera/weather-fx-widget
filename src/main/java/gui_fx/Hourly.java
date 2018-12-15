@@ -1,5 +1,6 @@
 package gui_fx;
 
+import com.sun.javafx.binding.StringFormatter;
 import gui_fx.rotates.RotateArrow;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,8 @@ import util.SaveCityName;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -30,7 +33,7 @@ public class Hourly
     private final static DecimalFormat FORMAT_PRECISION = new DecimalFormat("#0.0");
 
     private static String CITY_REQUEST;
-    public static String WIND_DIRECTION;
+    //public static String WIND_DIRECTION;
     private static int HOURS = 48;
     private static int INDEX = 0;
 
@@ -46,6 +49,7 @@ public class Hourly
     private List<Integer> cloudsCoverage;
     private List<Double> uvIndex;
     private List<String> description;
+    private List<LocalDateTime> time;
     private String cityName;
 
     private Parent current;
@@ -98,9 +102,10 @@ public class Hourly
         {
             //System.out.println(CITY_REQUEST);
             setApi();
+            setTime();
             setTemp();
             setRealFeelTemp();
-            /*setWindSpeed();
+            setWindSpeed();
             setWindDirection();
             setPressure();
             setHumidity();
@@ -111,15 +116,14 @@ public class Hourly
             displayWindDirectionArrow();
             setWeatherIcon();
             setUV();
-            */
-            //setDescription();
-
+            setDescription();
         }
     }
 
     private void displayData()
     {
         displayTemp();
+        displayCityName();
         displayRealFeelTemp();
         displayWindSpeed();
         displayHumidity();
@@ -132,6 +136,7 @@ public class Hourly
         displayWindDirection();
         displayWindDirectionArrow();
         displayWeatherIcon();
+        displayTime();
     }
 
     public void plusHourOnClick()
@@ -139,8 +144,7 @@ public class Hourly
         if(INDEX < HOURS - 1)
         {
             INDEX++;
-            displayTemp();
-            displayRealFeelTemp();
+            displayData();
         }
     }
 
@@ -149,17 +153,20 @@ public class Hourly
         if(INDEX > 0)
         {
             INDEX--;
-            displayTemp();
-            displayRealFeelTemp();
+            displayData();
         }
+    }
+
+    private void setTime()
+    {
+        time = api.getDateTime();
+        displayTime();
     }
 
     private void setTemp()
     {
         temp = api.getTemperatureForecast();
-        System.out.println(temp.size());
         displayTemp();
-
     }
 
     private void setRealFeelTemp()
@@ -229,6 +236,13 @@ public class Hourly
         displayDescription();
     }
 
+    private void displayTime()
+    {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm").
+        forecast_hour_label.setText(time.get(INDEX).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
+    }
+
     private void displayWeatherIcon()
     {
         String iconUrl = String.format("icons_weather/%s.png", weatherCodeIcon.get(INDEX));
@@ -276,8 +290,8 @@ public class Hourly
 
     private void displayWindDirection()
     {
-        WIND_DIRECTION = windDirection.get(INDEX);
-        wind_direction_label.setText(WIND_DIRECTION);
+        Controller.WIND_DIRECTION = windDirection.get(INDEX);
+        wind_direction_label.setText(Controller.WIND_DIRECTION);
 
     }
 
@@ -299,7 +313,7 @@ public class Hourly
 
     private void displayUV()
     {
-        uv_label.setText(String.valueOf(uvIndex.get(INDEX)));
+        uv_label.setText(FORMAT_PRECISION.format(uvIndex.get(INDEX)));
     }
 
 

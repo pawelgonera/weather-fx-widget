@@ -145,7 +145,7 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label fx:id="uv_label" layoutX="319.0" layoutY="51.0" prefHeight="20.0" prefWidth="23.0" text="10">
+            <Label fx:id="uv_label" layoutX="319.0" layoutY="51.0" prefHeight="20.0" prefWidth="46.0" text="10">
                <font>
                   <Font size="13.0" />
                </font>
@@ -158,7 +158,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="forecast_hour_label" layoutX="66.0" layoutY="20.0" text="15:00">
+            <Label fx:id="forecast_hour_label" layoutX="14.0" layoutY="20.0" prefHeight="33.0" prefWidth="260.0" text="15:00">
                <font>
                   <Font name="Tw Cen MT" size="30.0" />
                </font>

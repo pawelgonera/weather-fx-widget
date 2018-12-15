@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 public class WeatherHourlyForecastApiImpl implements WeatherHourlyForecastApi
 {
-    private static String QUERY = "https://api.weatherbit.io/v2.0/forecast/hourly?city=%s&key=%s&hours=%d";
+    private static String QUERY = "https://api.weatherbit.io/v2.0/forecast/hourly?city=%s&key=%s&hours=%d&lang=en";
     private HttpConnectFactory httpConnectFactory;
     private JsonData jsonData;
     private Jsonb jsonb;
