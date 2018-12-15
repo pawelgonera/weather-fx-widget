@@ -21,10 +21,9 @@ public class DataTest
 
 
     @BeforeEach
-    public Data setUp()
+    public void setUp()
     {
         data = JsonbBuilder.create().fromJson(DATA_TEST_RESPONSE, Data.class);
-        return data;
     }
 
     @Test

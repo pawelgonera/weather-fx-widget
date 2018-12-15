@@ -39,7 +39,7 @@ public class Controller
     private static String CITY_REQUEST;
     public static String WIND_DIRECTION;
 
-    private Parent main;
+    private Parent current;
     private Parent about;
 
     private SaveCityName saveCityName = SaveCityName.getInstance();
@@ -296,9 +296,10 @@ public class Controller
 
     }
 
-    public void switchToHourly()
+    public void switchToHourly() throws IOException
     {
-
+        current = FXMLLoader.load(getClass().getResource("/fxml/hourly.fxml"));
+        main_anchorPane.getChildren().addAll(current);
     }
 
     public void aboutProgram() throws IOException
