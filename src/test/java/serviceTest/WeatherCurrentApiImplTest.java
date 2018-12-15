@@ -3,7 +3,6 @@ package serviceTest;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.is;
 
-import deserializeTest.WeatherTest;
 import entity.JsonBody;
 import get.factory.HttpConnectFactory;
 import get.factory.QueryFactory;
@@ -23,7 +22,6 @@ public class WeatherCurrentApiImplTest
     private static String QUERY_CURRENT_WEATHER = "https://api.weatherbit.io/v2.0/current?city=%s&lang=en&key=%s";
     private final static String CITY_NAME_REQUEST = "Wieliczka";
     private WeatherCurrentApiImpl api;
-    private WeatherTest weatherTest;
     private Jsonb jsonb;
     private JsonBody json;
 
@@ -32,12 +30,12 @@ public class WeatherCurrentApiImplTest
     {
         api = new WeatherCurrentApiImpl(CITY_NAME_REQUEST);
         jsonb = JsonbBuilder.create();
-        weatherTest = WeatherTest.getInstance();
 
         String query = new QueryFactory().setCurrentQuery(CITY_NAME_REQUEST, QUERY_CURRENT_WEATHER);
-        //String response = new HttpConnectFactory().getConnection(query).connect();
+        String response = new HttpConnectFactory().getConnection(query).connect();
 
-        String response = "{\"data\":[{\"wind_cdir\":\"E\",\"rh\":95,\"pod\":\"n\",\"lon\":20.06473,\"pres\":958.2,\"timezone\":\"Europe\\/Warsaw\",\"ob_time\":\"2018-12-14 21:53\",\"country_code\":\"PL\",\"clouds\":0,\"vis\":10,\"solar_rad\":0,\"state_code\":\"77\",\"wind_spd\":1,\"lat\":49.98738,\"wind_cdir_full\":\"east\",\"slp\":998.4,\"datetime\":\"2018-12-14:22\",\"ts\":1544824380,\"station\":\"E6527\",\"h_angle\":-90,\"dewpt\":-2.3,\"uv\":0,\"dni\":0,\"wind_dir\":81,\"elev_angle\":-57.3136,\"ghi\":0,\"dhi\":0,\"precip\":null,\"city_name\":\"Wieliczka\",\"weather\":{\"icon\":\"c01n\",\"code\":\"800\",\"description\":\"Clear sky\"},\"sunset\":\"14:38\",\"temp\":-1.7,\"sunrise\":\"06:32\",\"app_temp\":-2.6}],\"count\":1}";
+        //String response = "{\"data\":[{\"wind_cdir\":\"E\",\"rh\":95,\"pod\":\"n\",\"lon\":20.06473,\"pres\":958.2,\"timezone\":\"Europe\\/Warsaw\",\"ob_time\":\"2018-12-14 21:53\",\"country_code\":\"PL\",\"clouds\":0,\"vis\":10,\"solar_rad\":0,\"state_code\":\"77\",\"wind_spd\":1,\"lat\":49.98738,\"wind_cdir_full\":\"east\",\"slp\":998.4,\"datetime\":\"2018-12-14:22\",\"ts\":1544824380,\"station\":\"E6527\",\"h_angle\":-90,\"dewpt\":-2.3,\"uv\":0,\"dni\":0,\"wind_dir\":81,\"elev_angle\":-57.3136,\"ghi\":0,\"dhi\":0,\"precip\":null,\"city_name\":\"Wieliczka\",\"weather\":{\"icon\":\"c01n\",\"code\":\"800\",\"description\":\"Clear sky\"},\"sunset\":\"14:38\",\"temp\":-1.7,\"sunrise\":\"06:32\",\"app_temp\":-2.6}],\"count\":1}";
+
         json = jsonb.fromJson(response, JsonBody.class);
     }
 

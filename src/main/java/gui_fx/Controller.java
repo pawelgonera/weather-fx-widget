@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -58,31 +59,39 @@ public class Controller
     @FXML
     private Button refresh_button;
     @FXML
-    protected Label main_temp_label;
+    private Label main_temp_label;
     @FXML
-    protected Label realFeel_temp_label;
+    private Label realFeel_temp_label;
     @FXML
-    protected Label wind_speed_label;
+    private Label wind_speed_label;
     @FXML
-    protected Label wind_direction_label;
+    private Label wind_direction_label;
     @FXML
-    protected ImageView wind_direction_icon;
+    private ImageView wind_direction_icon;
     @FXML
-    protected Label pressure_label;
+    private Label pressure_label;
     @FXML
-    protected Label humidity_label;
+    private Label humidity_label;
     @FXML
-    protected Label rain_fall_label;
+    private Label rain_fall_label;
     @FXML
-    protected Label snowfall_label;
+    private Label snowfall_label;
     @FXML
-    protected Label cityname_label;
+    private Label cityname_label;
     @FXML
-    protected Label clouds_label;
+    private Label clouds_label;
     @FXML
-    protected Label refresh_time_label;
+    private Label refresh_time_label;
     @FXML
-    protected ImageView weather_icon;
+    private ImageView weather_icon;
+    @FXML
+    private Label uv_label;
+    @FXML
+    private Label sunrise_label;
+    @FXML
+    private Label sunset_label;
+    @FXML
+    private Label description_label;
     @FXML
     private TextField search_city_textField;
 
@@ -106,11 +115,6 @@ public class Controller
     private void initialize()
     {
         onClickRefreshData();
-    }
-
-    public void clickOnAnchorPane()
-    {
-        search_city_textField.setPromptText("wyszukaj miasto");
     }
 
     public void onEnterPressed()
@@ -163,10 +167,13 @@ public class Controller
             displayLastObservationTime();
             displayWindDirectionArrow();
             displayWeatherIcon();
+            displayUV();
+            displaySunrise();
+            displaySunset();
         }
     }
 
-    public void displayWeatherIcon()
+    private void displayWeatherIcon()
     {
         String weatherCodeIcon = api.getWeatherIconCode();
         String iconUrl = String.format("icons_weather/%s.png", weatherCodeIcon);
@@ -174,81 +181,104 @@ public class Controller
         weather_icon.setImage(new Image(iconUrl));
     }
 
-    public void displayWindDirectionArrow()
+    private void displayWindDirectionArrow()
     {
         int degree = rotateArrow.getRotateValue();
         wind_direction_icon.setRotate(degree);
     }
 
-    public void displayLastObservationTime()
+    private void displayLastObservationTime()
     {
         LocalDateTime time = api.getLastObservationTime();
         ZonedDateTime zonedDateTime = ZonedDateTime.of(time, api.getTimeZone().toZoneId());
         String timeFormat = time.plusSeconds(zonedDateTime.getOffset().getTotalSeconds()).format(FORMATTER);
-        refresh_time_label.setText(String.valueOf(timeFormat));
+        refresh_time_label.setText(timeFormat);
     }
 
-    public void displayCloudsCoverage()
+    private void displayCloudsCoverage()
     {
         int clouds = api.getCloudsCoverage();
         clouds_label.setText(String.valueOf(clouds));
     }
 
-    public void displayCityName()
+    private void displayCityName()
     {
-        //String cityName = fixCityName.removecountry(CITY_REQUEST);
         String cityName = api.getCityName();
         cityname_label.setText(cityName);
     }
 
-    public void displaySnowFall()
+    private void displaySnowFall()
     {
         String snowfall = FORMAT_PRECISION.format(api.getAccumulatedSnowfall());
         snowfall_label.setText(snowfall);
     }
 
-    public void displayRainFall()
+    private void displayRainFall()
     {
         String rainfall = FORMAT_PRECISION.format(api.getAccumulatedLiquidEquivalentPrecipitation());
         rain_fall_label.setText(rainfall);
     }
 
-    public void displayHumidity()
+    private void displayHumidity()
     {
         int humidity = api.getHumidity();
         humidity_label.setText(String.valueOf(humidity));
     }
 
-    public void displayPressure()
+    private void displayPressure()
     {
         String pressure = FORMAT_PRECISION.format(api.getPressure());
         pressure_label.setText(String.valueOf(pressure));
     }
 
-    public void displayWindDirection()
+    private void displayWindDirection()
     {
         Controller.WIND_DIRECTION = api.getAbbreviatedWindDirection();
         wind_direction_label.setText(Controller.WIND_DIRECTION);
 
     }
 
-    public void displayWindSpeed()
+    private void displayWindSpeed()
     {
         String windSpeed = FORMAT_PRECISION.format(api.getWindSpeed() * 3.6);
         wind_speed_label.setText(windSpeed);
 
     }
 
-    public void displayRealFeelTemp()
+    private void displayRealFeelTemp()
     {
         double appTemp = api.getApparentTemperature();
         realFeel_temp_label.setText("/ " + String.valueOf(appTemp));
     }
 
-    public void displayTemp()
+    private void displayTemp()
     {
         BigDecimal temp = api.getTemperature();
         main_temp_label.setText(String.valueOf(temp));
+    }
+
+    private void displayUV()
+    {
+        double uvIndex = api.getUV();
+        uv_label.setText(String.valueOf(uvIndex));
+    }
+
+    private void displaySunrise()
+    {
+        LocalTime sunrise = api.getSunrise();
+        sunrise_label.setText(String.valueOf(sunrise));
+    }
+
+    private void displaySunset()
+    {
+        LocalTime sunset = api.getSunset();
+        sunset_label.setText(String.valueOf(sunset));
+    }
+
+    private void displayDescription()
+    {
+        String description = api.getDescription();
+        description_label.setText(description);
     }
 
     private void loadCityName()

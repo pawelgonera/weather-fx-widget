@@ -80,6 +80,16 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     }
 
     @Override
+    public String getDescription()
+    {
+        return apiData.stream()
+                .map(Data::getWeather)
+                .findFirst()
+                .map(Weather::getTextWeatherDescription)
+                .orElseThrow(this::newRunTimeException);
+    }
+
+    @Override
     public String getWeatherCode()
     {
         return apiData.stream()

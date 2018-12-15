@@ -29,4 +29,5 @@ public interface WeatherCurrentApi
     TimeZone getTimeZone();
     String getWeatherIconCode();
     String getWeatherCode();
+    String getDescription();
 }
