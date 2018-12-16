@@ -7,9 +7,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import service.WeatherHourlyForecastApiImpl;
 import util.SaveCityName;
 
@@ -33,7 +36,6 @@ public class Hourly
     private final static DecimalFormat FORMAT_PRECISION = new DecimalFormat("#0.0");
 
     private static String CITY_REQUEST;
-    //public static String WIND_DIRECTION;
     private static int HOURS = 48;
     private static int INDEX = 0;
 
@@ -87,6 +89,8 @@ public class Hourly
     private Label description_label;
     @FXML
     private Label forecast_hour_label;
+    @FXML
+    private Pane menu_panel_pane;
 
     private void setApi()
     {
@@ -100,8 +104,8 @@ public class Hourly
 
         if(CITY_REQUEST != null)
         {
-            //System.out.println(CITY_REQUEST);
             setApi();
+
             setTime();
             setTemp();
             setRealFeelTemp();
@@ -138,6 +142,22 @@ public class Hourly
         displayWeatherIcon();
         displayTime();
     }
+
+    public void swipeRight()
+    {
+
+    }
+
+    public void showMenu()
+    {
+        menu_panel_pane.setLayoutX(270);
+    }
+
+    public void hideMenu()
+    {
+        menu_panel_pane.setLayoutX(370);
+    }
+
 
     public void plusHourOnClick()
     {

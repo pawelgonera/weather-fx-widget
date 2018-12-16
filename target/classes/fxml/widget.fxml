@@ -24,9 +24,15 @@
       <Pane fx:id="bottom_welcome_pan" layoutY="248.0" prefHeight="157.0" prefWidth="400.0" style="-fx-background-color: #cfeeff;">
          <children>
             <Label layoutX="277.0" layoutY="111.0" prefHeight="17.0" prefWidth="115.0" text="Autor: Paweł Gónera" />
-            <Label layoutX="200.0" layoutY="128.0" prefHeight="17.0" prefWidth="189.0" text="Wszelkie prawa zastrzeżone    2018" />
-            <Label layoutX="14.0" layoutY="128.0" prefHeight="17.0" prefWidth="77.0" text="Wersja: 0.01" />
+            <Label layoutX="205.0" layoutY="128.0" prefHeight="17.0" prefWidth="189.0" text="Wszelkie prawa zastrzeżone  2018" />
+            <Label layoutX="14.0" layoutY="128.0" prefHeight="17.0" prefWidth="77.0" text="Wersja: 0.02" />
             <Button fx:id="start_button" layoutX="140.0" layoutY="35.0" mnemonicParsing="false" onAction="#loadMain" prefHeight="25.0" prefWidth="115.0" text="Sprawdź pogodę" textAlignment="CENTER" />
+            <Label layoutX="15.0" layoutY="75.0" prefHeight="17.0" prefWidth="202.0" text="Dane pogodowe pochodzą ze strony" />
+            <Label layoutX="50.0" layoutY="96.0" prefHeight="20.0" prefWidth="128.0" text="www.weatherbit.io">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

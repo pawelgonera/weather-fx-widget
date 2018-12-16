@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import org.controlsfx.control.textfield.TextFields;
 import service.GeoDataImpl;
 import service.WeatherCurrentApiImpl;
@@ -51,11 +52,7 @@ public class Controller
     private List<String> citiesMap = new LinkedList<>();
 
     @FXML
-    private Label top_welcome_label;
-    @FXML
     private AnchorPane main_anchorPane;
-    @FXML
-    private Button start_button;
     @FXML
     private Button refresh_button;
     @FXML
@@ -94,6 +91,8 @@ public class Controller
     private Label description_label;
     @FXML
     private TextField search_city_textField;
+    @FXML
+    private Pane menu_panel_pane;
 
     private ListView listView = new ListView();
     private ContextMenu contextMenu;
@@ -115,6 +114,16 @@ public class Controller
     private void initialize()
     {
         onClickRefreshData();
+    }
+
+    public void showMenu()
+    {
+        menu_panel_pane.setLayoutX(270);
+    }
+
+    public void hideMenu()
+    {
+        menu_panel_pane.setLayoutX(370);
     }
 
     public void onEnterPressed()
@@ -260,7 +269,7 @@ public class Controller
     private void displayUV()
     {
         double uvIndex = api.getUV();
-        uv_label.setText(String.valueOf(uvIndex));
+        uv_label.setText(String.valueOf(FORMAT_PRECISION.format(uvIndex)));
     }
 
     private void displaySunrise()

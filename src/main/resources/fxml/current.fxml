@@ -170,7 +170,7 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label fx:id="uv_label" layoutX="319.0" layoutY="51.0" prefHeight="20.0" prefWidth="23.0" text="10">
+            <Label fx:id="uv_label" layoutX="319.0" layoutY="51.0" prefHeight="20.0" prefWidth="40.0" text="10">
                <font>
                   <Font size="13.0" />
                </font>
@@ -205,25 +205,15 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="right_data_weather_pane" layoutX="370.0" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #eaf8ff;">
+      <Pane fx:id="menu_panel_pane" layoutX="370.0" onMouseEntered="#showMenu" onMouseExited="#hideMenu" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #eaf8ff;">
          <children>
-            <Label alignment="CENTER" layoutX="25.0" layoutY="356.0" prefHeight="24.0" prefWidth="153.0" text="Dane pogodowe pochodzą ze strony&#10;" textAlignment="CENTER">
-               <font>
-                  <Font size="9.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="55.0" layoutY="376.0" prefHeight="17.0" prefWidth="90.0" text="www.weatherbit.io">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </Label>
-            <Button fx:id="about_button" layoutX="63.0" layoutY="334.0" mnemonicParsing="false" onAction="#aboutProgram" prefHeight="20.0" prefWidth="75.0" text="O programie">
+            <Button fx:id="about_button" layoutX="30.0" layoutY="334.0" mnemonicParsing="false" onAction="#aboutProgram" prefHeight="20.0" prefWidth="75.0" text="O programie">
                <font>
                   <Font size="10.0" />
                </font>
             </Button>
-            <Button fx:id="current_button" layoutY="24.0" mnemonicParsing="false" onAction="#switchToCurrent" text="Aktualna" />
-            <Button fx:id="hourly_button" layoutY="82.0" mnemonicParsing="false" onAction="#switchToHourly" text="Co godzinę" />
+            <Button fx:id="current_button" layoutX="35.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchToCurrent" text="Aktualna" />
+            <Button fx:id="hourly_button" layoutX="30.0" layoutY="82.0" mnemonicParsing="false" onAction="#switchToHourly" text="Co godzinę" />
          </children></Pane>
    </children>
 </AnchorPane>
