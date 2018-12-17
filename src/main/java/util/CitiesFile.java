@@ -9,6 +9,7 @@ public class CitiesFile
 {
     //private final static String CITIES_FILE = "cities_20000json/cities_1.json";
     private final static String CITIES_FILE = "src/main/resources/cities_20000csv/cities_20000.csv";
+    //private final static String CITIES_FILE = "/cities_20000csv/cities_20000.csv";
 
     public static List<String[]> getGeoData()
     {
@@ -25,9 +26,9 @@ public class CitiesFile
 
         List<String[]> geoData = new LinkedList<>();
 
-        try(BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("src/main/resources/cities_20000csv/cities_20000.csv"), "UTF-8")))
+        try(BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(CITIES_FILE), "UTF-8")))
         {
-            String[] record = new String[7];
+            String[] record;
             String line;
             while ((line = reader.readLine()) != null)
             {

@@ -30,6 +30,7 @@ public class Hourly
     private final static DecimalFormat FORMAT_PRECISION = new DecimalFormat("#0.0");
 
     private static String CITY_REQUEST;
+    protected static String CITY_NAME;
     private static int HOURS = 48;
     private static int INDEX = 0;
 
@@ -275,7 +276,7 @@ public class Hourly
 
     private void displayCityName()
     {
-        cityname_label.setText(Controller.CITY_REQUEST);
+        cityname_label.setText(CITY_NAME);
     }
 
     private void displaySnowFall()

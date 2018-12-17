@@ -41,8 +41,8 @@ public class GeoDataImpl implements GeoData
     public List<String> getCityName()
     {
         return geoData.stream()
-                            .map(strings -> strings[1])
-                            .collect(Collectors.toList());
+                        .map(strings -> strings[1])
+                        .collect(Collectors.toList());
 
         //for(String[] elements : geoData)
             //citiesList.add(elements[1]);

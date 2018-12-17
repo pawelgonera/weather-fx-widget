@@ -18,6 +18,7 @@ import util.SaveCityName;
 import validator.FixCityName;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
@@ -171,7 +172,12 @@ public class Controller
             displayHumidity();
             displayRainFall();
             displaySnowFall();
-            displayCityName();
+            try
+            {
+                displayCityName();
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
             displayCloudsCoverage();
             displayLastObservationTime();
             displayWindDirectionArrow();
@@ -211,10 +217,13 @@ public class Controller
         clouds_label.setText(String.valueOf(clouds));
     }
 
-    private void displayCityName()
+    private void displayCityName() throws UnsupportedEncodingException
     {
         String cityName = api.getCityName();
-        cityname_label.setText(cityName);
+        byte[] txtBytes = cityName.getBytes();
+        String cityNameUTF8 = new String(txtBytes, "UTF-8");
+        Hourly.CITY_NAME = cityNameUTF8;
+        cityname_label.setText(cityNameUTF8);
     }
 
     private void displaySnowFall()
@@ -245,14 +254,12 @@ public class Controller
     {
         Controller.WIND_DIRECTION = api.getAbbreviatedWindDirection();
         wind_direction_label.setText(Controller.WIND_DIRECTION);
-
     }
 
     private void displayWindSpeed()
     {
         String windSpeed = FORMAT_PRECISION.format(api.getWindSpeed() * 3.6);
         wind_speed_label.setText(windSpeed);
-
     }
 
     private void displayRealFeelTemp()
