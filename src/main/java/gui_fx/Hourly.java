@@ -1,25 +1,19 @@
 package gui_fx;
 
-import com.sun.javafx.binding.StringFormatter;
 import gui_fx.rotates.RotateArrow;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
-import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import service.WeatherHourlyForecastApiImpl;
 import util.SaveCityName;
-
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -105,7 +99,6 @@ public class Hourly
         if(CITY_REQUEST != null)
         {
             setApi();
-
             setTime();
             setTemp();
             setRealFeelTemp();
@@ -258,8 +251,6 @@ public class Hourly
 
     private void displayTime()
     {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
-        //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm").
         forecast_hour_label.setText(time.get(INDEX).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
     }
 
@@ -284,8 +275,7 @@ public class Hourly
 
     private void displayCityName()
     {
-        cityName = api.getCityName().get(0);
-        cityname_label.setText(cityName);
+        cityname_label.setText(Controller.CITY_REQUEST);
     }
 
     private void displaySnowFall()

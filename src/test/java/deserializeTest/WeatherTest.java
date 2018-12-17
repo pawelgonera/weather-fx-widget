@@ -24,10 +24,9 @@ public class WeatherTest
     }
 
     @BeforeEach
-    public Weather setUp()
+    public void setUp()
     {
         weather = JsonbBuilder.create().fromJson(WEATHER_TEST_RESPONSE, Weather.class);
-        return weather;
     }
 
     @Test

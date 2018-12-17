@@ -156,7 +156,7 @@
                     </items>
                   </ContextMenu>
                </contextMenu></TextField>
-            <Button fx:id="refresh_button" layoutX="309.0" layoutY="144.0" maxHeight="3.0" maxWidth="3.0" minHeight="3.0" minWidth="3.0" mnemonicParsing="false" onAction="#onClickRefreshData" prefHeight="3.0" prefWidth="3.0" style="-fx-background-image: C:\Users\poulg\IdeaProjects\weather_forecast_maven\src\main\resources.refresh_button.png">
+            <Button fx:id="refresh_button" layoutX="309.0" layoutY="144.0" maxHeight="3.0" maxWidth="3.0" minHeight="3.0" minWidth="3.0" mnemonicParsing="false" onAction="#onClickRefreshData" prefHeight="3.0" prefWidth="3.0" style="-fx-background-image: resources\icons\refresh_button.png">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>

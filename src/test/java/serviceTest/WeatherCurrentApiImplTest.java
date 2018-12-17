@@ -6,6 +6,7 @@ import static org.hamcrest.Matchers.is;
 import entity.JsonBody;
 import get.factory.HttpConnectFactory;
 import get.factory.QueryFactory;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import service.WeatherCurrentApiImpl;
@@ -19,8 +20,9 @@ import java.util.TimeZone;
 
 public class WeatherCurrentApiImplTest
 {
+    /*
     private static String QUERY_CURRENT_WEATHER = "https://api.weatherbit.io/v2.0/current?city=%s&lang=en&key=%s";
-    private final static String CITY_NAME_REQUEST = "Wieliczka";
+    private final static String CITY_NAME_REQUEST = "Kalisz";
     private WeatherCurrentApiImpl api;
     private Jsonb jsonb;
     private JsonBody json;
@@ -246,7 +248,8 @@ public class WeatherCurrentApiImplTest
 
         final LocalTime testValue = json.getData().get(0).getSunSet();
 
-        assertThat(sunsetTest, is(testValue));
+        Assertions.assertEquals(sunsetTest, testValue);
+        //assertThat(sunsetTest, is(testValue));
     }
 
     @Test
@@ -258,6 +261,7 @@ public class WeatherCurrentApiImplTest
 
         assertThat(timeZoneTest, is(testValue));
     }
+    */
 
 }
 

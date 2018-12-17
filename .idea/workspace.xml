@@ -7,28 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c95392a-ccc7-47da-8169-47f5bb82cd5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/city/saved_city.data" beforeDir="false" afterPath="$PROJECT_DIR$/city/saved_city.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Arrow_Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/refresh_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui_fx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui_fx/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/current.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/current.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/hourly.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/hourly.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/serviceTest/WeatherCurrentApiImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/serviceTest/WeatherCurrentApiImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/current.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/current.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui_fx/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui_fx/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/WeatherCurrentApiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/WeatherCurrentApiImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-connectTest.HttpConnectionTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-deserializeTest.DataTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-deserializeTest.JsonBodyTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-deserializeTest.WeatherTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-validatorTest.ClientRequestValidationTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/connectTest.HttpConnectionTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/deserializeTest.DataTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/deserializeTest.JsonBodyTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/deserializeTest.WeatherTest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/validatorTest.ClientRequestValidationTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/deserializeTest/DataTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/deserializeTest/DataTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/deserializeTest/WeatherTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/deserializeTest/WeatherTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/serviceTest/WeatherCurrentApiImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/serviceTest/WeatherCurrentApiImplTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/wweather_forecast_maven-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/wweather_forecast_maven-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
@@ -71,32 +79,33 @@
     <session id="-1310366529">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="25" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.0" value="11" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="5" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="10" />
-          <entry key="fxml" value="32" />
-          <entry key="java" value="14817" />
-          <entry key="xml" value="69" />
+          <entry key="fxml" value="39" />
+          <entry key="java" value="14934" />
+          <entry key="xml" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14817" />
+          <entry key="JAVA" value="14934" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="XML" value="101" />
+          <entry key="XML" value="120" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -104,7 +113,7 @@
           <entry key="class" value="4" />
           <entry key="fxml" value="16" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="189" />
+          <entry key="java" value="196" />
           <entry key="json" value="1" />
           <entry key="png" value="1" />
           <entry key="xml" value="4" />
@@ -114,7 +123,7 @@
         <counts>
           <entry key="CLASS" value="4" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="189" />
+          <entry key="JAVA" value="196" />
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="20" />
@@ -127,29 +136,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="367">
+              <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2686">
-              <caret line="158" selection-start-line="158" selection-end-line="158" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/util/JsonData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
             </state>
           </provider>
         </entry>
@@ -157,31 +148,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2193">
-              <caret line="160" selection-start-line="160" selection-end-line="160" />
+            <state relative-caret-position="298">
+              <caret line="276" column="5" selection-start-line="276" selection-start-column="5" selection-end-line="276" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3846#3847#0" expanded="true" />
                 <element signature="e#3893#3894#0" expanded="true" />
+                <element signature="e#6337#6338#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/rotates/RotateArrow.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/util/JsonData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="37">
+              <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+            <state relative-caret-position="162">
+              <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -189,8 +181,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4590">
-              <caret line="312" selection-start-line="312" selection-end-line="312" />
+            <state relative-caret-position="408">
+              <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,20 +191,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/current.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="119" selection-start-line="16" selection-start-column="119" selection-end-line="16" selection-end-column="119" />
+            <state relative-caret-position="340">
+              <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/current.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="169" column="38" lean-forward="true" selection-start-line="169" selection-start-column="38" selection-end-line="169" selection-end-column="38" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherHourlyForecastApiImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="16" column="113" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="113" />
+            <state relative-caret-position="164">
+              <caret line="16" column="107" selection-start-line="16" selection-start-column="107" selection-end-line="16" selection-end-column="107" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -224,7 +225,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="10" selection-start-line="10" selection-end-line="31" selection-end-column="28" />
+              <caret line="10" selection-start-line="10" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -252,6 +253,7 @@
       <find>precip</find>
       <find>uv</find>
       <find>date</find>
+      <find>System</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -293,21 +295,21 @@
         <option value="$PROJECT_DIR$/src/main/java/validator/FixCityName.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui_fx/About.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/GeoDataImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui_fx/CurrentWeatherHandler.java" />
         <option value="$PROJECT_DIR$/src/test/java/serviceTest/GeoDataTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/serviceTest/WeatherCurrentApiImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/WeatherHourlyForecastApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/WeatherHourlyForecastApiImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui_fx/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/current.fxml" />
+        <option value="$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/serviceTest/WeatherCurrentApiImplTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/current.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui_fx/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java" />
       </list>
     </option>
   </component>
@@ -363,8 +365,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -512,10 +512,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544964281951" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545043782629" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -547,7 +549,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataTest.deserializeTemperatureTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in weather_forecast_api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weather_forecast_api" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather_forecast_api" />
       <extension name="coverage">
         <pattern>
@@ -557,13 +567,11 @@
       </extension>
       <option name="PACKAGE_NAME" value="deserializeTest" />
       <option name="MAIN_CLASS_NAME" value="deserializeTest.DataTest" />
-      <option name="METHOD_NAME" value="deserializeTemperatureTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeatherCurrentApiImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WeatherCurrentApiImplTest.getSunsetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather_forecast_api" />
       <extension name="coverage">
         <pattern>
@@ -573,38 +581,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="serviceTest" />
       <option name="MAIN_CLASS_NAME" value="serviceTest.WeatherCurrentApiImplTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WeatherCurrentApiImplTest.getTemperatureTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="weather_forecast_api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="serviceTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="serviceTest" />
-      <option name="MAIN_CLASS_NAME" value="serviceTest.WeatherCurrentApiImplTest" />
-      <option name="METHOD_NAME" value="getTemperatureTest" />
+      <option name="METHOD_NAME" value="getSunsetTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeatherCurrentApiImplTest.getWeatherCodeWrongValueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WeatherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather_forecast_api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="serviceTest.*" />
+          <option name="PATTERN" value="deserializeTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="serviceTest" />
-      <option name="MAIN_CLASS_NAME" value="serviceTest.WeatherCurrentApiImplTest" />
-      <option name="METHOD_NAME" value="getWeatherCodeWrongValueTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="deserializeTest" />
+      <option name="MAIN_CLASS_NAME" value="deserializeTest.WeatherTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -657,19 +649,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.WeatherCurrentApiImplTest" />
+      <item itemvalue="JUnit.DataTest" />
+      <item itemvalue="JUnit.All in weather_forecast_api" />
+      <item itemvalue="JUnit.WeatherTest" />
+      <item itemvalue="JUnit.WeatherCurrentApiImplTest.getSunsetTest" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.WeatherCurrentApiImplTest.getTemperatureTest" />
-      <item itemvalue="JUnit.WeatherCurrentApiImplTest.getWeatherCodeWrongValueTest" />
-      <item itemvalue="JUnit.DataTest.deserializeTemperatureTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.DataTest.deserializeTemperatureTest" />
-        <item itemvalue="JUnit.WeatherCurrentApiImplTest.getWeatherCodeWrongValueTest" />
-        <item itemvalue="JUnit.WeatherCurrentApiImplTest" />
-        <item itemvalue="JUnit.WeatherCurrentApiImplTest.getTemperatureTest" />
+        <item itemvalue="JUnit.All in weather_forecast_api" />
+        <item itemvalue="JUnit.WeatherCurrentApiImplTest.getSunsetTest" />
+        <item itemvalue="JUnit.WeatherTest" />
+        <item itemvalue="JUnit.DataTest" />
       </list>
     </recent_temporary>
   </component>
@@ -687,35 +679,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WeatherCurrentApiImplTest_getWeatherCodeWrongValueTest - 2018.12.15 at 15h 15m 21s.xml">
-      <configuration name="WeatherCurrentApiImplTest.getWeatherCodeWrongValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WeatherCurrentApiImplTest_getWeatherCodeWrongValueTest - 2018.12.15 at 15h 15m 53s.xml">
-      <configuration name="WeatherCurrentApiImplTest.getWeatherCodeWrongValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WeatherCurrentApiImplTest_getWeatherCodeWrongValueTest - 2018.12.15 at 15h 16m 46s.xml">
-      <configuration name="WeatherCurrentApiImplTest.getWeatherCodeWrongValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WeatherCurrentApiImplTest_getWeatherCodeWrongValueTest - 2018.12.15 at 15h 17m 06s.xml">
-      <configuration name="WeatherCurrentApiImplTest.getWeatherCodeWrongValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WeatherCurrentApiImplTest_getWeatherCodeWrongValueTest - 2018.12.15 at 15h 17m 18s.xml">
-      <configuration name="WeatherCurrentApiImplTest.getWeatherCodeWrongValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WeatherCurrentApiImplTest_getWeatherCodeWrongValueTest - 2018.12.15 at 15h 20m 11s.xml">
-      <configuration name="WeatherCurrentApiImplTest.getWeatherCodeWrongValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WeatherCurrentApiImplTest_getWeatherCodeWrongValueTest - 2018.12.15 at 15h 22m 37s.xml">
-      <configuration name="WeatherCurrentApiImplTest.getWeatherCodeWrongValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WeatherCurrentApiImplTest_getWeatherCodeWrongValueTest - 2018.12.15 at 15h 24m 44s.xml">
-      <configuration name="WeatherCurrentApiImplTest.getWeatherCodeWrongValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataTest_deserializeTemperatureTest - 2018.12.15 at 22h 35m 29s.xml">
+    <history-entry file="DataTest_deserializeTemperatureTest - 2018.12.16 at 13h 53m 38s.xml">
       <configuration name="DataTest.deserializeTemperatureTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataTest_deserializeTemperatureTest - 2018.12.15 at 22h 35m 40s.xml">
+    <history-entry file="DataTest_deserializeTemperatureTest - 2018.12.16 at 13h 53m 50s.xml">
       <configuration name="DataTest.deserializeTemperatureTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataTest_deserializeTemperatureTest - 2018.12.16 at 13h 54m 08s.xml">
+      <configuration name="DataTest.deserializeTemperatureTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataTest - 2018.12.16 at 13h 54m 13s.xml">
+      <configuration name="DataTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_weather_forecast_api - 2018.12.16 at 13h 54m 24s.xml">
+      <configuration name="All in weather_forecast_api" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_weather_forecast_api - 2018.12.16 at 13h 55m 07s.xml">
+      <configuration name="All in weather_forecast_api" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WeatherTest - 2018.12.16 at 13h 55m 32s.xml">
+      <configuration name="WeatherTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_weather_forecast_api - 2018.12.16 at 13h 55m 42s.xml">
+      <configuration name="All in weather_forecast_api" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WeatherCurrentApiImplTest_getSunsetTest - 2018.12.16 at 13h 56m 40s.xml">
+      <configuration name="WeatherCurrentApiImplTest.getSunsetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_weather_forecast_api - 2018.12.16 at 13h 57m 55s.xml">
+      <configuration name="All in weather_forecast_api" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -729,8 +721,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34488273" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3523454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -739,12 +732,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
@@ -847,12 +840,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/widget.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="28" column="107" selection-start-line="28" selection-start-column="107" selection-end-line="28" selection-end-column="107" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/text/Normalizer.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -963,13 +956,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/CurrentWeatherHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -991,13 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/serviceTest/WeatherCurrentApiImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/About.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1012,13 +991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/JsonBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/Data.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -1026,20 +998,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/hourly.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="142" column="61" selection-start-line="142" selection-start-column="61" selection-end-line="142" selection-end-column="61" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/com/sun/javafx/binding/StringFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1069,42 +1034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2686">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/JsonData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
-          <caret line="160" selection-start-line="160" selection-end-line="160" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3846#3847#0" expanded="true" />
-            <element signature="e#3893#3894#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/rotates/RotateArrow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1112,35 +1041,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/DataTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+        <state relative-caret-position="306">
+          <caret line="35" column="66" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/deserializeTest/WeatherTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4590">
-          <caret line="312" selection-start-line="312" selection-end-line="312" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/current.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/serviceTest/WeatherCurrentApiImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="119" selection-start-line="16" selection-start-column="119" selection-end-line="16" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherHourlyForecastApiImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="113" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="113" />
+        <state relative-caret-position="4199">
+          <caret line="263" column="6" selection-start-line="263" selection-start-column="6" selection-end-line="263" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1150,7 +1068,86 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="10" selection-start-line="10" selection-end-line="31" selection-end-column="28" />
+          <caret line="10" selection-start-line="10" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherHourlyForecastApiImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="16" column="107" selection-start-line="16" selection-start-column="107" selection-end-line="16" selection-end-column="107" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/current.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="169" column="38" lean-forward="true" selection-start-line="169" selection-start-column="38" selection-end-line="169" selection-end-column="38" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/JsonBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/JsonData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="276" column="5" selection-start-line="276" selection-start-column="5" selection-end-line="276" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3846#3847#0" expanded="true" />
+            <element signature="e#3893#3894#0" expanded="true" />
+            <element signature="e#6337#6338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

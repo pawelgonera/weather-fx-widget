@@ -6,6 +6,8 @@ import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.is;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -31,7 +33,8 @@ public class DataTest
     {
         final BigDecimal testingValue = data.getTemperature();
 
-        assertThat(testingValue, is(-0.5));
+        Assertions.assertEquals(testingValue, new BigDecimal(-0.5));
+        //assertThat(testingValue, is(-0.5));
     }
 
     @Test

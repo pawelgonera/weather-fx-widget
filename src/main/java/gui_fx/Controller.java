@@ -37,7 +37,7 @@ public class Controller
     private final static DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     private final static DecimalFormat FORMAT_PRECISION = new DecimalFormat("#0.0");
 
-    private static String CITY_REQUEST;
+    protected static String CITY_REQUEST;
     public static String WIND_DIRECTION;
 
     private Parent current;
@@ -179,6 +179,7 @@ public class Controller
             displayUV();
             displaySunrise();
             displaySunset();
+            displayDescription();
         }
     }
 

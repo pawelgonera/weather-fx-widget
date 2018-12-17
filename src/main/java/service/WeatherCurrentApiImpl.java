@@ -70,7 +70,7 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     private void getApiData()
     {
         String fixedCityNameRequest = fixCityName();
-        System.out.println("fixed: " + fixedCityNameRequest);
+        //System.out.println("fixed: " + fixedCityNameRequest);
         apiData = jsonData.getJsonWeather(httpConnectionFactory, jsonb, QUERY_CURRENT_WEATHER, fixedCityNameRequest);
     }
 
