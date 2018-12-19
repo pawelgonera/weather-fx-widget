@@ -42,6 +42,7 @@ public class Controller
     public static String WIND_DIRECTION;
 
     private Parent current;
+    private Parent daily;
     private Parent about;
 
     private SaveCityName saveCityName = SaveCityName.getInstance();
@@ -94,6 +95,8 @@ public class Controller
     private TextField search_city_textField;
     @FXML
     private Pane menu_panel_pane;
+    @FXML
+    private ImageView menu_icon;
 
     private ListView listView = new ListView();
     private ContextMenu contextMenu;
@@ -120,11 +123,13 @@ public class Controller
     public void showMenu()
     {
         menu_panel_pane.setLayoutX(270);
+        menu_icon.setOpacity(0);
     }
 
     public void hideMenu()
     {
         menu_panel_pane.setLayoutX(370);
+        menu_icon.setOpacity(100);
     }
 
     public void onEnterPressed()
@@ -311,6 +316,12 @@ public class Controller
     public void switchToCurrent()
     {
 
+    }
+
+    public void switchToDaily() throws IOException
+    {
+        daily = FXMLLoader.load(getClass().getResource("/fxml/daily.fxml"));
+        main_anchorPane.getChildren().addAll(daily);
     }
 
     public void switchToHourly() throws IOException

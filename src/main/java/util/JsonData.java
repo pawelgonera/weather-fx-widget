@@ -47,14 +47,14 @@ public class JsonData
         return data;
     }
 
-    public List<Data> getJsonWeather(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String city, int hours)
+    public List<Data> getJsonWeather(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String city, int quantity)
     {
         List<Data> data = new LinkedList<>();
-        try(HttpConnection connection = httpConnectFactory.getConnection(new QueryFactory().setForecastQuery(city, hours, query)))
+        try(HttpConnection connection = httpConnectFactory.getConnection(new QueryFactory().setForecastQuery(city, quantity, query)))
         {
             String response = connection.connect();
             JsonBody jsonBody = jsonb.fromJson(response, JsonBody.class);
-            for (int i = 0; i < hours; i++)
+            for (int i = 0; i < quantity; i++)
                 data.add(jsonBody.getData().get(i));
         }
         catch (Exception e)

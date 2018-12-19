@@ -1,16 +1,19 @@
 package gui_fx;
 
+import api.WeatherFewDailyForecast;
 import gui_fx.rotates.RotateArrow;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import service.WeatherHourlyForecastApiImpl;
+import service.WeatherFewDailyForecastImpl;
 import util.SaveCityName;
+
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
@@ -18,9 +21,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class Hourly
+public class Daily
 {
-    WeatherHourlyForecastApiImpl api;
+    WeatherFewDailyForecast api;
 
     private SaveCityName saveCityName = SaveCityName.getInstance();
 
@@ -31,7 +34,7 @@ public class Hourly
 
     private static String CITY_REQUEST;
     protected static String CITY_NAME;
-    private static int HOURS = 48;
+    private static int DAYS = 5;
     private static int INDEX = 0;
 
     private List<String> weatherCodeIcon;
@@ -50,11 +53,11 @@ public class Hourly
     private String cityName;
 
     private Parent current;
-    private Parent daily;
+    private Parent hourly;
     private Parent about;
 
     @FXML
-    private AnchorPane hourly_anchorPane;
+    private AnchorPane daily_anchorPane;
     @FXML
     private Label main_temp_label;
     @FXML
@@ -89,10 +92,14 @@ public class Hourly
     private Pane menu_panel_pane;
     @FXML
     private ImageView menu_icon;
+    @FXML
+    private Button daily_button;
+
 
     private void setApi()
+
     {
-        api = new WeatherHourlyForecastApiImpl(CITY_REQUEST, HOURS);
+        api = new WeatherFewDailyForecastImpl(CITY_REQUEST, DAYS);
     }
 
     @FXML
@@ -140,10 +147,6 @@ public class Hourly
         displayTime();
     }
 
-    public void swipeRight()
-    {
-
-    }
 
     public void showMenu()
     {
@@ -157,10 +160,9 @@ public class Hourly
         menu_icon.setOpacity(100);
     }
 
-
     public void plusHourOnClick()
     {
-        if(INDEX < HOURS - 1)
+        if(INDEX < DAYS - 1)
         {
             INDEX++;
             displayData();
@@ -341,24 +343,23 @@ public class Hourly
     public void switchToCurrent() throws IOException
     {
         current = FXMLLoader.load(getClass().getResource("/fxml/current.fxml"));
-        hourly_anchorPane.getChildren().addAll(current);
+        daily_anchorPane.getChildren().addAll(current);
     }
 
-    public void switchToHourly()
+    public void switchToHourly() throws IOException
     {
-
-    }
-
-    public void switchToDaily() throws IOException
-    {
-        daily = FXMLLoader.load(getClass().getResource("/fxml/daily.fxml"));
-        hourly_anchorPane.getChildren().addAll(daily);
+        hourly = FXMLLoader.load(getClass().getResource("/fxml/hourly.fxml"));
     }
 
     public void aboutProgram() throws IOException
     {
         about = FXMLLoader.load(getClass().getResource("/fxml/widget.fxml"));
-        hourly_anchorPane.getChildren().addAll(about);
+        daily_anchorPane.getChildren().addAll(about);
+    }
+
+    public void switchToDaily()
+    {
+
     }
 
     private void loadCityName()
