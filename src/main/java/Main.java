@@ -1,4 +1,3 @@
-import gui_fx.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,10 +8,6 @@ import javafx.stage.Stage;
 
 public class Main extends Application
 {
-    private static String QUERY = "https://api.weatherbit.io/v2.0/current?city=Kalisz&key=c820ef242bee4a319736ef8537661f06";
-    private static final String DATE_FORMAT = "yyyy-MM-dd hh:mm";
-    Controller controller = new Controller();
-
     public static void main(String[] args)
     {
         /*WeatherCurrentApiImpl weatherApi = new WeatherCurrentApiImpl();
@@ -100,7 +95,7 @@ public class Main extends Application
         //System.out.println(citiesList);
 
 
-        //launch(args);
+        launch(args);
 
     }
 
