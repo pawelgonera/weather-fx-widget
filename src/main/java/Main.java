@@ -5,11 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import service.*;
-import validator.ClientRequestValidation;
-import validator.FixCityName;
 
-import java.util.List;
 
 public class Main extends Application
 {
@@ -36,9 +32,9 @@ public class Main extends Application
             System.out.println(temps + " Time: " + LocalTime.now().plusHours(i++));
             */
 
-        WeatherCurrentApiImpl api = new WeatherCurrentApiImpl("Kalisz");
+        //WeatherCurrentApiImpl api = new WeatherCurrentApiImpl("Kalisz");
 
-        ClientRequestValidation clientRequestValidation = ClientRequestValidation.getInstance();
+        //ClientRequestValidation clientRequestValidation = ClientRequestValidation.getInstance();
 
         //System.out.println(api.getWeatherIconCode());
 
@@ -104,7 +100,7 @@ public class Main extends Application
         //System.out.println(citiesList);
 
 
-        launch(args);
+        //launch(args);
 
     }
 
