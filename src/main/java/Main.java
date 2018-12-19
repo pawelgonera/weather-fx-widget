@@ -116,7 +116,5 @@ public class Main extends Application
         primaryStage.setScene(new Scene(root, 390, 390, Color.rgb( 164, 248, 255)));
         primaryStage.setResizable(false);
         primaryStage.show();
-
-        //controller.
     }
 }

@@ -7,13 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c95392a-ccc7-47da-8169-47f5bb82cd5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/api_properties/apikey.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/city/saved_city.data" beforeDir="false" afterPath="$PROJECT_DIR$/city/saved_city.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui_fx/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui_fx/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/GeoDataImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/GeoDataImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/CitiesFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/CitiesFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/ApiKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ApiKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/hourly.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/hourly.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,32 +53,35 @@
     <session id="-1310366529">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="27" />
-          <entry key="project.open.time.0" value="11" />
+          <entry key="project.closed" value="33" />
+          <entry key="project.open.time.0" value="15" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="5" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="28" />
+          <entry key="project.opened" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="10" />
           <entry key="fxml" value="39" />
-          <entry key="java" value="14959" />
+          <entry key="java" value="15425" />
+          <entry key="properties" value="17" />
           <entry key="xml" value="114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14959" />
+          <entry key="JAVA" value="15425" />
           <entry key="PLAIN_TEXT" value="10" />
+          <entry key="Properties" value="17" />
           <entry key="XML" value="153" />
         </counts>
       </usages-collector>
@@ -88,9 +90,10 @@
           <entry key="class" value="4" />
           <entry key="fxml" value="16" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="201" />
+          <entry key="java" value="208" />
           <entry key="json" value="1" />
           <entry key="png" value="1" />
+          <entry key="properties" value="2" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
@@ -98,9 +101,10 @@
         <counts>
           <entry key="CLASS" value="4" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="201" />
+          <entry key="JAVA" value="208" />
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="2" />
           <entry key="XML" value="20" />
         </counts>
       </usages-collector>
@@ -108,11 +112,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="520">
+              <caret line="106" column="23" lean-forward="true" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,43 +125,51 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="876">
-              <caret line="150" column="46" selection-start-line="150" selection-start-column="46" selection-end-line="150" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="216" column="40" selection-start-line="216" selection-start-column="40" selection-end-line="216" selection-end-column="40" />
+            <state relative-caret-position="190">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
               <folding>
-                <element signature="e#7804#7805#0" expanded="true" />
-                <element signature="e#7862#7863#0" expanded="true" />
-                <element signature="e#7901#7902#0" expanded="true" />
-                <element signature="e#7956#7957#0" expanded="true" />
+                <element signature="e#2962#2963#0" expanded="true" />
+                <element signature="e#3023#3024#0" expanded="true" />
+                <element signature="e#3106#3107#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/util/SaveCityName.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/util/JsonData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
+            <state relative-caret-position="190">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entity/GeoData.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/get/factory/QueryFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/util/ApiKey.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -185,19 +197,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/current.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="186" column="21" selection-start-line="186" selection-start-column="21" selection-end-line="186" selection-end-column="21" />
+            <state relative-caret-position="1326">
+              <caret line="180" column="21" selection-start-line="180" selection-start-column="21" selection-end-line="180" selection-end-column="21" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -206,11 +209,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="276" column="5" selection-start-line="276" selection-start-column="5" selection-end-line="276" selection-end-column="5" />
+            <state relative-caret-position="4488">
+              <caret line="278" column="42" selection-start-line="278" selection-start-column="42" selection-end-line="278" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6337#6338#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -261,8 +263,6 @@
         <option value="$PROJECT_DIR$/src/main/java/util/UserNameApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/CityNamesApiImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Cities.java" />
-        <option value="$PROJECT_DIR$/src/main/java/util/ApiKey.java" />
-        <option value="$PROJECT_DIR$/src/main/java/get/factory/QueryFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/CitiesData.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/CitiesNamesList.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/JsonData.java" />
@@ -277,7 +277,6 @@
         <option value="$PROJECT_DIR$/src/main/java/validator/FixCityName.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui_fx/About.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Data.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui_fx/CurrentWeatherHandler.java" />
         <option value="$PROJECT_DIR$/src/test/java/serviceTest/GeoDataTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/WeatherCurrentApi.java" />
@@ -288,11 +287,15 @@
         <option value="$PROJECT_DIR$/src/test/java/serviceTest/WeatherCurrentApiImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/current.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/GeoDataImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/CitiesFile.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/gui_fx/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/api_properties/apikey.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/util/ApiKey.java" />
+        <option value="$PROJECT_DIR$/src/main/java/get/factory/QueryFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -348,7 +351,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -461,6 +463,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="api_properties" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weather_forecast_maven" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weather_forecast_maven" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="fxml" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -497,10 +507,11 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545046747746" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545225357527" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -540,20 +551,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="weather_forecast_api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="deserializeTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="deserializeTest" />
-      <option name="MAIN_CLASS_NAME" value="deserializeTest.DataTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WeatherCurrentApiImplTest.getSunsetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="weather_forecast_api" />
       <extension name="coverage">
@@ -580,6 +577,20 @@
       </extension>
       <option name="PACKAGE_NAME" value="deserializeTest" />
       <option name="MAIN_CLASS_NAME" value="deserializeTest.WeatherTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="deserializeTest in weather_forecast_api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="weather_forecast_api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="deserializeTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="deserializeTest" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -632,19 +643,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.DataTest" />
       <item itemvalue="JUnit.All in weather_forecast_api" />
       <item itemvalue="JUnit.WeatherTest" />
       <item itemvalue="JUnit.WeatherCurrentApiImplTest.getSunsetTest" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.deserializeTest in weather_forecast_api" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.deserializeTest in weather_forecast_api" />
         <item itemvalue="JUnit.All in weather_forecast_api" />
         <item itemvalue="JUnit.WeatherCurrentApiImplTest.getSunsetTest" />
         <item itemvalue="JUnit.WeatherTest" />
-        <item itemvalue="JUnit.DataTest" />
       </list>
     </recent_temporary>
   </component>
@@ -662,9 +673,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataTest_deserializeTemperatureTest - 2018.12.16 at 13h 53m 38s.xml">
-      <configuration name="DataTest.deserializeTemperatureTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DataTest_deserializeTemperatureTest - 2018.12.16 at 13h 53m 50s.xml">
       <configuration name="DataTest.deserializeTemperatureTest" configurationId="JUnit" />
     </history-entry>
@@ -692,6 +700,9 @@
     <history-entry file="All_in_weather_forecast_api - 2018.12.16 at 13h 57m 55s.xml">
       <configuration name="All in weather_forecast_api" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="deserializeTest_in_weather_forecast_api - 2018.12.19 at 14h 12m 02s.xml">
+      <configuration name="deserializeTest in weather_forecast_api" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -706,7 +717,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35607675" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37579957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -715,7 +726,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -770,20 +781,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/LinkedHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="164" column="17" lean-forward="true" selection-start-line="164" selection-start-column="17" selection-end-line="164" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Collection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -873,20 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/get/factory/QueryFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="1401" column="19" selection-start-line="1401" selection-start-column="19" selection-end-line="1401" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1018,9 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4199">
           <caret line="263" column="6" selection-start-line="263" selection-start-column="6" selection-end-line="263" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1028,9 +1008,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" selection-start-line="10" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,9 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="107" selection-start-line="16" selection-start-column="107" selection-end-line="16" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,36 +1025,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/JsonData.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+        <state relative-caret-position="-155">
+          <caret line="136" column="11" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+        <state relative-caret-position="791">
+          <caret line="150" column="46" selection-start-line="150" selection-start-column="46" selection-end-line="150" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/current.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/api_properties/apikey.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="186" column="21" selection-start-line="186" selection-start-column="21" selection-end-line="186" selection-end-column="21" />
+        <state>
+          <caret selection-end-column="15" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/SaveCityName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="276" column="5" selection-start-line="276" selection-start-column="5" selection-end-line="276" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6337#6338#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="765">
+          <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -1109,39 +1078,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Hourly.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="876">
-          <caret line="150" column="46" selection-start-line="150" selection-start-column="46" selection-end-line="150" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="4488">
+          <caret line="278" column="42" selection-start-line="278" selection-start-column="42" selection-end-line="278" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/SaveCityName.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
+        <state relative-caret-position="190">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+          <folding>
+            <element signature="e#2962#2963#0" expanded="true" />
+            <element signature="e#3023#3024#0" expanded="true" />
+            <element signature="e#3106#3107#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui_fx/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/current.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="216" column="40" selection-start-line="216" selection-start-column="40" selection-end-line="216" selection-end-column="40" />
+        <state relative-caret-position="1326">
+          <caret line="180" column="21" selection-start-line="180" selection-start-column="21" selection-end-line="180" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/ApiKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/get/factory/QueryFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/JsonData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/WeatherCurrentApiImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="106" column="23" lean-forward="true" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
           <folding>
-            <element signature="e#7804#7805#0" expanded="true" />
-            <element signature="e#7862#7863#0" expanded="true" />
-            <element signature="e#7901#7902#0" expanded="true" />
-            <element signature="e#7956#7957#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
