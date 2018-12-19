@@ -25,7 +25,7 @@
                   <Font name="Tw Cen MT" size="50.0" />
                </font>
             </Label>
-            <Label fx:id="realFeel_temp_label" alignment="CENTER_RIGHT" layoutX="231.0" layoutY="133.0" prefHeight="27.0" prefWidth="50.0" text="/ 15,3">
+            <Label fx:id="realFeel_temp_label" alignment="CENTER_RIGHT" layoutX="235.0" layoutY="133.0" prefHeight="27.0" prefWidth="50.0" text="/ 15,3">
                <font>
                   <Font size="16.0" />
                </font></Label>
@@ -34,7 +34,7 @@
                   <Font size="21.0" />
                </font>
             </Label>
-            <Label layoutX="282.0" layoutY="137.0" prefHeight="10.0" prefWidth="18.0" text="°C">
+            <Label layoutX="285.0" layoutY="137.0" prefHeight="10.0" prefWidth="18.0" text="°C">
                <font>
                   <Font size="8.0" />
                </font></Label>
