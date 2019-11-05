@@ -1,9 +1,7 @@
 package get.factory;
 
 import util.ApiKey;
-import util.UserNameApi;
 
-import java.io.FileNotFoundException;
 
 public class QueryFactory
 {
