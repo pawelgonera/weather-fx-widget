@@ -21,8 +21,10 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+
 public class Daily
 {
+
     WeatherDailyForecastApi api;
 
     private SaveCityName saveCityName = SaveCityName.getInstance();
@@ -152,6 +154,7 @@ public class Daily
         api = new WeatherDailyForecastImpl(CITY_REQUEST, DAYS);
     }
 
+    /*
     @FXML
     private void initialize()
     {
@@ -191,7 +194,7 @@ public class Daily
         displayWeatherIcon();
        // displayTime();
     }
-
+*/
     public void showMenu()
     {
         menu_panel_pane.setLayoutX(270);
@@ -203,7 +206,7 @@ public class Daily
         menu_panel_pane.setLayoutX(370);
         menu_icon.setOpacity(100);
     }
-
+/*
     private void setTime()
     {
         time = api.getDateTime();
@@ -270,6 +273,7 @@ public class Daily
         displayDescription();
     }
 
+
     private void displayMaxTemp()
     {
         max_temp_label.setText(String.valueOf(maxTemp.get(0)));
@@ -286,13 +290,13 @@ public class Daily
         min_temp_label3.setText(String.valueOf(minTemp.get(3)));
     }
 
-    /*private void displayTime()
+    private void displayTime()
     {
         day_time_label.setText(String.valueOf(time.get(0)));
         day_time_label1.setText(String.valueOf(time.get(1)));
         day_time_label2.setText(String.valueOf(time.get(2)));
         day_time_label3.setText(String.valueOf(time.get(3)));
-    }*/
+    }
 
     private void displayWeatherIcon()
     {
@@ -305,7 +309,7 @@ public class Daily
         String iconUrl3 = String.format("icons_weather/%s.png", weatherCodeIcon.get(3));
         weather_icon3.setImage(new Image(iconUrl3));
     }
-
+*/
     private int setWindArrow(int index)
     {
         Controller.WIND_DIRECTION = windDirection.get(index);
@@ -329,7 +333,7 @@ public class Daily
     {
         //snowfall_label.setText(FORMAT_PRECISION.format(snowFall.get(INDEX)));
     }
-
+/*
     private void displayRainFall()
     {
         rain_fall_label.setText(FORMAT_PRECISION.format(rainFall.get(0)));
@@ -366,7 +370,7 @@ public class Daily
         description_label2.setText(description.get(2));
         description_label3.setText(description.get(3));
     }
-
+*/
     public void switchToCurrent() throws IOException
     {
         current = FXMLLoader.load(getClass().getResource("/fxml/current.fxml"));
@@ -390,14 +394,9 @@ public class Daily
 
     }
 
-    public void switchToThreeHourly() throws IOException
-    {
-        threeHourly = FXMLLoader.load(getClass().getResource("/fxml/three_hourly.fxml"));
-        daily_anchorPane.getChildren().addAll(threeHourly);
-    }
-
     private void loadCityName()
     {
         CITY_REQUEST = saveCityName.loadCityName();
     }
+
 }

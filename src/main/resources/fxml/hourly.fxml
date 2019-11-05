@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="hourly_anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui_fx.Hourly">
+<AnchorPane fx:id="hourly_anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui_fx.Hourly">
    <children>
       <Pane fx:id="left_data_weather_pane" onSwipeRight="#swipeRight" prefHeight="400.0" prefWidth="370.0" style="-fx-background-color: #ffffff;">
          <children>
@@ -181,8 +181,7 @@
                   <Image url="@../icons/menu.png" />
                </image>
             </ImageView>
-            <Button fx:id="three_hourly_button" layoutX="36.0" layoutY="138.0" mnemonicParsing="false" onAction="#switchToThreeHourly" text="Na 5 dni" />
-            <Button fx:id="daily_button" layoutX="33.0" layoutY="190.0" mnemonicParsing="false" onAction="#switchToDaily" text="Na 16 dni" />
+            <Button fx:id="daily_button" layoutX="34.0" layoutY="139.0" mnemonicParsing="false" onAction="#switchToDaily" text="Na 16 dni" />
          </children></Pane>
    </children>
 </AnchorPane>

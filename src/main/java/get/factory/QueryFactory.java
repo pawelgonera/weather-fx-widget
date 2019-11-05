@@ -24,19 +24,5 @@ public class QueryFactory
 
         return response.toString();
     }
-    /*
-    public String setCityNamesQuery(String countryCode, String query)
-    {
-        StringBuilder response = new StringBuilder();
-        try
-        {
-            response.append(String.format(query, countryCode, UserNameApi.getUserName()));
-        }catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }
 
-        return response.toString();
-    }
-    */
 }

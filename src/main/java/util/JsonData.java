@@ -34,7 +34,6 @@ public class JsonData
         {
             String response = connection.connect();
             JsonBody jsonBody = jsonb.fromJson(response, JsonBody.class);
-            //data.add(jsonBody.getData().get(0));
             data = Optional.ofNullable(jsonBody)
                             .map(JsonBody::getData)
                             .orElseThrow(() -> new NotFoundDesiredJsonDataException("Not found desired data"));
@@ -84,44 +83,5 @@ public class JsonData
         return data;
     }
 
-    /*
-    public List<Cities> getJsonCities(Jsonb jsonb)
-    {
-        List<Cities> citiesList = new LinkedList<>();
-        String line = CitiesFile.getCitiesFile();
-        byte[] bytes = line.getBytes(StandardCharsets.UTF_16LE);
-        String utf8 = new String(bytes, StandardCharsets.UTF_16LE);
-
-        line = line.replaceAll("\r?\n", "");
-        CitiesData citiesData = jsonb.fromJson(line, CitiesData.class);
-
-        citiesList = Optional.ofNullable(citiesData)
-                                .map(CitiesData::getCitiesList)
-                                .orElseThrow(() -> new NotFoundDesiredJsonDataException("Not found desired data"));
-
-        for(int i = 0; i < 2; i++)
-        {
-            citiesList.add(citiesData.getCitiesList().get(i));
-        }
-        return citiesList;
-        return citiesList;
-    }*/
-
-
-    /*
-    public List<City> getJsonCities(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String countryCode)
-    {
-        List<City> cityList = new LinkedList<>();
-        try(HttpConnection connection = httpConnectFactory.getConnection(new QueryFactory().setCityNamesQuery(countryCode, query)))
-        {
-            String response = connection.connect();
-            GeoData geoData = jsonb.fromJson(response, GeoData.class);
-            for(int i = 0; i < 1000; i++)
-                cityList.add(geoData.getCities().get(i));
-        }
-
-        return cityList;
-    }
-    */
 
 }

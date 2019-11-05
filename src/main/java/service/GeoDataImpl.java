@@ -1,12 +1,9 @@
 package service;
 
 import api.GeoData;
-import exception.NotFoundDesiredJsonDataException;
 import util.CitiesFile;
 
 import java.util.List;
-import java.util.OptionalInt;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class GeoDataImpl implements GeoData
@@ -43,9 +40,6 @@ public class GeoDataImpl implements GeoData
         return geoData.stream()
                         .map(strings -> strings[1])
                         .collect(Collectors.toList());
-
-        //for(String[] elements : geoData)
-            //citiesList.add(elements[1]);
     }
 
     @Override

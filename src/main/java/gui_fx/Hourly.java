@@ -356,12 +356,6 @@ public class Hourly
         hourly_anchorPane.getChildren().addAll(daily);
     }
 
-    public void switchToThreeHourly() throws IOException
-    {
-        threeHourly = FXMLLoader.load(getClass().getResource("/fxml/three_hourly.fxml"));
-        hourly_anchorPane.getChildren().addAll(threeHourly);
-    }
-
     public void aboutProgram() throws IOException
     {
         about = FXMLLoader.load(getClass().getResource("/fxml/widget.fxml"));
