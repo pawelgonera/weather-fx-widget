@@ -4,18 +4,9 @@ import javax.json.bind.annotation.JsonbDateFormat;
 import javax.json.bind.annotation.JsonbProperty;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.TimeZone;
 
-public class Data
+public class DataDaily
 {
-    @JsonbProperty("timestamp_local")
-    private LocalDateTime timestampAtLocalTime;
-
-    @JsonbProperty("timestamp_utc")
-    private LocalDateTime timestampAtUTCTime;
-
     @JsonbProperty("wind_gust_spd")
     private double windGustSpeed;
 
@@ -40,15 +31,21 @@ public class Data
     @JsonbProperty("pres")
     private double pressure;
 
-    @JsonbProperty("timezone")
-    private TimeZone timeZone;
+    public BigDecimal getMaxApparentTemperature() {
+        return maxApparentTemperature;
+    }
 
-    @JsonbProperty("ob_time")
-    @JsonbDateFormat(value = "yyyy-MM-dd HH:mm")
-    private LocalDateTime lastObservationTime;
+    public void setMaxApparentTemperature(BigDecimal maxApparentTemperature) {
+        this.maxApparentTemperature = maxApparentTemperature;
+    }
 
-    @JsonbProperty("country_code")
-    private String countryAbbreviation;
+    public BigDecimal getMinApparentTemperature() {
+        return minApparentTemperature;
+    }
+
+    public void setMinApparentTemperature(BigDecimal minApparentTemperature) {
+        this.minApparentTemperature = minApparentTemperature;
+    }
 
     @JsonbProperty("clouds_low")
     private double lowLevelCloudCoverage;
@@ -74,17 +71,8 @@ public class Data
     @JsonbProperty("wind_cdir_full")
     private String verbalWindDirection;
 
-    @JsonbProperty("app_temp")
-    private double apparentTemperature;
-
-    @JsonbProperty("state_code")
-    private String stateAbbreviation;
-
     @JsonbProperty("ts")
     private double lastObservationTimeUnixTimestamp;
-
-    @JsonbProperty("h_angle")
-    private double solarHourAngle;
 
     @JsonbProperty("dewpt")
     private double dewPoint;
@@ -95,18 +83,12 @@ public class Data
     @JsonbProperty("uv")
     private double UVIndex;
 
-    @JsonbProperty("station")
-    private String sourceStationID;
-
     @JsonbProperty("wind_dir")
     private double windDirection;
 
-    @JsonbProperty("elev_angle")
-    private double solarElevationAngle;
-
     @JsonbProperty("datetime")
-    @JsonbDateFormat(value = "yyyy-MM-dd:HH")
-    private LocalDateTime currentCycleHour;
+    @JsonbDateFormat(value = "yyyy-MM-dd")
+    private LocalDate currentCycleHour;
 
     @JsonbProperty("valid_date")
     @JsonbDateFormat(value = "yyyy-MM-dd")
@@ -135,6 +117,12 @@ public class Data
 
     @JsonbProperty("sunset_ts")
     private long sunsetTimeUnixTimestamp;
+
+    @JsonbProperty("app_max_temp")
+    private BigDecimal maxApparentTemperature;
+
+    @JsonbProperty("app_min_temp")
+    private BigDecimal minApparentTemperature;
 
     public LocalDate getValidDate() {
         return validDate;
@@ -229,12 +217,6 @@ public class Data
     @JsonbProperty("city_name")
     private String cityName;
 
-    @JsonbProperty("sunrise")
-    private LocalTime sunriseTime;
-
-    @JsonbProperty("sunset")
-    private LocalTime sunSet;
-
     @JsonbProperty("temp")
     private BigDecimal temperature;
 
@@ -244,7 +226,7 @@ public class Data
     @JsonbProperty("slp")
     private double seaLevelPressure;
 
-    public Data()
+    public DataDaily()
     {
 
     }
@@ -305,28 +287,20 @@ public class Data
         this.averageOzone = averageOzone;
     }
 
-    public LocalDateTime getTimestampAtLocalTime() {
-        return timestampAtLocalTime;
-    }
-
-    public void setTimestampAtLocalTime(LocalDateTime timestampAtLocalTime) {
-        this.timestampAtLocalTime = timestampAtLocalTime;
-    }
-
-    public LocalDateTime getTimestampAtUTCTime() {
-        return timestampAtUTCTime;
-    }
-
-    public void setTimestampAtUTCTime(LocalDateTime timestampAtUTCTime) {
-        this.timestampAtUTCTime = timestampAtUTCTime;
-    }
-
     public String getAbbreviatedWindDirection() {
         return abbreviatedWindDirection;
     }
 
     public void setAbbreviatedWindDirection(String abbreviatedWindDirection) {
         this.abbreviatedWindDirection = abbreviatedWindDirection;
+    }
+
+    public double getWindDirection() {
+        return windDirection;
+    }
+
+    public void setWindDirection(double windDirection) {
+        this.windDirection = windDirection;
     }
 
     public int getRelativeHumidity() {
@@ -361,30 +335,6 @@ public class Data
         this.pressure = pressure;
     }
 
-    public TimeZone getTimeZone() {
-        return timeZone;
-    }
-
-    public void setTimeZone(TimeZone timeZone) {
-        this.timeZone = timeZone;
-    }
-
-    public LocalDateTime getLastObservationTime() {
-        return lastObservationTime;
-    }
-
-    public void setLastObservationTime(LocalDateTime lastObservationTime) {
-        this.lastObservationTime = lastObservationTime;
-    }
-
-    public String getCountryAbbreviation() {
-        return countryAbbreviation;
-    }
-
-    public void setCountryAbbreviation(String countryAbbreviation) {
-        this.countryAbbreviation = countryAbbreviation;
-    }
-
     public int getCloudCoverage() {
         return cloudCoverage;
     }
@@ -417,36 +367,12 @@ public class Data
         this.verbalWindDirection = verbalWindDirection;
     }
 
-    public double getApparentTemperature() {
-        return apparentTemperature;
-    }
-
-    public void setApparentTemperature(double apparentTemperature) {
-        this.apparentTemperature = apparentTemperature;
-    }
-
-    public String getStateAbbreviation() {
-        return stateAbbreviation;
-    }
-
-    public void setStateAbbreviation(String stateAbbreviation) {
-        this.stateAbbreviation = stateAbbreviation;
-    }
-
     public double getLastObservationTimeUnixTimestamp() {
         return lastObservationTimeUnixTimestamp;
     }
 
     public void setLastObservationTimeUnixTimestamp(double lastObservationTimeUnixTimestamp) {
         this.lastObservationTimeUnixTimestamp = lastObservationTimeUnixTimestamp ;
-    }
-
-    public double getSolarHourAngle() {
-        return solarHourAngle;
-    }
-
-    public void setSolarHourAngle(double solarHourAngle) {
-        this.solarHourAngle = solarHourAngle;
     }
 
     public double getDewPoint() {
@@ -473,35 +399,11 @@ public class Data
         this.UVIndex = UVIndex;
     }
 
-    public String getSourceStationID() {
-        return sourceStationID;
-    }
-
-    public void setSourceStationID(String sourceStationID) {
-        this.sourceStationID = sourceStationID;
-    }
-
-    public double getWindDirection() {
-        return windDirection;
-    }
-
-    public void setWindDirection(double windDirection) {
-        this.windDirection = windDirection;
-    }
-
-    public double getSolarElevationAngle() {
-        return solarElevationAngle;
-    }
-
-    public void setSolarElevationAngle(double solarElevationAngle) {
-        this.solarElevationAngle = solarElevationAngle;
-    }
-
-    public LocalDateTime getCurrentCycleHour() {
+    public LocalDate getCurrentCycleHour() {
         return currentCycleHour;
     }
 
-    public void setCurrentCycleHour(LocalDateTime currentCycleHour) {
+    public void setCurrentCycleHour(LocalDate currentCycleHour) {
         this.currentCycleHour = currentCycleHour;
     }
 
@@ -559,22 +461,6 @@ public class Data
 
     public void setCityName(String cityName) {
         this.cityName = cityName;
-    }
-
-    public LocalTime getSunriseTime() {
-        return sunriseTime;
-    }
-
-    public void setSunriseTime(LocalTime sunriseTime) {
-        this.sunriseTime = sunriseTime;
-    }
-
-    public LocalTime getSunSet() {
-        return sunSet;
-    }
-
-    public void setSunSet(LocalTime sunSet) {
-        this.sunSet = sunSet;
     }
 
     public BigDecimal getTemperature() {

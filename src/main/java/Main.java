@@ -5,6 +5,8 @@ import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.time.LocalDate;
+
 public class Main extends Application
 {
     public static void main(String[] args)
@@ -96,6 +98,10 @@ public class Main extends Application
 
         launch(args);
 
+        //System.out.println(LocalDate.now());
+
+
+
     }
 
     @Override
@@ -103,7 +109,7 @@ public class Main extends Application
     {
         Parent root = FXMLLoader.load(getClass().getResource("fxml/current.fxml"));
         primaryStage.setTitle("Weather Widget - welcome");
-        primaryStage.setScene(new Scene(root, 390, 390, Color.rgb( 164, 248, 255)));
+        primaryStage.setScene(new Scene(root, 400, 400, Color.rgb( 164, 248, 255)));
         primaryStage.setResizable(false);
         primaryStage.show();
     }

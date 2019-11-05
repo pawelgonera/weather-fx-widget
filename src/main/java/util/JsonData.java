@@ -65,6 +65,25 @@ public class JsonData
         return data;
     }
 
+    public List<DataDaily> getJsonWeatherForDaily(HttpConnectFactory httpConnectFactory, Jsonb jsonb, String query, String city, int quantity)
+    {
+        List<DataDaily> data = new LinkedList<>();
+        try(HttpConnection connection = httpConnectFactory.getConnection(new QueryFactory().setForecastQuery(city, quantity, query)))
+        {
+            String response = connection.connect();
+            JsonBodyDaily jsonBody = jsonb.fromJson(response, JsonBodyDaily.class);
+            System.out.println(jsonBody.getData().size());
+            for (int i = 0; i < quantity; i++)
+                data.add(jsonBody.getData().get(i));
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        return data;
+    }
+
     /*
     public List<Cities> getJsonCities(Jsonb jsonb)
     {

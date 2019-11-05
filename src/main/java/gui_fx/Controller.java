@@ -42,7 +42,9 @@ public class Controller
     public static String WIND_DIRECTION;
 
     private Parent current;
+    private Parent threeHourly;
     private Parent daily;
+    private Parent hourly;
     private Parent about;
 
     private SaveCityName saveCityName = SaveCityName.getInstance();
@@ -97,9 +99,21 @@ public class Controller
     private Pane menu_panel_pane;
     @FXML
     private ImageView menu_icon;
+    @FXML
+    private Button daily_button;
+    @FXML
+    private Button hourly_button;
+    @FXML
+    private Button current_button;
+    @FXML
+    private ContextMenu searching_contexMenu;
+    @FXML
+    private MenuItem cities_menuItem;
+    @FXML
+    private ImageView refresh_icon;
+    @FXML
+    private Button about_button;
 
-    private ListView listView = new ListView();
-    private ContextMenu contextMenu;
 
     public static Controller getInstance()
     {
@@ -318,16 +332,22 @@ public class Controller
 
     }
 
+    public void switchToHourly() throws IOException
+    {
+        hourly = FXMLLoader.load(getClass().getResource("/fxml/hourly.fxml"));
+        main_anchorPane.getChildren().addAll(hourly);
+    }
+
     public void switchToDaily() throws IOException
     {
         daily = FXMLLoader.load(getClass().getResource("/fxml/daily.fxml"));
         main_anchorPane.getChildren().addAll(daily);
     }
 
-    public void switchToHourly() throws IOException
+    public void switchToThreeHourly() throws IOException
     {
-        current = FXMLLoader.load(getClass().getResource("/fxml/hourly.fxml"));
-        main_anchorPane.getChildren().addAll(current);
+        threeHourly = FXMLLoader.load(getClass().getResource("/fxml/three_hourly.fxml"));
+        main_anchorPane.getChildren().addAll(threeHourly);
     }
 
     public void aboutProgram() throws IOException

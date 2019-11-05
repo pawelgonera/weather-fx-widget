@@ -15,10 +15,8 @@ import javax.json.bind.JsonbBuilder;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.ZoneId;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
 import java.util.TimeZone;
 
 public class WeatherCurrentApiImpl implements WeatherCurrentApi
@@ -70,7 +68,6 @@ public class WeatherCurrentApiImpl implements WeatherCurrentApi
     private void getApiData()
     {
         String fixedCityNameRequest = fixCityName();
-        //System.out.println("fixed: " + fixedCityNameRequest);
         apiData = jsonData.getJsonWeather(httpConnectionFactory, jsonb, QUERY_CURRENT_WEATHER, fixedCityNameRequest);
     }
 

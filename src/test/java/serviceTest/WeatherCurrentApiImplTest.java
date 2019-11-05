@@ -20,7 +20,7 @@ import java.util.TimeZone;
 
 public class WeatherCurrentApiImplTest
 {
-    /*
+
     private static String QUERY_CURRENT_WEATHER = "https://api.weatherbit.io/v2.0/current?city=%s&lang=en&key=%s";
     private final static String CITY_NAME_REQUEST = "Kalisz";
     private WeatherCurrentApiImpl api;
@@ -261,7 +261,7 @@ public class WeatherCurrentApiImplTest
 
         assertThat(timeZoneTest, is(testValue));
     }
-    */
+
 
 }
 
