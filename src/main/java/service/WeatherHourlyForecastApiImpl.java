@@ -16,7 +16,7 @@ public class WeatherHourlyForecastApiImpl implements WeatherHourlyForecastApi
 {
     private static String QUERY = "https://api.weatherbit.io/v2.0/forecast/hourly?city=%s&key=%s&hours=%d&lang=en";
     private HttpConnectFactory httpConnectFactory;
-    private JsonData jsonData;
+    private JsonData jsonData = JsonData.getInstance();
     private Jsonb jsonb;
     private List<Data> apiData;
     private String cityNameRequest;
@@ -24,17 +24,16 @@ public class WeatherHourlyForecastApiImpl implements WeatherHourlyForecastApi
 
     public WeatherHourlyForecastApiImpl(String cityNameRequest, int hours)
     {
-        this(new HttpConnectFactory(), JsonbBuilder.create(), new JsonData());
+        this(new HttpConnectFactory(), JsonbBuilder.create());
         this.cityNameRequest = cityNameRequest;
         this.hours = hours;
         getApiData();
     }
 
-    public WeatherHourlyForecastApiImpl(HttpConnectFactory httpConnectFactory, Jsonb jsonb, JsonData jsonData)
+    public WeatherHourlyForecastApiImpl(HttpConnectFactory httpConnectFactory, Jsonb jsonb)
     {
         this.httpConnectFactory = httpConnectFactory;
         this.jsonb = jsonb;
-        this.jsonData = jsonData;
     }
 
     private void getApiData()
