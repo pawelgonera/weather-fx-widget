@@ -12,11 +12,12 @@ public class GeoDataImpl implements GeoData
 
     private List<String[]> geoData;
 
+    private CitiesFile file = CitiesFile.getInstance();
+
     private GeoDataImpl()
     {
-        geoData = CitiesFile.getGeoData();
+        geoData = file.getGeoData();
     }
-
 
     public static GeoDataImpl getInstance()
     {

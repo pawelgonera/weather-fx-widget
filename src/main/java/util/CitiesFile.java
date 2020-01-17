@@ -8,15 +8,30 @@ import java.util.List;
 
 public class CitiesFile
 {
-    //private final static String CITIES_FILE = "cities_20000json/cities_1.json";
-    private final static String CITIES_FILE = "src/main/resources/cities_20000csv/cities_20000.csv";
+    private static CitiesFile instance = null;
+    private final static String CITIES_FILE = "cities_20000csv/cities_20000.csv";
 
-    public static List<String[]> getGeoData()
+    private CitiesFile()
     {
+
+    }
+
+    public static CitiesFile getInstance()
+    {
+        if(instance == null)
+            instance = new CitiesFile();
+
+        return instance;
+    }
+
+    public List<String[]> getGeoData()
+    {
+        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+        InputStream inputStream = classloader.getResourceAsStream(CITIES_FILE);
 
         List<String[]> geoData = new LinkedList<>();
 
-        try(BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(CITIES_FILE), StandardCharsets.UTF_8)))
+        try(BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8)))
         {
             String[] record;
             String line;

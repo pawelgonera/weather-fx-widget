@@ -1,17 +1,35 @@
 package util;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 public class ApiKey
 {
-    private static String FILENAME = "src/main/resources/api_properties/apikey.properties";
+    private static String FILENAME = "api_properties/apikey.properties";
+    private static ApiKey instance = null;
+
+    private ApiKey()
+    {
+
+    }
+
+    public static ApiKey getInstance()
+    {
+        if(instance == null)
+            instance = new ApiKey();
+
+        return instance;
+    }
 
     private static Properties PROPERTIES = new Properties();
 
-    public static String getApiKey()
+    public String getApiKey()
     {
-        try(FileInputStream input = new FileInputStream(FILENAME))
+        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+        InputStream inputStream = classloader.getResourceAsStream(FILENAME);
+
+        try(BufferedReader input = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8)))
         {
            PROPERTIES.load(input);
 
