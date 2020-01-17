@@ -7,3 +7,14 @@ Data is retrieving from weather [API](https://www.weatherbit.io/api). It's displ
 
 ### Visualization in JavaFX
 ![weather](https://imagizer.imageshack.com/img921/1158/Ct9QCf.jpg)
+
+### Lunch project
+After cloning this repository, build jar file with maven in target/weather_forecast-1.0-SNAPSHOT.jar
+```
+mvn install
+```
+
+Then open executable file
+```
+java -jar target/weather_forecast-1.0-SNAPSHOT.jar
+```
